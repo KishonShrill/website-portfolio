@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/website-portfolio/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="My Portfolio Website" />
+    <meta name="keywords" content="web design, html, css, js" />
+    <title>Website Portfolio</title>
+    <script type="module" crossorigin src="/website-portfolio/assets/index-1ad65c53.js"></script>
+    <link rel="stylesheet" href="/website-portfolio/assets/index-92a938c5.css">
+  </head>
+
+  <body>
+    <header class="header container">
+      <nav>
+        <ul class="header__menu">
+          <li><a class="header__link" href="#about">About</a></li>
+          <li><a class="header__link" href="#featured">Work</a></li>
+          <li><a class="header__link" href="#contact">Contact</a></li>
+          <li class="header__line"></li>
+          <li>
+            <button id="theme-toggle" class="header__sun">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                fill="currentColor">
+                <path
+                  d="M12 2.25a.75.75 0 01.75.75v2.25a.75.75 0 01-1.5 0V3a.75.75 0 01.75-.75zM7.5 12a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM18.894 6.166a.75.75 0 00-1.06-1.06l-1.591 1.59a.75.75 0 101.06 1.061l1.591-1.59zM21.75 12a.75.75 0 01-.75.75h-2.25a.75.75 0 010-1.5H21a.75.75 0 01.75.75zM17.834 18.894a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 10-1.061 1.06l1.59 1.591zM12 18a.75.75 0 01.75.75V21a.75.75 0 01-1.5 0v-2.25A.75.75 0 0112 18zM7.758 17.303a.75.75 0 00-1.061-1.06l-1.591 1.59a.75.75 0 001.06 1.061l1.591-1.59zM6 12a.75.75 0 01-.75.75H3a.75.75 0 010-1.5h2.25A.75.75 0 016 12zM6.697 7.757a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 00-1.061 1.06l1.59 1.591z" />
+              </svg>
+            </button>
+          </li>
+          <li><a class="header__explore btn" href="#">Explore</a></li>
+        </ul>
+        <button class="header__bars">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+            fill="currentColor">
+            <path fillRule="evenodd"
+              d="M3 6.75A.75.75 0 013.75 6h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 6.75zM3 12a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 12zm0 5.25a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75a.75.75 0 01-.75-.75z"
+              clipRule="evenodd" />
+          </svg>
+        </button>
+      </nav>
+    </header>
+    <!-- Mobile Navigation -->
+    <div class="mobile-nav">
+      <nav>
+        <ul class="mobile-nav__menu">
+          <li><a class="mobile-nav__link" href="#about">About</a></li>
+          <li><a class="mobile-nav__link" href="#featured">Work</a></li>
+          <li><a class="mobile-nav__link" href="#contact">Contact </a></li>
+          <li class="mobile-nav__link-line"></li>
+          <li>
+            <button id="theme-toggle" class="mobile-nav__sun">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                fill="currentColor">
+                <path
+                  d="M12 2.25a.75.75 0 01.75.75v2.25a.75.75 0 01-1.5 0V3a.75.75 0 01.75-.75zM7.5 12a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM18.894 6.166a.75.75 0 00-1.06-1.06l-1.591 1.59a.75.75 0 101.06 1.061l1.591-1.59zM21.75 12a.75.75 0 01-.75.75h-2.25a.75.75 0 010-1.5H21a.75.75 0 01.75.75zM17.834 18.894a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 10-1.061 1.06l1.59 1.591zM12 18a.75.75 0 01.75.75V21a.75.75 0 01-1.5 0v-2.25A.75.75 0 0112 18zM7.758 17.303a.75.75 0 00-1.061-1.06l-1.591 1.59a.75.75 0 001.06 1.061l1.591-1.59zM6 12a.75.75 0 01-.75.75H3a.75.75 0 010-1.5h2.25A.75.75 0 016 12zM6.697 7.757a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 00-1.061 1.06l1.59 1.591z" />
+              </svg>
+            </button>
+          </li>
+          <li>
+            <a class="mobile-nav__btn btn" href="#">Explore More</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <main class="container">
+      <section class="hero container">
+        <img class="hero__img" src="./author_picture.jpg" alt="Profile Picture">
+        <h2 class="hero__subtitle">Hello, I am Chriscent 👋</h2>
+        <h1 class="hero__title">COMPUTER SCIENCE <br> WEB DEVELOPER</h1>
+        <p class="hero__description">An aspiring <strong>Front-End Web
+            Developer</strong> that is currently studying in the course of
+          <strong>Computer Science</strong>.
+        </p>
+        <a class="hero__btn btn" href="#">My Socials</a>
+        <!-- <img class="hero__feature" src="./Cyberpunk_Final_Render_woBack.png" alt="Cyberpunk Image"> -->
+      </section>
+
+      <section id="about" class="about container section">
+        <div class="about__content">
+          <h2 class="about__title">About</h2>
+          <p class="about__description">I'm <strong>Chriscent</strong>, a
+            computer science student studying at
+            Mindanao State University Iligan Instutie of Technology
+            with a passion for front-end development.
+          </p>
+          <p class="about__description">
+            When I'm not coding, you'll often find me castling a line while
+            fishing, knocking
+            down pins at the bowling alley, or jamming out to music.
+          </p>
+          <p class="about__description">I embrace my unique quirks,
+            comining a touch of weirdness with boundless enthusiasm. I may be a
+            bit crazy at times,
+            but I'm also a loyal fun-loving freind to have by your side.
+          </p>
+          <hr class="about__hr" />
+          <h3 class="about__subtitle">Technologies</h3>
+          <div class="about__ul-container">
+            <ul class="about__ul">
+              <li class="about__list">HTML</li>
+              <li class="about__list">CSS</li>
+              <li class="about__list">Java</li>
+            </ul>
+            <ul class="about__ul">
+              <li class="about__list">C</li>
+              <li class="about__list">C++</li>
+              <li class="about__list">Blender 3D</li>
+            </ul>
+          </div>
+        </div>
+        <div class="about__img-wrapper">
+          <img 
+            class="about__img lazy loading"
+            src="https://fakeimg.pl/2160/?retina=1&text=ニャー&font=noto"
+            data-src="./Cyberpunk_Final_Render_woBack.png"
+            alt="Cyberpunk Image made with Blender 3D">
+        </div>
+      </section>
+
+      <section id="featured" class="featured container section">
+        <h3 class="featured__subtitle">Featured Projects</h3>
+        <div class="featured__wrapper">
+          <h2 class="featured__title">Chriscent Productions</h2>
+          <a class="featured__link" href="#">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none"
+              viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round"
+                d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244" />
+            </svg>
+          </a>
+        </div>
+        <p class="featured__description">Lorem ipsum dolor sit amet consectetur,
+          adipisicing elit. Tempora, voluptates ad? Voluptas ea vitae fugiat
+          iusto similique inventore et voluptatum, consequatur pariatur ab
+          distinctio nam sint iste debitis eum accusamus! Eius suscipit ab autem
+          temporibus deserunt odit ut illo possimus.</p>
+        <div class="featured__info-container">
+          <div>
+            <h3 class="featured__label">Skill Stack</h3>
+            <ul class="featured__skill-stack">
+              <li class="featured__info">Web Development</li>
+              <li class="featured__info">Blender 3D</li>
+              <li class="featured__info">Social Media Analyst</li>
+              <li class="featured__info">Camera Operator</li>
+              <li class="featured__info">Video Editor</li>
+              <li class="featured__info">Photographer</li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="featured__label">Project Type</h3>
+            <p class="featured__info">########-########</p>
+          </div>
+          <div>
+            <h3 class="featured__label">Timeline</h3>
+            <p class="featured__info">September 2023 - present</p>
+          </div>
+        </div>
+        <div class="featured__img-container">
+          <div class="featured__img-wrapper">
+            <img 
+              class="lazy loading" 
+              src="https://fakeimg.pl/1050x600/?retina=1&text=こんにちは&font=noto"
+              data-src="./featured/MAS-AMiCUS.png" 
+              alt="Chriscent Production" />
+          </div>
+          <div class="featured__img-wrapper">
+            <img 
+              class="lazy loading" 
+              src="https://fakeimg.pl/1920x1080/?retina=1&text=こんにちは&font=noto"
+              data-src="./featured/love.png" 
+              alt="Chriscent Production" />
+          </div>  
+          <div class="featured__img-wrapper">
+            <img 
+              class="lazy loading" 
+              src="https://fakeimg.pl/1920x1080/?retina=1&text=こんにちは&font=noto"
+              data-src="./featured/DadDay.png" 
+              alt="Chriscent Production" />
+          </div>
+          <div class="featured__img-wrapper">
+            <img 
+              class="lazy loading" 
+              src="https://fakeimg.pl/1920x1080/?retina=1&text=こんにちは&font=noto"
+              data-src="./featured/easyanimate0001.png"
+              alt="Chriscent Production" />
+          </div>
+          <div class="featured__img-wrapper">
+            <img 
+              class="lazy loading" 
+              src="https://fakeimg.pl/1920x1001/?retina=1&text=こんにちは&font=noto"
+              data-src="./featured/news-home.png" 
+              alt="Chriscent Production" />
+          </div>
+          <div class="featured__img-wrapper">
+            <img 
+              class="lazy loading" 
+              src="https://fakeimg.pl/1920x1080/?retina=1&text=こんにちは&font=noto"
+              data-src="./featured/car.png" 
+              alt="Chriscent Production" />
+          </div>
+          <div class="featured__img-wrapper">
+            <img 
+              class="lazy loading" 
+              src="https://fakeimg.pl/1920x1080/?retina=1&text=こんにちは&font=noto"
+              data-src="./featured/CouchFinalDesktop.png"
+              alt="Chriscent Production" />
+          </div>
+          <div class="featured__img-wrapper">
+            <img 
+              class="lazy loading" 
+              src="https://fakeimg.pl/1920x1080/?retina=1&text=こんにちは&font=noto"
+              data-src="./featured/leche_flan.png" 
+              alt="Chriscent Production" />
+          </div>
+        </div>
+      </section>
+      <!-- WORK -->
+      <section class="work container section">
+        <h2 class="work__title">Projects</h2>
+        <p class="work__description">Lorem ipsum dolor sit amet consectetur
+          adipisicing elit. Impedit, omnis hic! Blanditiis, aperiam est at velit
+          eveniet aspernatur laborum harum ut id fugit laboriosam voluptate
+          assumenda temporibus ea, quae beatae et explicabo deserunt soluta
+          distinctio fugiat.</p>
+        <div class="work__container">
+          <!-- Project 1 -->
+          <h3 class="work__project-title">Planet Earth</h3>
+          <div class="work__img-wrapper work__project-image1">
+            <img 
+              class="lazy loading"  
+              src="https://fakeimg.pl/1080x1080/?retina=1&text=ニャー&font=noto"
+              data-src="./work/Earth.png"
+              alt="A 3D Model picture of planet Earth">
+          </div>
+          <div class="work__project work__project-content1">
+            <h3 class="work__project-subtitle">Planet Earth</h3>
+            <p class="work__project-description1">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              Voluptates laboriosam labore, impedit cum aperiam
+              qui cumque blanditiis excepturi!
+            </p>
+            <p class="work__project-description2">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+              Corporis quas quae aspernatur. Quis qui consectetur impedit,
+              nisi velit, labore ipsa commodi veritatis, error tenetur esse!
+              At ut optio facere dolor mollitia voluptate adipisci iste eius.
+            </p>
+            <a class="btn work__project-btn" href="#">More Info</a>
+          </div>
+          <!-- Project 2 -->
+          <h3 class="work__project-title">Low Poly Room</h3>
+          <div class="work__img-wrapper work__project-image2">
+            <img 
+              class="lazy loading" 
+              src="https://fakeimg.pl/1080x1080/?retina=1&text=ニャー&font=noto" 
+              data-src="./work/somewhat low poly.png"
+              alt="A low-poly 3D modeled bedroom">
+          </div>
+          <div class="work__project work__project-content2">
+            <h3 class="work__project-subtitle">Low Poly Room</h3>
+            <p class="work__project-description1">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              Voluptates laboriosam labore, impedit cum aperiam
+              qui cumque blanditiis excepturi!
+            </p>
+            <p class="work__project-description2">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+              Corporis quas quae aspernatur. Quis qui consectetur impedit,
+              nisi velit, labore ipsa commodi veritatis, error tenetur esse!
+              At ut optio facere dolor mollitia voluptate adipisci iste eius.
+            </p>
+            <a class="btn work__project-btn" href="#">More Info</a>
+          </div>
+          <!-- Project 3 -->
+          <h3 class="work__project-title">Weird Object</h3>
+          <div class="work__img-wrapper work__project-image3">
+            <img 
+              class="lazy loading"  
+              src="https://fakeimg.pl/2160x2160/?retina=1&text=ニャー&font=noto"
+              data-src="./work/Weird Object.png"
+              alt="A 3D model of a weird shaped object">
+          </div>
+          <div class="work__project work__project-content3">
+            <h3 class="work__project-subtitle">Weird Object</h3>
+            <p class="work__project-description1">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              Voluptates laboriosam labore, impedit cum aperiam
+              qui cumque blanditiis excepturi!
+            </p>
+            <p class="work__project-description2">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+              Corporis quas quae aspernatur. Quis qui consectetur impedit,
+              nisi velit, labore ipsa commodi veritatis, error tenetur esse!
+              At ut optio facere dolor mollitia voluptate adipisci iste eius.
+            </p>
+            <a class="btn work__project-btn" href="#">More Info</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact container section" id="contact">
+        <h2 class="contact__title">Get In Contact</h2>
+        <p class="contact__description">
+          Whether you are starting a project, have business
+          inquiries or just
+          want to say hi, my inbox is always open so feel free
+          to reach out and
+          I will get back to you as soon as possible.
+        </p>
+        <a class="contact__btn btn"
+          href="mailto:chriscentlouisjune.pingol@g.msuiit.edu.ph"
+          target="_blank">Reach out!</a>
+      </section>
+    </main>
+    <footer class="footer container section">
+      <h3 class="footer__title"><strong>~ Chriscent Production ~</strong></h3>
+    </footer>
+    
+  </body>
+
+</html>
