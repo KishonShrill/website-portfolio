@@ -8,12 +8,19 @@
     <meta name="description" content="My Portfolio Website" />
     <meta name="keywords" content="web design, html, css, js" />
     <title>Website Portfolio</title>
-    <script type="module" crossorigin src="/website-portfolio/assets/index-d32357c4.js"></script>
-    <link rel="stylesheet" href="/website-portfolio/assets/index-e47dda36.css">
+    <script type="module" crossorigin src="/website-portfolio/assets/index-7445295e.js"></script>
+    <link rel="stylesheet" href="/website-portfolio/assets/index-b0211edf.css">
   </head>
 
   <body>
     <header class="header container">
+      <a href="https://www.facebook.com/ChriscentProduction/">
+        <img 
+        class="header__logo"
+        src="./myLogo.png"
+        alt="Cyberpunk Image made with Blender 3D"
+        >
+      </a>
       <nav>
         <ul class="header__menu">
           <li><a class="header__link" href="#about">About</a></li>
@@ -64,6 +71,42 @@
         </ul>
       </nav>
     </div>
+    <!-- Importing Disqus Comment Section -->
+    <button class="comment__btn">
+      <svg 
+        xmlns="http://www.w3.org/2000/svg" 
+        fill="white" 
+        viewBox="0 0 24 24" 
+        stroke-width="1.5" 
+        stroke="currentColor" 
+        >
+          <path stroke-linecap="round" stroke-linejoin="round" d="M20.25 8.511c.884.284 1.5 1.128 1.5 2.097v4.286c0 1.136-.847 2.1-1.98 2.193-.34.027-.68.052-1.02.072v3.091l-3-3c-1.354 0-2.694-.055-4.02-.163a2.115 2.115 0 01-.825-.242m9.345-8.334a2.126 2.126 0 00-.476-.095 48.64 48.64 0 00-8.048 0c-1.131.094-1.976 1.057-1.976 2.192v4.286c0 .837.46 1.58 1.155 1.951m9.345-8.334V6.637c0-1.621-1.152-3.026-2.76-3.235A48.455 48.455 0 0011.25 3c-2.115 0-4.198.137-6.24.402-1.608.209-2.76 1.614-2.76 3.235v6.226c0 1.621 1.152 3.026 2.76 3.235.577.075 1.157.14 1.74.194V21l4.155-4.155" />
+      </svg>
+    </button>
+    <div class="comment-container contianer">
+      <section class="container section">
+        <div id="disqus_thread"></div>
+        <script>
+            /**
+            *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+            *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+            
+            var disqus_config = function () {
+            this.page.url = window.location.href;  // Replace PAGE_URL with your page's canonical URL variable
+            this.page.identifier = this.page.url; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+            };
+            
+            (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document, s = d.createElement('script');
+            s.src = 'https://kishonshrill.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+      </section>
+    </div>
+
     <main class="container">
       <section class="hero container">
         <img class="hero__img" src="./author_picture.jpg" alt="Profile Picture">
@@ -76,7 +119,6 @@
           the software <strong><a href="https://www.blender.org/" target="_blank">Blender</a></strong>.
         </p>
         <a class="hero__btn btn" href="https://www.facebook.com/ChriscentProduction/">My Social</a>
-        <!-- <img class="hero__feature" src="./Cyberpunk_Final_Render_woBack.png" alt="Cyberpunk Image"> -->
       </section>
 
       <section id="about" class="about container section">
