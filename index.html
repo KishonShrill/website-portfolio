@@ -7,13 +7,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="My Portfolio Website" />
     <meta name="keywords" content="web design, html, css, js" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <title>Website Portfolio</title>
-    <script type="module" crossorigin src="/website-portfolio/assets/main-31a0e584.js"></script>
-    <link rel="modulepreload" crossorigin href="/website-portfolio/assets/comments-46747df0.js">
-    <link rel="stylesheet" href="/website-portfolio/assets/comments-64f4f52e.css">
+
+    <!-- Pre-Loader Script -->
+    <script>
+      $(window).on("load", function() {
+        // Add a 3-second (3000 milliseconds) delay before fading out
+        setTimeout(function() {
+          $(".loader-wrapper").fadeOut("slow");
+        }, 3000);
+      });
+    </script>
+
+    <script type="module" crossorigin src="/website-portfolio/assets/main-e9c9aa0a.js"></script>
+    <link rel="modulepreload" crossorigin href="/website-portfolio/assets/dark-mode-6de210e5.js">
+    <link rel="stylesheet" href="/website-portfolio/assets/dark-mode-2f44bc4b.css">
+    <link rel="stylesheet" href="/website-portfolio/assets/index-7c5f8db6.css">
   </head>
 
   <body>
+    <!--! Pre-Loader -->
+    <div class="loader-wrapper">
+      <img class="imageSpin" src="./preloadLogo.jpg" alt="">
+    </div>
+
     <header class="header container">
       <a href="https://www.facebook.com/ChriscentProduction/">
         <img 
