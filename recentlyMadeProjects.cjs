@@ -3,7 +3,10 @@ const mongoose = require('mongoose');
 const app = express();
 
 // Connect to MongoDB
-mongoose.connect('mongodb://localhost:27017/your_database', { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect('mongodb://localhost:27017/portfolio', { 
+  useNewUrlParser: true, 
+  useUnifiedTopology: true 
+});
 
 const urlSchema = new mongoose.Schema({
   name: String,
@@ -14,7 +17,7 @@ const urlSchema = new mongoose.Schema({
 const Url = mongoose.model('Url', urlSchema);
 
 // Endpoint to retrieve the top 8 entries
-app.get('/top8', async (req, res) => {
+app.get('/website-portfolio/mas_amicus/', async (req, res) => {
   try {
     const top8Urls = await Url.find().sort({ _id: -1 }).limit(8);
     res.json(top8Urls);
@@ -24,6 +27,6 @@ app.get('/top8', async (req, res) => {
   }
 });
 
-app.listen(3000, () => {
-  console.log('Server started on port 3000');
+app.listen(5173, () => {
+  console.log('Server started on port 5173');
 });
