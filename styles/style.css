@@ -9,12 +9,12 @@ font-family: 'Figtree', sans-serif;
   --clr-secondary: #8D97C0;
   --clr-tertiary: #3e435b;
   --clr-rose: #e11d48;
-  --clr-highlight: #fd9fad;
+  --clr-highlight: #535eff;
 
   /* sizes */
   --size-xxs: 0.5rem;
   --size-xs: 0.75rem;
-  --size-x: 0.875rem;
+  --size-s: 0.875rem;
   --size-base: 1rem;
   --size-l: 1.125rem;
   --size-xl: 1.25rem;
@@ -50,6 +50,7 @@ body {
   font-family: 'Figtree', sans-serif;
   background-color: var(--clr-dark);
   color: var(--clr-main);
+  scrollbar-gutter: stable;
 }
 
 h1 {

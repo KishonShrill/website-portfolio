@@ -21,7 +21,7 @@ const lazyLoading = () => {
 
 export default lazyLoading;
 
-//! Inefficient
+/* Inefficient */
 /* 
 const observer = new IntersectionObserver(() => {}, {
   root: null,

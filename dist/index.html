@@ -7,13 +7,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="My Portfolio Website" />
     <meta name="keywords" content="web design, html, css, js" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <title>Website Portfolio</title>
-    <script type="module" crossorigin src="/website-portfolio/assets/index-1ad65c53.js"></script>
-    <link rel="stylesheet" href="/website-portfolio/assets/index-92a938c5.css">
+
+    <!-- Pre-Loader Script -->
+    <script>
+      $(window).on("load", function() {
+        // Add a 3-second (3000 milliseconds) delay before fading out
+        setTimeout(function() {
+          $(".loader-wrapper").fadeOut("slow");
+        }, 3000);
+      });
+    </script>
+
+    <script type="module" crossorigin src="/website-portfolio/assets/main-dae93ef9.js"></script>
+    <link rel="modulepreload" crossorigin href="/website-portfolio/assets/dark-mode-d36b631f.js">
+    <link rel="stylesheet" href="/website-portfolio/assets/dark-mode-eecc09e8.css">
+    <link rel="stylesheet" href="/website-portfolio/assets/index-fd0dad3f.css">
   </head>
 
   <body>
+    <!--! Pre-Loader -->
+    <div class="loader-wrapper">
+      <img class="imageSpin" src="./preloadLogo.jpg" alt="">
+    </div>
+
     <header class="header container">
+      <a href="https://www.facebook.com/ChriscentProduction/">
+        <img 
+        class="header__logo"
+        src="./myLogo.png"
+        alt="Cyberpunk Image made with Blender 3D"
+        >
+      </a>
       <nav>
         <ul class="header__menu">
           <li><a class="header__link" href="#about">About</a></li>
@@ -29,7 +55,7 @@
               </svg>
             </button>
           </li>
-          <li><a class="header__explore btn" href="#">Explore</a></li>
+          <li><a class="header__explore btn">Explore</a></li>
         </ul>
         <button class="header__bars">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
@@ -59,22 +85,77 @@
             </button>
           </li>
           <li>
-            <a class="mobile-nav__btn btn" href="#">Explore More</a>
+            <a class="mobile-nav__btn btn ">Explore</a>
           </li>
         </ul>
       </nav>
     </div>
+
+    <div class="explore-container">
+      <div class="explore-container__header explore__container">
+        <a class="explore-container__closeBtn btn">Close</a>
+      </div>
+      <div class="explore-container__album explore__container">
+        <div class="grid grid1">1</div>
+        <div class="grid grid2">2</div>
+        <div class="grid grid3">3</div>
+        <div class="grid grid4">4</div>
+        <div class="grid grid5">5</div>
+        <div class="grid grid6">6</div>
+        <div class="grid grid7">7</div>
+        <div class="grid grid8">8</div>
+        <div class="grid grid9">9</div>
+      </div>
+    </div>
+
+    <!-- Importing Disqus Comment Section -->
+    <button class="comment__btn">
+      <svg 
+        xmlns="http://www.w3.org/2000/svg" 
+        fill="white" 
+        viewBox="0 0 24 24" 
+        stroke-width="1.5" 
+        stroke="currentColor" 
+        >
+          <path stroke-linecap="round" stroke-linejoin="round" d="M20.25 8.511c.884.284 1.5 1.128 1.5 2.097v4.286c0 1.136-.847 2.1-1.98 2.193-.34.027-.68.052-1.02.072v3.091l-3-3c-1.354 0-2.694-.055-4.02-.163a2.115 2.115 0 01-.825-.242m9.345-8.334a2.126 2.126 0 00-.476-.095 48.64 48.64 0 00-8.048 0c-1.131.094-1.976 1.057-1.976 2.192v4.286c0 .837.46 1.58 1.155 1.951m9.345-8.334V6.637c0-1.621-1.152-3.026-2.76-3.235A48.455 48.455 0 0011.25 3c-2.115 0-4.198.137-6.24.402-1.608.209-2.76 1.614-2.76 3.235v6.226c0 1.621 1.152 3.026 2.76 3.235.577.075 1.157.14 1.74.194V21l4.155-4.155" />
+      </svg>
+    </button>
+    <div class="comment-container contianer">
+      <section class="container section">
+        <div id="disqus_thread"></div>
+        <script>
+            /**
+            *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+            *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+            
+            var disqus_config = function () {
+            this.page.url = window.location.href;  // Replace PAGE_URL with your page's canonical URL variable
+            this.page.identifier = this.page.url; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+            };
+            
+            (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document, s = d.createElement('script');
+            s.src = 'https://kishonshrill.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+      </section>
+    </div>
+
     <main class="container">
       <section class="hero container">
         <img class="hero__img" src="./author_picture.jpg" alt="Profile Picture">
         <h2 class="hero__subtitle">Hello, I am Chriscent 👋</h2>
         <h1 class="hero__title">COMPUTER SCIENCE <br> WEB DEVELOPER</h1>
-        <p class="hero__description">An aspiring <strong>Front-End Web
-            Developer</strong> that is currently studying in the course of
-          <strong>Computer Science</strong>.
+        <p class="hero__description">
+          I am an aspiring <strong>Front-End Web Developer</strong> currently 
+          pursuing a degree in <strong>Computer Science</strong>. I'm also deeply 
+          passionate about 3D Art, and I regularly create captivating designs using 
+          the software <strong><a href="https://www.blender.org/" target="_blank">Blender</a></strong>.
         </p>
-        <a class="hero__btn btn" href="#">My Socials</a>
-        <!-- <img class="hero__feature" src="./Cyberpunk_Final_Render_woBack.png" alt="Cyberpunk Image"> -->
+        <a class="hero__btn btn" href="https://www.facebook.com/ChriscentProduction/">My Social</a>
       </section>
 
       <section id="about" class="about container section">
@@ -131,11 +212,12 @@
             </svg>
           </a>
         </div>
-        <p class="featured__description">Lorem ipsum dolor sit amet consectetur,
-          adipisicing elit. Tempora, voluptates ad? Voluptas ea vitae fugiat
-          iusto similique inventore et voluptatum, consequatur pariatur ab
-          distinctio nam sint iste debitis eum accusamus! Eius suscipit ab autem
-          temporibus deserunt odit ut illo possimus.</p>
+        <p class="featured__description">
+          As an author, I take immense pride in showcasing my featured picture projects. 
+          Each image is a window into the worlds I've created with words, a visual testament 
+          to the stories I've woven. Through these captivating visuals, I invite visioners to 
+          embark on journeys that transcend the captured photos, offering them a deeper connection 
+          to the narratives I've crafted.</p>
         <div class="featured__info-container">
           <div>
             <h3 class="featured__label">Skill Stack</h3>
@@ -150,7 +232,7 @@
           </div>
           <div>
             <h3 class="featured__label">Project Type</h3>
-            <p class="featured__info">########-########</p>
+            <p class="featured__info">Web Design & 3D Art</p>
           </div>
           <div>
             <h3 class="featured__label">Timeline</h3>
@@ -219,11 +301,11 @@
       <!-- WORK -->
       <section class="work container section">
         <h2 class="work__title">Projects</h2>
-        <p class="work__description">Lorem ipsum dolor sit amet consectetur
-          adipisicing elit. Impedit, omnis hic! Blanditiis, aperiam est at velit
-          eveniet aspernatur laborum harum ut id fugit laboriosam voluptate
-          assumenda temporibus ea, quae beatae et explicabo deserunt soluta
-          distinctio fugiat.</p>
+        <p class="work__description">
+          Here are some of the rendered artworks I've created during 
+          moments when I needed a break or found myself looking for 
+          creative inspiration outside of web development. Explore my 
+          artistic side below:</p>
         <div class="work__container">
           <!-- Project 1 -->
           <h3 class="work__project-title">Planet Earth</h3>
@@ -237,17 +319,16 @@
           <div class="work__project work__project-content1">
             <h3 class="work__project-subtitle">Planet Earth</h3>
             <p class="work__project-description1">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-              Voluptates laboriosam labore, impedit cum aperiam
-              qui cumque blanditiis excepturi!
+              Picture Earth as a masterpiece of vibrant colors and intricate 
+              details. From space, it's a breathtaking canvas painted with various 
+              shades of blue, with the deep oceans resembling rich indigo and the 
+              continents adorned in lush greens and earthy browns.
             </p>
             <p class="work__project-description2">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-              Corporis quas quae aspernatur. Quis qui consectetur impedit,
-              nisi velit, labore ipsa commodi veritatis, error tenetur esse!
-              At ut optio facere dolor mollitia voluptate adipisci iste eius.
+              It's a picture of harmony, where the delicate balance of ecosystems and 
+              the interconnectedness of all life forms create an awe-inspiring visual symphony.
             </p>
-            <a class="btn work__project-btn" href="#">More Info</a>
+            <a class="btn work__project-btn" href="https://www.instagram.com/arts.tic_musician/">See More</a>
           </div>
           <!-- Project 2 -->
           <h3 class="work__project-title">Low Poly Room</h3>
@@ -261,17 +342,17 @@
           <div class="work__project work__project-content2">
             <h3 class="work__project-subtitle">Low Poly Room</h3>
             <p class="work__project-description1">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-              Voluptates laboriosam labore, impedit cum aperiam
-              qui cumque blanditiis excepturi!
+              In this low-poly 3D-rendered student bedroom, simplicity meets 
+              functionality. The minimalist design features clean lines, muted 
+              colors, and basic geometric shapes, creating a tranquil space 
+              conducive to focused study.
             </p>
             <p class="work__project-description2">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-              Corporis quas quae aspernatur. Quis qui consectetur impedit,
-              nisi velit, labore ipsa commodi veritatis, error tenetur esse!
-              At ut optio facere dolor mollitia voluptate adipisci iste eius.
+              Compact and efficient, this room maximizes every inch, offering a 
+              cozy haven where students can find both comfort and inspiration in 
+              their academic pursuits.
             </p>
-            <a class="btn work__project-btn" href="#">More Info</a>
+            <a class="btn work__project-btn" href="https://www.instagram.com/arts.tic_musician/">See More</a>
           </div>
           <!-- Project 3 -->
           <h3 class="work__project-title">Weird Object</h3>
@@ -285,17 +366,18 @@
           <div class="work__project work__project-content3">
             <h3 class="work__project-subtitle">Weird Object</h3>
             <p class="work__project-description1">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-              Voluptates laboriosam labore, impedit cum aperiam
-              qui cumque blanditiis excepturi!
+              This enigmatic object defies conventional comprehension, a 
+              perplexing creation that even, I, the creator cannot unravel. Its 
+              form is a whimsical blend of disparate elements, an abstract 
+              collage of shapes and materials that defy categorization.
             </p>
             <p class="work__project-description2">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-              Corporis quas quae aspernatur. Quis qui consectetur impedit,
-              nisi velit, labore ipsa commodi veritatis, error tenetur esse!
-              At ut optio facere dolor mollitia voluptate adipisci iste eius.
+              It exists as an intriguing enigma, inviting viewers to ponder 
+              its existence and draw their own interpretations from its inscrutable 
+              presence, reminding us that art can be a boundless realm of the 
+              inexplicable and mysterious.
             </p>
-            <a class="btn work__project-btn" href="#">More Info</a>
+            <a class="btn work__project-btn" href="https://www.instagram.com/arts.tic_musician/">See More</a>
           </div>
         </div>
       </section>

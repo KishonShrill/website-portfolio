@@ -147,19 +147,19 @@
 /* xxl */
 @media (min-width: 1536px) {
   .about__title {
-    font-size: var(--size-4xl);
+    font-size: var(--size-6xl);
   }
   
   .about__description {
-    font-size: var(--size-l);
+    font-size: var(--size-2xl);
   }
   
   .about__subtitle {
-    font-size: var(--size-l);
+    font-size: var(--size-2xl);
   }
   
   .about__list {
-    font-size: var(--size-l);
+    font-size: var(--size-2xl);
   }
 
   .about__img {
