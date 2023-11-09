@@ -63,25 +63,25 @@ strong {
 }
 
 /* xs */
-@media (min-width: 475px) {
+@media (min-width: 495px) {
   .container {
     max-width: 475px;
   }
 }
 /* s */
-@media (min-width: 640px) {
+@media (min-width: 660px) {
   .container {
     max-width: 640px;
   }
 }
 /* m */
-@media (min-width: 768px) {
+@media (min-width: 788px) {
   .container {
     max-width: 768px;
   }
 }
 /* l */
-@media (min-width: 1024px) {
+@media (min-width: 1044px) {
   .container {
     max-width: 1024px;
   }
@@ -91,13 +91,13 @@ strong {
   }
 }
 /* xl */
-@media (min-width: 1280px) {
+@media (min-width: 1300px) {
   .container {
     max-width: 1280px;
   }
 }
 /* xxl */
-@media (min-width: 1536px) {
+@media (min-width: 1556px) {
   .container {
     max-width: 1536px;
   }

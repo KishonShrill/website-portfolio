@@ -12,6 +12,11 @@ export default defineConfig({
         main: resolve(__dirname, './index.html'),
         mas_amicus: resolve(__dirname, './mas_amicus/index.html'),
         minimalistic: resolve(__dirname, './minimalistic/index.html'),
+        
+        news_homepage_main: resolve(__dirname, './projects/news_homepage/index.html'),
+        nft_preview_card_component: resolve(__dirname, './projects/nft_preview_card_component/index.html'),
+        product_preview_card_component: resolve(__dirname, './projects/product_preview_card_component/index.html'),
+        qr_code_component: resolve(__dirname, './projects/qr_code_component/index.html'),
       },
     }
   }  

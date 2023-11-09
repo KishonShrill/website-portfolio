@@ -8,9 +8,7 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
     "build": "vite build",
-    "preview": "vite preview",
-    "start": "concurrently \"npm run dev\" \"npm run serve\"",
-    "serve": "npx nodemon recentlyMadeProjects.cjs"
+    "preview": "vite preview"
   },
   "devDependencies": {
     "gh-pages": "^6.0.0",

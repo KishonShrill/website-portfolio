@@ -35,22 +35,33 @@
 }
 
 .about__ul {
-  display: flex;
-  flex-direction: column;
-  gap: 1em;
-  list-style-type: '\1F4DA';
-  padding-left: 1em;
-  flex: 1;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-rows: 1fr 1fr 1fr;
+  /* gap: 1rem; */
+  border: 1px solid red;
 }
 
 .about__list {
+  height: 180px;
+  width: max(100%, 18.75rem);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  border: 1px solid red;
   font-size: var(--size-s);
   color: var(--clr-secondary);
 }
 
-.about__list::before {
-  content: '';
-  margin-left: 0.5em;
+.about__list img {
+  height: 100%;
+}
+
+.about__list p {
+  width: 100%;
+  display: block;
+  text-align: center;
 }
 
 /* xs */
