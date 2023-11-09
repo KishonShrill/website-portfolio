@@ -7,30 +7,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="My Portfolio Website" />
     <meta name="keywords" content="web design, html, css, js" />
+    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <title>Website Portfolio</title>
 
     <!-- Pre-Loader Script -->
     <script>
       $(window).on("load", function() {
-        // Add a 3-second (3000 milliseconds) delay before fading out
+        // Add a 1-second (1000 milliseconds) delay before fading out
         setTimeout(function() {
           $(".loader-wrapper").fadeOut("slow");
-        }, 3000);
+        }, 1000);
       });
     </script>
 
-    <script type="module" crossorigin src="/website-portfolio/assets/main-e9c9aa0a.js"></script>
-    <link rel="modulepreload" crossorigin href="/website-portfolio/assets/dark-mode-6de210e5.js">
-    <link rel="stylesheet" href="/website-portfolio/assets/dark-mode-2f44bc4b.css">
-    <link rel="stylesheet" href="/website-portfolio/assets/index-7c5f8db6.css">
+    <script type="module" crossorigin src="/website-portfolio/assets/main-8ae5f4c7.js"></script>
+    <link rel="modulepreload" crossorigin href="/website-portfolio/assets/dark-mode-83c2f194.js">
+    <link rel="stylesheet" href="/website-portfolio/assets/dark-mode-cd370941.css">
+    <link rel="stylesheet" href="/website-portfolio/assets/index-9a6cb573.css">
   </head>
 
   <body>
     <!--! Pre-Loader -->
-    <div class="loader-wrapper">
+    <!-- <div class="loader-wrapper">
       <img class="imageSpin" src="./preloadLogo.jpg" alt="">
-    </div>
+    </div> -->
 
     <header class="header container">
       <a href="https://www.facebook.com/ChriscentProduction/">
@@ -55,7 +56,7 @@
               </svg>
             </button>
           </li>
-          <li><a class="header__explore btn" href="#">Explore</a></li>
+          <li><a class="header__explore btn">Explore</a></li>
         </ul>
         <button class="header__bars">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
@@ -85,11 +86,29 @@
             </button>
           </li>
           <li>
-            <a class="mobile-nav__btn btn" href="#">Explore More</a>
+            <a class="mobile-nav__btn btn ">Explore</a>
           </li>
         </ul>
       </nav>
     </div>
+
+    <div class="explore-container">
+      <div class="explore-container__header explore__container full-bleed">
+        <a class="explore-container__closeBtn btn">Close</a>
+      </div>
+      <div class="explore-container__album explore__container">
+        <div class="grid grid1"><img src="" alt=""></div>
+        <div class="grid grid2"><img src="" alt=""></div>
+        <div class="grid grid3"><img src="" alt=""></div>
+        <div class="grid grid4"><img src="" alt=""></div>
+        <div class="grid grid5"><img src="" alt=""></div>
+        <div class="grid grid6"><img src="" alt=""></div>
+        <div class="grid grid7"><img src="" alt=""></div>
+        <div class="grid grid8"><img src="" alt=""></div>
+        <div class="grid grid9"><img src="" alt=""></div>
+      </div>
+    </div>
+
     <!-- Importing Disqus Comment Section -->
     <button class="comment__btn">
       <svg 
@@ -160,17 +179,13 @@
           </p>
           <hr class="about__hr" />
           <h3 class="about__subtitle">Technologies</h3>
-          <div class="about__ul-container">
-            <ul class="about__ul">
-              <li class="about__list">HTML</li>
-              <li class="about__list">CSS</li>
-              <li class="about__list">Java</li>
-            </ul>
-            <ul class="about__ul">
-              <li class="about__list">C</li>
-              <li class="about__list">C++</li>
-              <li class="about__list">Blender 3D</li>
-            </ul>
+          <div class="about__ul">
+            <div class="about__list"><img src="https://fakeimg.pl/300x300" alt=""><p>HTML</p></div>
+            <div class="about__list"><img src="https://fakeimg.pl/300x300" alt=""><p>CSS</p></div>
+            <div class="about__list"><img src="https://fakeimg.pl/300x300" alt=""><p>Java</p></div>
+            <div class="about__list"><img src="https://fakeimg.pl/300x300" alt=""><p>C</p></div>
+            <div class="about__list"><img src="https://fakeimg.pl/300x300" alt=""><p>C++</p></div>
+            <div class="about__list"><img src="https://fakeimg.pl/300x300" alt=""><p>Blender 3D</p></div>
           </div>
         </div>
         <div class="about__img-wrapper">
@@ -381,7 +396,6 @@
     <footer class="footer container section">
       <h3 class="footer__title"><strong>~ Chriscent Production ~</strong></h3>
     </footer>
-    
   </body>
 
 </html>
