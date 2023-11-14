@@ -31,8 +31,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Solution URL here](https://github.com/KishonShrill/ApplyingMyKnowledge/tree/master/homepage/projects/news-homepage-main)
-- Live Site URL: [Live site URL here](https://kishonshrill.github.io/ApplyingMyKnowledge/homepage/projects/news-homepage-main.html)
+- Solution URL: [Solution URL here](https://github.com/KishonShrill/website-portfolio/tree/main/projects/news_homepage)
+- Live Site URL: [Live site URL here](https://kishonshrill.github.io/website-portfolio/projects/news_homepage/)
 
 ## My process
 
@@ -53,6 +53,6 @@ I used flexbox because it is an easy way to center containers and images on the 
 
 ## Author
 
-- Website - [Chriscent Pingol](https://kishonshrill.github.io/ApplyingMyKnowledge/homepage/index.html)
+- Website - [Chriscent Pingol](https://kishonshrill.github.io/website-portfolio/)
 - Frontend Mentor - [@KishonShrill](https://www.frontendmentor.io/profile/KishonShrill)
 

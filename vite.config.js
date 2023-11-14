@@ -16,6 +16,7 @@ export default defineConfig({
         nft_preview_card_component: resolve(__dirname, './projects/nft_preview_card_component/index.html'),
         product_preview_card_component: resolve(__dirname, './projects/product_preview_card_component/index.html'),
         qr_code_component: resolve(__dirname, './projects/qr_code_component/index.html'),
+        results_summary_component: resolve(__dirname, './projects/results_summary_component/index.html'),
       },
     }
   }  
