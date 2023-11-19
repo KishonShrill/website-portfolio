@@ -8,42 +8,26 @@
     
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <title>Frontend Mentor | Newsletter sign-up form with success message</title>
+    <title>Frontend Mentor | Successfully Signed Up</title>
     <script type="module" crossorigin src="/website-portfolio/assets/modulepreload-polyfill-3cfb730f.js"></script>
     <script type="module" crossorigin src="/website-portfolio/assets/index-09ce48f4.js"></script>
     <link rel="stylesheet" href="/website-portfolio/assets/index-5aa675b8.css">
   </head>
   <body>
 
-    <main class="sign-up-wrapper">
-      <!-- Sign-up form start -->
-      <section class="sign-up__container description">
-        <h1 class="description__title">Stay updated!</h1>
-        <p class="description__subtitle">Join 60,000+ product managers receiving monthly updates on:</p>
-        <ul class="description__list">
-          <li>Product discovery and building what matters</li>
-          <li>Measuring to ensure updates are a success</li>
-          <li>And much more!</li>
-        </ul>
-        <div class="sign-up__info">
-          <p class="sign-up__input-legend">Email address</p>
-          <p class="sign-up__input-legend sign-up__warning"></p>
-        </div>
-        <input 
-          class="sign-up__input"
-          type="email" 
-          id="email" 
-          name="mail" 
-          placeholder="email@company.com"
-        >
-        <input 
-          class="sign-up__btn"
+    <main class="success-form-wrapper">
+      <span class="svg-check"></span>
+      <h1 class="success-form__title">Thanks for subscribing!</h1>
+      <p class="success-form__subtitle">
+        A confirmation email has been sent to <br>
+        <span class="bold getEmail">###</span>. Please open it and click on the button inside to confirm your subscription. 
+      </p>
+      <input 
+          class="sign-up__btn success__btn"
           type="submit"
-          value="Subscribe to monthly newsletter"
-        ></input>
-      </section>
-
-      <section class="sign-up__container"></section>
+          value="Dismiss message"
+          onclick="window.location.href = '../'"
+      ></input>
     </main>
     
     <footer class="attribution">
@@ -52,7 +36,7 @@
         Coded by <a href="https://github.com/KishonShrill"> Chriscent Pingol</a>.</p>
       </div>
 
-      <p class="web">Go back <a href="../../index.html"> Home</a>.</p>
+      <p class="web">Go back <a href="../../../index.html"> Home</a>.</p>
     </footer>
   </body>
 </html>
