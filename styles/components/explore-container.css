@@ -67,10 +67,6 @@
   transition: all 1;
 }
 
-.grid:hover {
-  transform: translateY(-15px);
-}
-
 .grid img {
   width: 100%;
   height: 100%;

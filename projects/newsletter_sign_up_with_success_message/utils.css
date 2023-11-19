@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+* {
+  --clr-dark: #252525;
+  --clr-light: hsl(0, 0%, 100%);
+  --clr-primary: hsl(4, 100%, 67%);
+  --clr-shade740: hsl(235, 18%, 26%);
+  --clr-shade800: hsl(234, 29%, 20%);
+  --clr-grey: hsl(231, 7%, 60%);
+
+  --font: 'Roboto', sans-serif;
+}
+
+.web {
+  display: block;
+}
+
+.phone {
+  display: none;
+}
