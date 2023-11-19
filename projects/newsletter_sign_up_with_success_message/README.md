@@ -1,6 +1,6 @@
-# Frontend Mentor - News Homepage solution
+# Frontend Mentor - Newsletter Sign Up with Success Message solution
 
-This is a solution to the [Product preview card component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/news-homepage-H6SWTa1MFl). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
+This is a solution to the [Newsletter sign up with success message challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/newsletter-signup-form-with-success-message-3FC1AZbNrv/hub). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
 
 ## Table of contents
 
@@ -11,7 +11,6 @@ This is a solution to the [Product preview card component challenge on Frontend 
 - [My process](#my-process)
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
-  - [Continued development](#continued-development)
   - [Useful resources](#useful-resources)
 - [Author](#author)
 
@@ -24,11 +23,12 @@ Users should be able to:
 
 - View the optimal layout depending on their device's screen size
 - See hover and focus states for interactive elements
+- Transition to success page when inputing correct and valid email
+- Display error message when inputing invalid email
 
 ### Screenshot
 
-!!! Under Construction !!!
-<!-- ![](assets\images\newspage.jpg) -->
+![](design\desktop-design.jpg)
 
 ### Links
 

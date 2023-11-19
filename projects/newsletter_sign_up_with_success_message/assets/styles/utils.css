@@ -11,10 +11,7 @@
   --font: 'Roboto', sans-serif;
 }
 
-.web {
-  display: block;
-}
-
-.phone {
-  display: none;
+.bold {
+  font-family: var(--font);
+  font-weight: 700;
 }

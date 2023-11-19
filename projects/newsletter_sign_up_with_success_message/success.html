@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+    <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+    <link rel="stylesheet" href="./assets/styles/utils.css">
+    <link rel="stylesheet" href="./assets/styles/style.css">
+    <script type="module" src="./index.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <title>Frontend Mentor | Successfully Signed Up</title>
+  </head>
+  <body>
+
+    <main class="success-form-wrapper">
+      <span class="svg-check"></span>
+      <h1 class="success-form__title">Thanks for subscribing!</h1>
+      <p class="success-form__subtitle">
+        A confirmation email has been sent to <br>
+        <span class="bold getEmail">###</span>. Please open it and click on the button inside to confirm your subscription. 
+      </p>
+      <input 
+          class="sign-up__btn success__btn"
+          type="submit"
+          value="Dismiss message"
+          onclick="window.location.href = './'"
+      ></input>
+    </main>
+    
+    <footer class="attribution">
+      <div>
+        <p class="web">Challenge by <a class="mentor" href="https://www.frontendmentor.io?ref=challenge" target="_blank"> Frontend Mentor</a>. 
+        Coded by <a href="https://github.com/KishonShrill"> Chriscent Pingol</a>.</p>
+      </div>
+
+      <p class="web">Go back <a href="../../index.html"> Home</a>.</p>
+    </footer>
+  </body>
+</html>
