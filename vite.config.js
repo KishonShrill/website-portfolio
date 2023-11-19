@@ -19,6 +19,7 @@ export default defineConfig({
         qr_code_component: resolve(__dirname, './projects/qr_code_component/index.html'),
         results_summary_component: resolve(__dirname, './projects/results_summary_component/index.html'),
         newsletter_sign_up_with_success_message: resolve(__dirname, './projects/newsletter_sign_up_with_success_message/index.html'),
+        success: resolve(__dirname, './projects/newsletter_sign_up_with_success_message/success/index.html'),
       },
     }
   }  

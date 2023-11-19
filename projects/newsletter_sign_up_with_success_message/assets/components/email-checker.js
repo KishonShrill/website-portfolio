@@ -17,7 +17,7 @@ const emailChecker = () => {
     localStorage.setItem("email", emailInput.toLowerCase());
     emptyWarningText.innerText = ''; // Clear any previous warning
     emailInputBox.style.border = '1px solid #252525'; // Reset border
-    window.location.href = './success.html';
+    window.location.href = './success/';
   });
 
   const isValidEmail = (email) => {
