@@ -1,1 +1,0 @@
-import{m as o,d as c}from"./dark-mode-83c2f194.js";const e=()=>{window.onload=function(){Particles.init({selector:".background"})},Particles.init({selector:".background",color:["#03dac6","#ff0266","#000000"],connectParticles:!0,responsive:[{breakpoint:768,options:{color:["#faebd7","#03dac6","#ff0266"],maxParticles:43,connectParticles:!1}}]})};o();c();e();

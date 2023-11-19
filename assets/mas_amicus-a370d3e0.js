@@ -1,0 +1,1 @@
+import"./modulepreload-polyfill-3cfb730f.js";import{m as e,d as t}from"./dark-mode-8a2d271b.js";const n=()=>{var o=2;setInterval(function(){document.getElementById("btn"+o).click(),o++,console.log(o),o==4&&(o=1)},5e3)};e();t();n();
