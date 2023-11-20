@@ -9,43 +9,31 @@
     
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    
-    <title>Frontend Mentor | Newsletter sign-up form with success message</title>
+
+    <title>Frontend Mentor | Age calculator app</title>
     <script type="module" crossorigin src="/website-portfolio/assets/modulepreload-polyfill-3cfb730f.js"></script>
-    <script type="module" crossorigin src="/website-portfolio/assets/index-09ce48f4.js"></script>
-    <link rel="stylesheet" href="/website-portfolio/assets/index-5aa675b8.css">
+    <link rel="stylesheet" href="/website-portfolio/assets/index-9f77f084.css">
   </head>
   <body>
 
-    <main class="sign-up-wrapper">
-      <!-- Sign-up form start -->
-      <section class="sign-up__container description">
-        <h1 class="description__title">Stay updated!</h1>
-        <p class="description__subtitle">Join 60,000+ product managers receiving monthly updates on:</p>
-        <ul class="description__list">
-          <li>Product discovery and building what matters</li>
-          <li>Measuring to ensure updates are a success</li>
-          <li>And much more!</li>
-        </ul>
-        <div class="sign-up__info">
-          <p class="sign-up__input-legend">Email address</p>
-          <p class="sign-up__input-legend sign-up__warning"></p>
+    <main>
+      <section class="date__inputs-container">
+        <div><p class="date__legend">D A Y</p>
+          <input class="date__input" type="number" min="1" max="2" placeholder="DD">
         </div>
-        <input 
-          class="sign-up__input"
-          type="email" 
-          id="email" 
-          name="mail" 
-          placeholder="email@company.com"
-        >
-        <input 
-          class="sign-up__btn"
-          type="submit"
-          value="Subscribe to monthly newsletter"
-        ></input>
+        <div><p class="date__legend">M O N T H</p>
+          <input class="date__input" type="number" min="1" max="2" placeholder="MM">
+        </div>
+        <div><p class="date__legend">Y E A R</p>
+          <input class="date__input" type="number" min="1" max="4" placeholder="YYYY">
+        </div>
       </section>
-
-      <section class="sign-up__container"></section>
+      <hr>
+      <section class="date__output-container">
+        <h1 class="date__output"><i><span class="date__answer" id="years">- -</span> years</i></h1>
+        <h1 class="date__output"><i><span class="date__answer" id="months">- -</span> months</i></h1>
+        <h1 class="date__output"><i><span class="date__answer" id="days">- -</span> days</i></h1>
+      </section>
     </main>
     
     <footer class="attribution">
