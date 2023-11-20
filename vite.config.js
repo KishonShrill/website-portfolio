@@ -20,6 +20,7 @@ export default defineConfig({
         results_summary_component: resolve(__dirname, './projects/results_summary_component/index.html'),
         newsletter_sign_up_with_success_message: resolve(__dirname, './projects/newsletter_sign_up_with_success_message/index.html'),
         success: resolve(__dirname, './projects/newsletter_sign_up_with_success_message/success/index.html'),
+        age_calculator_app: resolve(__dirname, './projects/age_calculator_app/index.html'),
       },
     }
   }  

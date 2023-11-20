@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+    <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+    <link rel="stylesheet" href="./assets/styles/utils.css">
+    <link rel="stylesheet" href="./assets/styles/style.css">
+    <script type="module" src="index.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <title>Frontend Mentor | Age calculator app</title>
+  </head>
+  <body>
+
+    <main>
+      <section class="date__inputs-container">
+        <div><p class="date__legend">D A Y</p>
+          <input class="date__input" type="number" min="1" max="2" placeholder="DD">
+        </div>
+        <div><p class="date__legend">M O N T H</p>
+          <input class="date__input" type="number" min="1" max="2" placeholder="MM">
+        </div>
+        <div><p class="date__legend">Y E A R</p>
+          <input class="date__input" type="number" min="1" max="4" placeholder="YYYY">
+        </div>
+      </section>
+      <hr>
+      <section class="date__output-container">
+        <h1 class="date__output"><i><span class="date__answer" id="years">- -</span> years</i></h1>
+        <h1 class="date__output"><i><span class="date__answer" id="months">- -</span> months</i></h1>
+        <h1 class="date__output"><i><span class="date__answer" id="days">- -</span> days</i></h1>
+      </section>
+    </main>
+    
+    <footer class="attribution">
+      <div>
+        <p class="web">Challenge by <a class="mentor" href="https://www.frontendmentor.io?ref=challenge" target="_blank"> Frontend Mentor</a>. 
+        Coded by <a href="https://github.com/KishonShrill"> Chriscent Pingol</a>.</p>
+      </div>
+
+      <p class="web">Go back <a href="../../index.html"> Home</a>.</p>
+    </footer>
+  </body>
+</html>
