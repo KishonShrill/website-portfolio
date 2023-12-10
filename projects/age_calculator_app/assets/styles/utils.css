@@ -22,9 +22,6 @@ input[type=number]{
   -moz-appearance: textfield;
 }
 
-/* .web {display: none;} */
-/* .phone {display: block;} */
-
 /* Attribution Div */
 .attribution {
   width: 100%;
@@ -48,7 +45,4 @@ input[type=number]{
 }
 .attribution p a:visited {
   color: rgb(23, 226, 23);
-}
-.attribution .phone {
-  display: none;
 }

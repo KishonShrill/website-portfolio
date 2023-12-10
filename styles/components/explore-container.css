@@ -64,7 +64,11 @@
   margin: 0 auto;
   background-color: rgb(161, 188, 248);
   transform: translateY(0);
-  transition: all 1;
+  transition: all 0.15s;
+}
+
+.grid:hover {
+  transform: translateY(-10px);
 }
 
 .grid img {
