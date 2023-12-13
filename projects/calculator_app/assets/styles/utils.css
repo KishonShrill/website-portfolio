@@ -1,0 +1,70 @@
+:root {
+  --clr-main: hsl(222, 26%, 31%);
+  --clr-keypad: hsl(223, 31%, 20%);
+  --clr-screen: hsl(224, 36%, 15%);
+
+  --clr-secondaryBackground: hsl(225, 21%, 49%);
+  --clr-secondaryShadow: hsl(224, 28%, 35%);
+
+  --clr-primaryBackground: hsl(6, 63%, 50%);
+  --clr-primaryShadow: hsl(6, 70%, 34%);
+
+  --clr-keyBackground: hsl(30, 25%, 89%);
+  --clr-keyShadow: hsl(28, 16%, 65%);
+
+  --text-clr: hsl(221, 14%, 31%);
+  --clr-deleteHover: hsl(226, 65%, 83%);
+  --clr-keysHover: hsl(30, 100%, 98%);
+  --clr-equalHover: hsl(6, 84%, 70%);
+  --clr-theme: aliceblue;
+  --clr-equalColor: aliceblue;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100dvh;
+}
+
+body {
+  position: relative;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type=number]{
+  -moz-appearance: textfield;
+}
+
+/* Attribution Div */
+.attribution {
+  width: 100%;
+  height: 3vh;
+  padding: 0 20px 0 20px;
+  
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background-color: #232323;
+  color: #fff;
+  overflow: hidden;
+}
+.attribution p {
+  font-size: 0.9375rem;
+}
+.attribution p a:visited {
+  color: rgb(23, 226, 23);
+}
