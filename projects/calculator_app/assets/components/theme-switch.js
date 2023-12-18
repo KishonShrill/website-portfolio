@@ -29,7 +29,7 @@ const themeSwitcher = () => {
         default:
           break;
       }
-    } else {firstInput.setAttribute('checked', 'checked');}
+    } else {firstRadio.setAttribute('checked', 'checked');}
 
     radioButtons.forEach((radioButton) => {
       radioButton.addEventListener('change', function () {

@@ -1,0 +1,111 @@
+:root {
+  font-size: 15px;
+  font-family: 'Overpass', sans-serif;
+
+  --clr-light: hsl(0, 0%, 100%);
+  --clr-lightGrey: hsl(217, 12%, 63%);
+  --clr-mediumGrey: hsl(216, 12%, 54%);
+  --clr-mediumBlue: rgba(38,46,56,255);
+  --clr-darkBlue: rgba(23,30,41,255);
+  --clr-veryDarkBlue: rgba(20,21,25,255);
+
+  --clr-primary: hsl(25, 97%, 53%);
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background-color: var(--clr-veryDarkBlue);
+  color: var(--clr-light);
+}
+
+.component {
+  width: 410px;
+  height: auto;
+  padding: 2.2rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  border-radius: 30px;
+
+  background: radial-gradient(circle at 50% 0%, var(--clr-mediumBlue), var(--clr-darkBlue) 100%);
+}
+
+.star-wrapper {
+  height: 50px;
+  width: 50px;
+
+  display: grid;
+  place-content: center;
+
+  border-radius: 50%;
+
+  background-color: var(--clr-mediumBlue);
+}
+
+.component__title {
+  margin-top: 2rem;
+  font-size: 1.8rem;
+}
+
+.component__para {
+  margin-top: 10px;
+
+  line-height: 25px;
+  color: var(--clr-lightGrey);
+}
+
+.component__btn-wrapper {
+  margin-top: 1.8rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.component__btn {
+  height: 50px;
+  width: 50px;
+  
+  padding-top: 0.3125rem;
+
+  font-size: 1.1rem;
+  font-weight: 700;
+
+  border: none;
+  border-radius: 50%;
+  text-align: center;
+
+  color: var(--clr-mediumGrey);
+  background-color: var(--clr-mediumBlue);
+}
+.component__btn:hover {
+  color: var(--clr-light) !important;
+  background-color: var(--clr-lightGrey) !important;
+}
+.component__btn:focus {
+  color: var(--clr-light);
+  background-color: var(--clr-primary);
+}
+
+.component__submit {
+  width: auto;
+  height: 45px;
+  margin-top: 2rem;
+  padding-top: 0.3125rem;
+
+  font-weight: 700;
+
+  border: none;
+  border-radius: 25px;
+  text-align: center;
+  color: var(--clr-light);
+  background-color: var(--clr-primary);
+}
+.component__submit:hover {
+  color: var(--clr-primary);
+  background-color: var(--clr-light);
+}
