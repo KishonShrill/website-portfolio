@@ -56,4 +56,3 @@ In this solution, I have...
 
 - Website - [Chriscent Pingol](https://kishonshrill.github.io/website-portfolio/)
 - Frontend Mentor - [@KishonShrill](https://www.frontendmentor.io/profile/KishonShrill)
-

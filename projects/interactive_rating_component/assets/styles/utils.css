@@ -40,6 +40,7 @@ input {
 .attribution p {
   font-size: 0.9375rem;
 }
-.attribution p a:visited {
-  color: rgb(23, 226, 23);
-}
+.attribution p a { color: deeppink; }
+.attribution p a:hover { color: rgb(63, 20, 255); }
+.attribution p a:visited { color: rgb(23, 226, 23); }
+.attribution p a:visited:hover { color: rgb(63, 20, 255); }

@@ -1,6 +1,10 @@
 const styledBtn = () => {
   document.addEventListener('DOMContentLoaded', function () {
     const ratingButtons = document.querySelectorAll('button[name="rating"]');
+    const submitButton = document.querySelector('.component__submit');
+    const scorePick = document.querySelector('.score-rating');
+    var frontCard = document.querySelector('.front-card');
+    var backCard = document.querySelector('.back-card');
     let rating = 0;
 
     function rate(star) {
@@ -23,6 +27,16 @@ const styledBtn = () => {
         console.log("value is: " + rating);
         rate(this.value);
       });
+    });
+
+    submitButton.addEventListener('click', () => {
+      if (0 == rating) { 
+        alert("You must leave a rating to proceed."); 
+        return;
+      }
+      frontCard.style.transform = 'rotateY(180deg)';
+      backCard.style.transform ='rotateY(0deg)';
+      scorePick.innerText = `${rating}`;
     });
   });
 }

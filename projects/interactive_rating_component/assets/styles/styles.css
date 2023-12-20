@@ -14,6 +14,7 @@
 
 body {
   display: flex;
+  padding-inline: 20px;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -23,17 +24,32 @@ body {
 }
 
 .component {
-  width: 410px;
-  height: auto;
+  width: min(100%, 410px);
+  height: 410px;
+  position: relative;
+  transform-style: preserve-3d; /* TODO: Is this even needed? */
+}
+
+.front-card,
+.back-card {
+  width: 100%;
+  height: 100%;
   padding: 2.2rem;
 
+  position: absolute;
+  backface-visibility: hidden;
+  
+  border-radius: 30px;
+  background: radial-gradient(circle at 50% 0%, var(--clr-mediumBlue), var(--clr-darkBlue) 100%);
+  transition: transform 1s;
+}
+
+
+/* Front Card Stuff */
+.front-card {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-
-  border-radius: 30px;
-
-  background: radial-gradient(circle at 50% 0%, var(--clr-mediumBlue), var(--clr-darkBlue) 100%);
 }
 
 .star-wrapper {
@@ -55,7 +71,6 @@ body {
 
 .component__para {
   margin-top: 10px;
-
   line-height: 25px;
   color: var(--clr-lightGrey);
 }
@@ -108,4 +123,97 @@ body {
 .component__submit:hover {
   color: var(--clr-primary);
   background-color: var(--clr-light);
+}
+
+
+/* Back Card Stuff */
+.back-card {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  transform: rotateY(180deg);
+}
+
+.back-card__logo {
+  margin-top: 16px;
+}
+
+.illustration-phone {display: none;}
+
+.back-card__score {
+  padding: calc(6px + 3px) 20px 6px;
+  border-radius: 20px;
+  color: var(--clr-primary);
+  background-color: var(--clr-mediumBlue);
+}
+
+.back-card__title  {
+  width: 100%;
+  text-align: center;
+  font-size: 1.9rem;
+}
+
+.back-card__description {
+  margin-top: 10px;
+  line-height: 25px;
+  text-align: center;
+  color: var(--clr-lightGrey);
+}
+
+@media screen and (max-width: 475px) {
+  .attribution { display: none; }
+  
+  /* Front Card */
+  .component {
+    height: 335px;
+  }
+  .star-wrapper {
+    height: 40px;
+    width: 40px;
+  }
+  .front-card,
+  .back-card {
+    padding: 1.5rem;
+    border-radius: 15px;
+  }
+  .component__title {
+    margin-top: 1rem;
+    font-size: 1.6rem;
+    font-weight: 500;
+  }
+  .component__para {
+    line-height: 22px;
+    font-size: 0.95rem;
+  }
+  .component__btn-wrapper {
+    margin-top: 1.5rem;
+  }
+  .component__btn {
+    height: 42px;
+    width: 42px;
+  }
+  .component__submit {
+    margin-top: 1.5rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+  }
+
+  /* Back Card */
+  .illustration-web { display: none; }
+  .illustration-phone { display: block; }
+  .back-card__score {
+    padding: calc(6px + 3px) 10px 6px;
+    font-size: 0.95rem;
+  }
+  .back-card__title  {
+    margin-top: 1rem;
+    font-size: 1.6rem;
+    font-weight: 500;
+  }
+  .back-card__description {
+    line-height: 22px;
+    font-size: 0.95rem;
+  }
+  .description-spacer {display: none;}
 }
