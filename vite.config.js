@@ -23,6 +23,7 @@ export default defineConfig({
         age_calculator_app: resolve(__dirname, './projects/age_calculator_app/index.html'),
         calculator_app: resolve(__dirname, './projects/calculator_app/index.html'),
         interactive_rating_component: resolve(__dirname, './projects/interactive_rating_component/index.html'),
+        four_card_feature_section: resolve(__dirname, './projects/four_card_feature_section/index.html'),
       },
     }
   }  
