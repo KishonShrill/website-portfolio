@@ -1,4 +1,10 @@
 const websiteFunctions = () => {
+  document.addEventListener('DOMContentLoaded', () => {
+    setTimeout(function() {
+      $(".loader-wrapper").fadeOut("slow");
+    }, 1000);
+  });
+
   function openExploreBtn(selectedCategory) {
     var x = document.getElementsByClassName("tabs");
 

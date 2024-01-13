@@ -24,6 +24,8 @@ export default defineConfig({
         calculator_app: resolve(__dirname, './projects/calculator_app/index.html'),
         interactive_rating_component: resolve(__dirname, './projects/interactive_rating_component/index.html'),
         four_card_feature_section: resolve(__dirname, './projects/four_card_feature_section/index.html'),
+        profile_card_component: resolve(__dirname, './projects/profile_card_component/index.html'),
+        blog_preview_card: resolve(__dirname, './projects/blog_preview_card/index.html'),
       },
     }
   }  

@@ -1,4 +1,4 @@
-# Frontend Mentor - News Homepage solution
+# Frontend Mentor - Age Calculator
 
 This is a solution to the [Age Calculator](https://www.frontendmentor.io/challenges/age-calculator-app-dF9DFFpj-Q/). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
 

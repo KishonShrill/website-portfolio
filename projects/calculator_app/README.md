@@ -1,4 +1,4 @@
-# Frontend Mentor - News Homepage solution
+# Frontend Mentor - Calculator
 
 This is a solution to the [Calculator](https://www.frontendmentor.io/challenges/calculator-app-9lteq5N29). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
 
