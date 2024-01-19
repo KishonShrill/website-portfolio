@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+    <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+    <script type="module" src="./main.js"></script>
+
+    <title>Frontend Mentor | Interactive card details form</title>
+
+  </head>
+  <body>
+
+    <main class="interactive-wrapper">
+      <section class="card-wrapper">
+        <div class="card card1">
+          <img class="card__logo" src="./assets/images/card-logo.svg" alt="">
+          <div>
+            <p class="card__number">0000 0000 0000 0000</p>
+            <div id="flex-space-between">
+              <p class="card__owner">JANE APPLESEED</p>
+              <p class="card__expiry">00/00</p>
+            </div>
+          </div>
+        </div>
+        <div class="card card2">
+          <p class="card__cvv">000</p>
+        </div>
+      </section>
+
+      <section class="form-wrapper">
+        <div class="form">
+          <div class="form__input-row1"><label class="form__input-legend" for="card-name">CARDHOLDER NAME</label>
+            <input class="form__input" id="card-name" type="text" placeholder="e.g. Jane Appleseed">
+            <p class="form__input-error error-name"> </p>
+          </div>
+          <div class="form__input-row2"><label class="form__input-legend" for="card-nmbr">CARD NUMBER</label>
+            <input class="form__input" id="card-nmbr" type="number" min="16" max="16" placeholder="e.g. 1234 5678 9123 0000">
+            <p class="form__input-error error-number">  </p>
+          </div>
+          <div class="form__input-row3-col1"><label class="form__input-legend" for="card-month">EXP. DATE (MM/YY)</label>
+            <div class="form__3rd-row-1st-col">
+              <input class="form__input month" id="card-month" type="number" min="1" max="2" placeholder="MM">
+              <input class="form__input year" id="card-year" type="number" min="1" max="2" placeholder="YY">
+            </div>
+            <p class="form__input-error error-date">  </p>
+          </div>  
+          <div class="form__input-row3-col2"><label class="form__input-legend" for="card-cvc">CVC</label>
+            <input class="form__input" id="card-cvc" type="number" min="1" max="2" placeholder="e.g. 123">
+            <p class="form__input-error error-cvc">  </p>
+          </div>
+          <button class="form__submit form__input-row4" type="button">Confirm</button>
+        </div>
+      </section>
+    </main>
+
+
+    <!-- Completed state start -->
+<!-- 
+    Thank you!
+    We've added your card details
+    Continue -->
+    
+    <footer class="attribution web">
+      <div>
+        <p>Challenge by <a class="mentor" href="https://www.frontendmentor.io/challenges/age-calculator-app-dF9DFFpj-Q/hub" target="_blank"> Frontend Mentor</a>. 
+        Coded by <a href="https://github.com/KishonShrill"> Chriscent Pingol</a>.</p>
+      </div>
+    
+      <p>Go back <a href="../../index.html"> Home</a>.</p>
+    </footer>
+  </body>
+</html>

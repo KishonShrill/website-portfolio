@@ -4,7 +4,7 @@ import vue from '@vitejs/plugin-vue'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: '/website-portfolio/',
+  base: 'website-portfolio/',
   plugins: [vue()],
   build: {
     rollupOptions: {
@@ -26,6 +26,7 @@ export default defineConfig({
         four_card_feature_section: resolve(__dirname, './projects/four_card_feature_section/index.html'),
         profile_card_component: resolve(__dirname, './projects/profile_card_component/index.html'),
         blog_preview_card: resolve(__dirname, './projects/blog_preview_card/index.html'),
+        interactive_card_details_form: resolve(__dirname, './projects/interactive_card_details_form/index.html'),
       },
     }
   }  
