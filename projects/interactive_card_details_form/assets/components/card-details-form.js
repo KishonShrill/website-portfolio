@@ -20,6 +20,11 @@ const cardDetails = () => {
     const error_calendar = document.querySelector('.error-date');
     const error_cvc = document.querySelector('.error-cvc');
 
+    /* Div States */
+    const form = document.querySelector('.form');
+    const form_complete = document.querySelector('.form-complete');
+    const complete = document.querySelector('#btn-complete');
+
     /* States */
     let isName = false;
     let isNumber = false;
@@ -147,7 +152,23 @@ const cardDetails = () => {
         outNumber.innerText = formatCreditCardNumber(number.value);
         outExpiry.innerText = `${getMonth}/${getYear}`;
         outCVC.innerText = cvc.value;
+        form.style.display = 'none';
+        form_complete.style.display = 'flex';
       }
+    });
+
+    complete.addEventListener('click', () => {
+      name.value = "";
+      number.value = "";
+      month.value = "";
+      year.value = "";
+      cvc.value = "";
+      outName.innerText = 'Jane Appleseed';
+      outNumber.innerText = '0000 0000 0000 0000';
+      outExpiry.innerText = '00/00';
+      outCVC.innerText = '000';
+      form.style.display = 'grid';
+      form_complete.style.display = 'none';
     });
   });
 }

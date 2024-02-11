@@ -17,6 +17,7 @@ $clr-activeInputBorder: linear(hsl(249, 99%, 64%) to hsl(278, 94%, 30%));
 $clr-white: hsl(0, 0%, 100%);
 $clr-darkGrayishViolet: hsl(279, 6%, 55%);
 $clr-veryDarkViolet: hsl(278, 68%, 11%);
+$clr-darkPurple: #220930;
 
 body {
   width: 100%;
@@ -167,6 +168,42 @@ body {
         cursor: pointer;
 
         &:hover {background-color: hsl(278, 94%, 30%);}
+      }
+    }
+
+    .form-complete {
+      min-height: 370px;
+      width: 414px;
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      h1 {
+        margin-top: 2rem;
+        color: $clr-darkPurple;
+        font-size: 1.8rem;
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 0.3rem;
+      }
+
+      p {
+        color: $clr-darkGrayishViolet;
+        margin-top: 1.3rem;
+        font-size: 1.1rem;
+      }
+
+      a {
+        cursor: pointer;
+        margin-top: 3rem;
+        width: 90%;
+        padding-block: 15px;
+        color: #fff;
+        text-align: center;
+        text-decoration: none;
+        border-radius: 8px;
+        background-color: $clr-darkPurple;
       }
     }
   }
