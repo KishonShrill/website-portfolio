@@ -12,6 +12,39 @@
     
     <title>Website Portfolio</title>
 
+    <script>
+      fetch('./projects.json')
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        return response.json();
+      })
+      .then(data => {
+        // Get the container element
+        const listContainer = document.getElementById('explore__container');
+
+        // Iterate through the data and create HTML elements
+        data.forEach(item => {
+          const listItem = document.createElement('div');
+          listItem.innerHTML = `
+            <p>${item.name}</p>
+            <a href="${item.link}" target="_blank">
+              <picture>
+                <img src="${item.image}" alt="${item.name}" style="width:auto;">
+              </picture>
+            </a>
+            <hr>
+          `;
+          listContainer.appendChild(listItem);
+        });
+      })
+      .catch(error => {
+        console.error('Error fetching JSON:', error);
+        const errorMessage = document.getElementById('error-message');
+        errorMessage.textContent = `Error: ${error.message}`;
+      });
+    </script>
     <script type="module" crossorigin src="/website-portfolio/assets/main-c96797ec.js"></script>
     <link rel="modulepreload" crossorigin href="/website-portfolio/assets/modulepreload-polyfill-3cfb730f.js">
     <link rel="modulepreload" crossorigin href="/website-portfolio/assets/dark-mode-659be30a.js">
@@ -87,16 +120,8 @@
       <div class="explore-container__header explore__container full-bleed">
         <a class="explore-container__closeBtn btn">Close</a>
       </div>
-      <div class="explore-container__album explore__container">
-        <!-- <a class="grid" href=""><img src="./" alt=""></a> -->
-        <a class="grid" href="./projects/age_calculator_app/"><img src="./project_snapshot/age_calculator.jpg" alt=""></a>
-        <a class="grid" href="./projects/newsletter_sign_up_with_success_message/"><img src="./project_snapshot/newsletter_sign_up.jpg" alt=""></a>
-        <a class="grid" href="./projects/results_summary_component/"><img src="./project_snapshot/result_summary_component.jpg" alt=""></a>
-        <a class="grid" href="./projects/product_preview_card_component/"><img src="./project_snapshot/preview-product.jpg" alt=""></a>
-        <a class="grid" href="./projects/nft_preview_card_component/"><img src="./project_snapshot/nft_preview_card.jpg" alt=""></a>
-        <a class="grid" href="./projects/qr_code_component/"><img src="./project_snapshot/qr_code_component.jpg" alt=""></a>
-        <a class="grid" href="./projects/news_homepage/"><img src="./project_snapshot/newspage.jpg" alt=""></a>
-      </div>
+      <div class="explore-container__album explore__container" id="explore__container"></div>
+      <p id="error-message" style="color: red;"></p>
     </div>
 
     <!-- Importing Disqus Comment Section -->

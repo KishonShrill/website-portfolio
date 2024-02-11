@@ -1,0 +1,62 @@
+[
+  {
+    "name": "QR Code Component", 
+    "image": "./project_snapshot/qr_code_component.jpg", 
+    "link": "./projects/qr_code_component/"
+  },
+  {
+    "name": "News Homepage", 
+    "image": "./project_snapshot/newspage.jpg", 
+    "link": "./projects/news_homepage/"
+  },
+  {
+    "name": "Product Preview Card", 
+    "image": "./project_snapshot/preview-product.jpg", 
+    "link": "./projects/product_preview_card_component/"
+  },
+  {
+    "name": "NFT Preview Card", 
+    "image": "./project_snapshot/nft_preview_card.jpg", 
+    "link": "./projects/nft_preview_card_component/"
+  },
+  {
+    "name": "Results Summary Component", 
+    "image": "./project_snapshot/result_summary_component.jpg", 
+    "link": "./projects/results_summary_component/"
+  },
+  {
+    "name": "Newsletter Sign-up Form", 
+    "image": "./project_snapshot/newsletter_sign_up.jpg", 
+    "link": "./projects/newsletter_sign_up_with_success_message/"
+  },
+  {
+    "name": "Age Calculator", 
+    "image": "./project_snapshot/age_calculator.jpg", 
+    "link": "./projects/age_calculator_app/"
+  },
+  {
+    "name": "Interactive Rating Component", 
+    "image": "./project_snapshot/interactive_rating_component.jpg", 
+    "link": "./projects/interactive_rating_component/"
+  },
+  {
+    "name": "Four Card Feature Component", 
+    "image": "./project_snapshot/four_card_feature.jpg", 
+    "link": "./projects/four_card_feature_component/"
+  },
+  {
+    "name": "Profile Card Component", 
+    "image": "./project_snapshot/profile_card_component.jpg", 
+    "link": "./projects/profile_card_component/"
+  },
+  {
+    "name": "Blog Preview Card", 
+    "image": "./project_snapshot/blog_preview_card.jpg", 
+    "link": "./projects/blog_preview_card/"
+  },
+  {
+    "name": "Interactive Card Details Form",
+    "image": "./project_snapshot/interactive_card_details_form.jpg",
+    "link": "./projects/interactive_card_details_form/"
+  }
+]
