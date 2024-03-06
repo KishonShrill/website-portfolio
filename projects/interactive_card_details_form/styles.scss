@@ -100,7 +100,7 @@ body {
 
     .form {
       min-height: 370px;
-      width: 414px;
+      max-width: 414px;
       padding-left: 2rem;
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -268,5 +268,76 @@ body {
 }
 
 @media (max-width: 925px) {
-  
+  $phoneAdjust: 0.7;
+
+  body {
+    height: 100dvh;
+    justify-content: flex-start;
+
+    background-position: top;
+    background-size: 100% 31%;
+  }
+
+  .interactive-wrapper {
+    height: 100dvh;
+    display: flex;
+    margin-top: 0px;
+    gap: 0;
+    align-items: center;
+    flex-direction: column;
+
+    .card-wrapper {
+      display: block;
+      max-width: 520px;
+      height: 45%;
+      padding: 50px 20px 0 20px;
+
+      flex-direction: column-reverse;
+
+      .card {
+        width: calc(447px * $phoneAdjust);
+        height: calc(245px * $phoneAdjust);
+        border-radius: calc(inherit * $phoneAdjust);
+
+        &__logo {
+          width: (84px * $phoneAdjust);
+          height: (47px * $phoneAdjust);
+        }
+        &__number {
+          width: 100%;
+          margin-bottom: (1.8rem * $phoneAdjust);
+          letter-spacing: (4px * $phoneAdjust);
+          font-size: (28px * $phoneAdjust);
+        }
+        &__owner {font-size: (15px * $phoneAdjust);}
+        &__expiry {font-size: (15px * $phoneAdjust);}
+      }
+    }
+
+  }
+
+  .card1 {
+    position: absolute;
+    top: 147px;
+    padding: (1.8rem * $phoneAdjust) (1.95rem * $phoneAdjust) (1.5rem * $phoneAdjust);
+    background-size: contain;
+  }
+  .card2 {
+    margin-left: auto;
+    padding: (1.8rem * $phoneAdjust) (3.5rem * $phoneAdjust) (2rem * $phoneAdjust);
+    background-size: contain;
+  }
+
+  .form-wrapper {
+    height: 100%;
+    margin-top: 4rem;
+
+    .form {
+      padding-inline: 2rem !important;
+    }
+  }
+
+  .attribution {
+    display: none;
+  }
 }
