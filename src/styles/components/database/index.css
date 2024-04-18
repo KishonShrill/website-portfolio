@@ -1,0 +1,62 @@
+.database__body {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 170px 1fr 170px;
+  grid-template-rows: 1fr;
+}
+
+.database__nav {
+  font-size: 1rem;
+}
+
+.database__main {
+  width: 100%;
+  padding: 20px;
+}
+
+.csv__editor {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 90px 90px 70px 1fr 1fr;
+}
+
+.csv__header,
+.csv__content {
+  width: 100%;
+  grid-column: span 6;
+  display: grid;
+  grid-template-columns: inherit;
+}
+
+.csv__header {
+  padding-block: 10px;
+  border-bottom: 1px solid black;
+}
+
+.csv__content {
+  padding-block: 10px;
+  border-top: 1px solid black;
+}
+
+.action-wrapper {
+  width: 100%;
+  padding-block: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.data__actions{
+  display: flex;
+  gap: 1rem;
+}
+
+.action__add,
+.action__finish,
+.action__refresh {
+  padding: 7px 10px;
+  color: white;
+}
+
+.action__add {background-color: rgb(0, 119, 255);}
+.action__finish {background-color: rgb(62, 192, 62);}
+.action__refresh {background-color: rgb(247, 243, 19); color: black !important;}

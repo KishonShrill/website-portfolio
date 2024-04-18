@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:wght@400;700;800;900&display=swap');
+/*? Fonts to use
+font-family: 'Figtree', sans-serif;
+*/
+
+.light-mode {
+  --clr-light: #1a1e33;
+  --clr-dark: #fffffe;
+  --clr-main: #3e435b;
+  --clr-secondary: #3e435b;
+  --clr-tertiary: #3e435b;
+}
+
+:root {
+  --clr-dark: #1a1e33;
+  --clr-light: #fffffe;
+  --clr-main: #d0d5ec;
+  --clr-secondary: #8D97C0;
+  --clr-tertiary: #3e435b;
+  --clr-rose: #e11d48;
+  --clr-highlight: #535eff;
+
+  /* sizes */
+  --size-xxs: 0.5rem;
+  --size-xs: 0.75rem;
+  --size-s: 0.875rem;
+  --size-base: 1rem;
+  --size-l: 1.125rem;
+  --size-xl: 1.25rem;
+  --size-2xl: 1.5rem;
+  --size-3xl: 1.875rem;
+  --size-4xl: 2.25rem;
+  --size-5xl: 3rem;
+  --size-6xl: 3.75rem;
+  --size-7xl: 4.5rem;
+  --size-8xl: 6rem;
+  --size-9xl: 8rem;
+  --size-10xl: 10rem;
+}
+
+* {
+  margin: 0;
+  line-height: calc(1em + 0.5rem);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Figtree', sans-serif;
+  background-color: var(--clr-dark);
+  color: var(--clr-main);
+  scrollbar-gutter: stable;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--clr-light);
+}
+
+p {
+  font-weight: 400;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+  user-select: none;
+}
+
+button {
+  display: inline-block;
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: pointer;
+  color: inherit;
+}
+
+a {
+  color: var(--clr-rose);
+}
+
+strong {
+  color: var(--clr-highlight);
+}
+
+/* Scrollbar  */
+body::-webkit-scrollbar {
+  width: 8px;
+}
+
+body::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 0 rgba(0, 0, 0, 0);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: var(--clr-rose);
+  outline: 1px solid var(--clr-rose);
+}
