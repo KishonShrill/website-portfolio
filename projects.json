@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "name": "QR Code Component", 
+    "image": "/images/project_snapshot/qr_code_component.jpg", 
+    "link": "./projects/qr_code_component/"
+  },
+  {
+    "id": 2,
+    "name": "News Homepage", 
+    "image": "/images/project_snapshot/newspage.jpg", 
+    "link": "./projects/news_homepage/"
+  },
+  {
+    "id": 3,
+    "name": "Product Preview Card", 
+    "image": "/images/project_snapshot/preview-product.jpg", 
+    "link": "./projects/product_preview_card_component/"
+  },
+  {
+    "id": 4,
+    "name": "NFT Preview Card", 
+    "image": "/images/project_snapshot/nft_preview_card.jpg", 
+    "link": "./projects/nft_preview_card_component/"
+  },
+  {
+    "id": 5,
+    "name": "Results Summary Component", 
+    "image": "/images/project_snapshot/result_summary_component.jpg", 
+    "link": "./projects/results_summary_component/"
+  },
+  {
+    "id": 6,
+    "name": "Newsletter Sign-up Form", 
+    "image": "/images/project_snapshot/newsletter_sign_up.jpg", 
+    "link": "./projects/newsletter_sign_up_with_success_message/"
+  },
+  {
+    "id": 7,
+    "name": "Age Calculator", 
+    "image": "/images/project_snapshot/age_calculator.jpg", 
+    "link": "./projects/age_calculator_app/"
+  },
+  {
+    "id": 8,
+    "name": "Interactive Rating Component", 
+    "image": "/images/project_snapshot/interactive_rating_component.jpg", 
+    "link": "./projects/interactive_rating_component/"
+  },
+  {
+    "id": 9,
+    "name": "Four Card Feature Component", 
+    "image": "/images/project_snapshot/four_card_feature.jpg", 
+    "link": "./projects/four_card_feature_component/"
+  },
+  {
+    "id": 10,
+    "name": "Profile Card Component", 
+    "image": "/images/project_snapshot/profile_card_component.jpg", 
+    "link": "./projects/profile_card_component/"
+  },
+  {
+    "id": 11,
+    "name": "Blog Preview Card", 
+    "image": "/images/project_snapshot/blog_preview_card.jpg", 
+    "link": "./projects/blog_preview_card/"
+  },
+  {
+    "id": 12,
+    "name": "Interactive Card Details Form",
+    "image": "/images/project_snapshot/interactive_card_details_form.jpg",
+    "link": "./projects/interactive_card_details_form/"
+  }
+]
