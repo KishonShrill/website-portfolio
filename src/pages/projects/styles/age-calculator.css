@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap');
+
+* {
+  font-family: 'Poppins', sans-serif;
+
+  --weight-400i: 400, 1;
+  --weight-700i: 700, 1;
+  --weight-800: 800;
+
+  --clr-purple: hsl(259, 100%, 65%);
+  --clr-lightred: hsl(0, 100%, 67%);
+
+  --clr-light: hsl(0, 0%, 100%);
+  --clr-offlight: hsl(0, 0%, 94%);
+  --clr-lightgrey: hsl(0, 0%, 86%);
+  --clr-smokegrey: hsl(0, 1%, 44%);
+  --clr-offblack: hsl(0, 0%, 8%);
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--clr-offlight);
+}
+
+main {
+  width: min(840px, 100%);
+  height: 650px;
+  padding: 55px;
+  position: relative;
+  border-radius: 1.4375rem 1.4375rem 12.5rem 1.4375rem;
+  background-color: var(--clr-light);
+}
+
+.web {display: block;}
+.phone {display: block;}
+
+.date__inputs-container {
+  display: flex;
+  gap: 34px;
+}
+
+.date__inputs-container div {
+  width: 10rem;
+  height: 6.25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.date__legend {
+  color: var(--clr-smokegrey);
+  font-size: 0.9rem;
+}
+
+.date__input {
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px 20px;
+  font-size: 2rem;
+  border-radius: 10px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: var(--clr-lightgrey);
+}
+
+.date__input-error {
+  color: var(--clr-lightred);
+  font-size: 0.8rem;
+}
+
+hr {
+  border: 1px solid var(--clr-offlight);
+  margin-top: 50px;
+}
+
+button {
+  width: 100px;
+  height: 100px;
+  margin-top: 150px;
+  margin-right: 50px;
+  border-radius: 50%;
+  border: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-color: var(--clr-purple);
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: var(--clr-offblack);
+}
+
+.date__output-container {
+  min-height: calc(100% - 10rem);
+  display: flex;
+  flex-direction: column;
+}
+
+.date__output:nth-child(1) {
+  margin-top: auto;
+}
+
+.date__output {
+  font-size: 6.5rem;
+  font-weight: 800;
+  line-height: 7rem;
+}
+
+.date__answer {
+  color: var(--clr-purple);
+}
+
+@media screen and (max-width: 768px) {
+  .web {display: none;}
+  body {padding: 0 1rem;}
+  main {
+    height: auto;
+    padding: 30px;
+    border-radius: 23px 23px 100px 23px;
+  }
+  hr {margin-top: 4rem;}
+  button {
+    width: 65px;
+    height: 65px;
+    margin-top: 160px;
+    margin-right: 0px;
+    right: 50%;
+    top: 0;
+    transform: translateX(50%);
+  }
+  .date__inputs-container {
+    gap: 1rem;
+  }
+  .checker__btn svg{width: 2.5rem;}
+  .date__input {
+    padding: 10px 16px;
+    font-size: 1.4rem;
+  }
+  .date__output-container {
+    margin-top: 4rem;
+    margin-bottom: 1rem;
+  }
+  .date__output {
+    font-size: 3.3rem;
+    line-height: 4rem;
+  }
+}

@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+/*font-family: 'Outfit', sans-serif; 300 400 600 */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+main.body {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+
+  background-color: hsl(217, 54%, 11%);
+}
+
+.card {
+  height: 690px;
+  width: 410px;
+  padding: 30px;
+  font-family: 'Outfit', sans-serif;
+  font-size: 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: hsl(215, 51%, 70%);
+  border-radius: 20px;
+  background-color: hsl(216, 50%, 16%);
+  box-shadow:
+  2.8px 2.8px 2.2px rgba(0, 0, 0, 0.02),
+  6.7px 6.7px 5.3px rgba(0, 0, 0, 0.028),
+  12.5px 12.5px 10px rgba(0, 0, 0, 0.035),
+  22.3px 22.3px 17.9px rgba(0, 0, 0, 0.042),
+  41.8px 41.8px 33.4px rgba(0, 0, 0, 0.05),
+  100px 100px 80px rgba(0, 0, 0, 0.07)
+  ;
+}
+
+.preview-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+}
+.preview-container::after {
+  content: url(../images/icon-view.svg);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  opacity: 0;
+  z-index: 2;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.2s ease-in-out;
+}
+.preview-container::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  opacity: 0;
+  z-index: 2;
+  background: hsl(178, 100%, 50%);
+  border-radius: 10px;
+  transition: opacity 0.2s ease-in-out;
+}
+.preview-container:hover::before {opacity: 0.4;}
+.preview-container:hover::after {opacity: 1;}
+
+.preview__image {
+  position: relative;
+  max-width: 100%;
+  border-radius: 10px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+/*TODO: Clean this code out when I have time */
+.card h1 {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 600;
+  font-size: 1.625rem;
+  color: #fff;
+}
+
+.card h1:hover {
+  color: hsl(178, 100%, 50%);
+  cursor: pointer;
+}
+
+.card > p {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 300;
+  font-size: 1.3438rem;
+}
+
+#priceInfo {
+  display: flex;
+  justify-content: space-between;
+}
+
+#priceInfo div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+#price {
+  color: hsl(178, 100%, 50%);
+  font-family: 'Outfit', sans-serif;
+  font-weight: 400;
+}
+
+#author {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+#author img {
+  border: 2px solid #fff;
+  border-radius: 50%;
+  width: 40px;
+  display: block;
+}
+
+#author > p {
+  font-weight: 300;
+}
+
+#author span {
+  color: #fff;
+}
+
+#author span:hover {
+  color: hsl(178, 100%, 50%);
+  cursor: pointer;
+}
+
+hr {
+  height: 0.5px;
+  border: 1px solid;
+  color: hsl(215, 32%, 27%);
+}
+
+.attribution {
+  height: 3vh;
+  width: 100%;
+  padding: 0 20px 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background-color: #232323;
+  color: #fff;
+  position: absolute;
+  bottom: 0;
+  overflow: hidden;
+}
+
+.attribution p {
+  font-size: 15px;
+}
+.attribution p a:visited {
+  color: rgb(23, 226, 23);
+}
+.attribution .phone {
+  display: none;
+}
+
+@media screen and (max-width: 420px) {
+  body {
+    height: auto;
+    padding-top: 3vh;
+  }
+
+  .card {
+    flex-direction: column;
+    width: 90%;
+  }
+
+  .card img {
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 10px 10px 0px 0px;
+  }
+  
+  .card .cardinfo {
+    height: 400px;
+    width: 100%;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: rgb(255, 255, 255);
+    border-radius: 0px 0px 10px 10px;
+  }
+
+  .attribution .web {
+    display: none;
+  }
+
+  .attribution .phone {
+    display: block;
+  }
+}
