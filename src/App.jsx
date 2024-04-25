@@ -15,7 +15,7 @@ import AgeCalculatorApp from './pages/projects/AgeCalculatorApp.jsx';
 import QrCodeComponent from './pages/projects/QrCodeComponent.jsx';
 import NewsHomepage from './pages/projects/NewsHomepage.jsx';
 import ProductPreviewCard from './pages/projects/ProductPreviewCard.jsx';
-import NFTPreviewCard from './pages/projects/NFTPreviewCard.jsx';
+import NFTPreviewCard from './pages/projects/NftPreviewCard.jsx';
 import FourCardFeature from './pages/projects/FourCardFeature.jsx';
 import ProfileCardComponent from './pages/projects/ProfileCardComponent.jsx';
 import ResultSummaryComponent from './pages/projects/ResultsSummaryComponent.jsx';
