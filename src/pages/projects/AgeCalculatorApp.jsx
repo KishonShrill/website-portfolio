@@ -1,23 +1,33 @@
-export default function AgeCalculatorApp() {
-  return (
+import { useEffect } from "react"
+import ageCalculator from "./components/ageCalculator.cjs"
+
+const AgeCalculatorApp = (props) => {
+  useEffect(() => {document.title = props.title}, [])
+  useEffect(() => {
+    ageCalculator();
+    import('./styles/age-calculator.css')
+    import('./styles/utils.css')
+  }, [])
+
+  return(
     <>
       <main>
-        <section class="date__inputs-container">
-          <div><h2 class="date__legend">D A Y</h2>
-            <input class="date__input input__day" type="number" min="1" max="2" placeholder="DD" />
-            <p class="date__input-error"><em class="error-day"> </em></p>
+        <section className="date__inputs-container">
+          <div><h2 className="date__legend">D A Y</h2>
+            <input className="date__input input__day" type="number" min="1" max="2" placeholder="DD" />
+            <p className="date__input-error"><em className="error-day"> </em></p>
           </div>
-          <div><h2 class="date__legend">M O N T H</h2>
-            <input class="date__input input__month" type="number" min="1" max="2" placeholder="MM" />
-            <p class="date__input-error"><em class="error-month"> </em></p>
+          <div><h2 className="date__legend">M O N T H</h2>
+            <input className="date__input input__month" type="number" min="1" max="2" placeholder="MM" />
+            <p className="date__input-error"><em className="error-month"> </em></p>
           </div>
-          <div><h2 class="date__legend">Y E A R</h2>
-            <input class="date__input input__year" type="number" min="1" max="4" placeholder="YYYY" />
-            <p class="date__input-error"><em class="error-year"> </em></p>
+          <div><h2 className="date__legend">Y E A R</h2>
+            <input className="date__input input__year" type="number" min="1" max="4" placeholder="YYYY" />
+            <p className="date__input-error"><em className="error-year"> </em></p>
           </div>
         </section>
         <hr />
-        <button class="checker__btn">
+        <button className="checker__btn">
           <svg 
             xmlns="http://www.w3.org/2000/svg" 
             width="46" 
@@ -27,7 +37,7 @@ export default function AgeCalculatorApp() {
             <g 
               fill="none" 
               stroke="#FFF" 
-              stroke-width="2"
+              strokeWidth="2"
             >
               <path 
                 d="M1 22.019C8.333 21.686 23 25.616 23 44M23 44V0M45 
@@ -35,21 +45,22 @@ export default function AgeCalculatorApp() {
             </g>
           </svg>
         </button>
-        <section class="date__output-container">
-          <h1 class="date__output"><i><span class="date__answer" id="years">- -</span> years</i></h1>
-          <h1 class="date__output"><i><span class="date__answer" id="months">- -</span> months</i></h1>
-          <h1 class="date__output"><i><span class="date__answer" id="days">- -</span> days</i></h1>
+        <section className="date__output-container">
+          <h1 className="date__output"><i><span className="date__answer" id="years">- -</span> years</i></h1>
+          <h1 className="date__output"><i><span className="date__answer" id="months">- -</span> months</i></h1>
+          <h1 className="date__output"><i><span className="date__answer" id="days">- -</span> days</i></h1>
         </section>
       </main>
       
-      <footer class="attribution">
+      <footer className="attribution">
         <div>
-          <p class="web">Challenge by <a class="mentor" href="https://www.frontendmentor.io/challenges/age-calculator-app-dF9DFFpj-Q/hub" target="_blank"> Frontend Mentor</a>. 
+          <p className="web">Challenge by <a className="mentor" href="https://www.frontendmentor.io/challenges/age-calculator-app-dF9DFFpj-Q/hub" target="_blank"> Frontend Mentor</a>. 
           Coded by <a href="https://github.com/KishonShrill"> Chriscent Pingol</a>.</p>
         </div>
 
-        <p class="phone">Go back <a href="../../index.html"> Home</a>.</p>
+        <p className="phone">Go back <a href="../../"> Home</a>.</p>
       </footer>
     </>
-  );
+  )
 }
+export default AgeCalculatorApp

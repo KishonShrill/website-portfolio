@@ -1,9 +1,13 @@
+import { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import $ from 'jquery';
 import useStudentData from '../hooks/useStudentData';
-import '../styles/components/database/student-card.css'
 
 const SpecificStudent = () => {
+  useEffect(() => {
+    import('../styles/components/database/student-card.css')
+  }, [])
+
   // Adjustable Height
   const headerHeight = $(".header").height();
   const { studentId } = useParams()

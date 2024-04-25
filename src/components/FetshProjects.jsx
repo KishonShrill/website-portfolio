@@ -29,7 +29,7 @@ export default function LoadProjects() {
       {data?.data.map((item) => (
         <div key={item.id}>
           <p>{item.name}</p>
-          <a href={item.link} target="_blank" rel="noopener noreferrer">
+          <a href={item.link} target="_self" rel="noopener noreferrer">
             <picture>
               <img src={item.image} alt={item.name} style={{ width: 'auto' }} />
             </picture>

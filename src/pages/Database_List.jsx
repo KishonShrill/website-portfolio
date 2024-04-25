@@ -1,10 +1,14 @@
+import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import $ from 'jquery';
 
-import '../styles/components/database/index.css'
+
 import useStudentsData from '../hooks/useStudentsData';
 
 export default function Database_List() {
+  useEffect(() => {
+    import('../styles/components/database/index.css')
+  }, [])
   const { isLoading, data, isError, error, isFetching, refetch } = useStudentsData()
 
   console.log({ isLoading, isFetching })
@@ -28,6 +32,7 @@ export default function Database_List() {
 
   return (
     <>
+      <Header />
       <div className='database__body'>
         <nav className='database__nav'></nav>
         <main className="database__main csv__manager" style={{height: `calc(100vh - ${headerHeight}px - 70px)`}}>
