@@ -13,7 +13,7 @@ import SpecificStudent from './components/SpecificStudent.jsx';
 
 import AgeCalculatorApp from './pages/projects/AgeCalculatorApp.jsx';
 import QrCodeComponent from './pages/projects/QrCodeComponent.jsx';
-import NewsHomepage from './pages/projects/NewsHomePage.jsx';
+import NewsHomepage from './pages/projects/NewsHomepage.jsx';
 import ProductPreviewCard from './pages/projects/ProductPreviewCard.jsx';
 import NFTPreviewCard from './pages/projects/NFTPreviewCard.jsx';
 import FourCardFeature from './pages/projects/FourCardFeature.jsx';
