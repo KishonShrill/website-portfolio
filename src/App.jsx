@@ -19,6 +19,12 @@ import NFTPreviewCard from './pages/projects/NFTPreviewCard.jsx';
 import FourCardFeature from './pages/projects/FourCardFeature.jsx';
 import ProfileCardComponent from './pages/projects/ProfileCardComponent.jsx';
 import ResultSummaryComponent from './pages/projects/ResultsSummaryComponent.jsx';
+import InteractiveCardDetailsForm from './pages/projects/InteractiveCardDetailsForm.jsx';
+import InteractiveRatingComponent from './pages/projects/InteractiveRatingComponent.jsx';
+import NewsletterSignUpProject from './pages/projects/NewsletterSignUpProject.jsx';
+import NewsletterSignUpProjectSuccess from './pages/projects/NewsletterSignUpProjectSuccess.jsx';
+import CalculatorApp from './pages/projects/CalculatorApp.jsx';
+import BlogPreviewCard from './pages/projects/BlogPreviewCard.jsx';
 
 export default function App() {
   // Theme getter for local user setting
@@ -72,14 +78,21 @@ export default function App() {
         <Loader />
         <Routes>
           <Route path="/website-portfolio/" element={<Homepage title="Website-Portfolio" />} exact />
-          <Route path="/website-portfolio/projects/age_calculator_app" element={<AgeCalculatorApp title="Age Calculator App" />} />
-          <Route path="/website-portfolio/projects/qr_code_component" element={<QrCodeComponent title="QR Code Component" />} />
-          <Route path="/website-portfolio/projects/news_homepage" element={<NewsHomepage title="News Homepage" />} />
-          <Route path="/website-portfolio/projects/product_preview_card_component" element={<ProductPreviewCard title="Product Preview Card" />} />
-          <Route path="/website-portfolio/projects/nft_preview_card_component" element={<NFTPreviewCard title="NFT Preview Card Component" />} />
-          <Route path="/website-portfolio/projects/four_card_feature_component" element={<FourCardFeature title="Four Card Feature Component" />} />
-          <Route path="/website-portfolio/projects/profile_card_component" element={<ProfileCardComponent title="Profile Card Component" />} />
-          <Route path="/website-portfolio/projects/results_summary_component" element={<ResultSummaryComponent title="Results Summary Component" />} />
+          <Route path="/website-portfolio/projects/age_calculator_app" element={<AgeCalculatorApp title="Frontend Mentor | Age Calculator App" />} />
+          <Route path="/website-portfolio/projects/qr_code_component" element={<QrCodeComponent title="Frontend Mentor | QR Code Component" />} />
+          <Route path="/website-portfolio/projects/news_homepage" element={<NewsHomepage title="Frontend Mentor | News Homepage" />} />
+          <Route path="/website-portfolio/projects/product_preview_card_component" element={<ProductPreviewCard title="Frontend Mentor | Product Preview Card" />} />
+          <Route path="/website-portfolio/projects/nft_preview_card_component" element={<NFTPreviewCard title="Frontend Mentor | NFT Preview Card Component" />} />
+          <Route path="/website-portfolio/projects/four_card_feature_component" element={<FourCardFeature title="Frontend Mentor | Four Card Feature Component" />} />
+          <Route path="/website-portfolio/projects/profile_card_component" element={<ProfileCardComponent title="Frontend Mentor | Profile Card Component" />} />
+          <Route path="/website-portfolio/projects/results_summary_component" element={<ResultSummaryComponent title="Frontend Mentor | Results Summary Component" />} />
+          <Route path="/website-portfolio/projects/interactive_card_details_form" element={<InteractiveCardDetailsForm title="Frontend Mentor | Interactive Card Details Form Component" />} />
+          <Route path="/website-portfolio/projects/interactive_rating_component" element={<InteractiveRatingComponent title="Frontend Mentor | Interactive Rating Component" />} />
+          <Route path="/website-portfolio/projects/newsletter_sign_up_with_success_message" element={<NewsletterSignUpProject title="Frontend Mentor | Newsletter Sign Up" />} />
+          <Route path="/website-portfolio/projects/newsletter_sign_up_with_success_message/success" element={<NewsletterSignUpProjectSuccess title="Frontend Mentor | Newsletter Sign Up Success" />} />
+          <Route path="/website-portfolio/projects/calculator_app" element={<CalculatorApp title="Frontend Mentor | CalculatorApp" />} />
+          <Route path="/website-portfolio/projects/blog_preview_card" element={<BlogPreviewCard title="Frontend Mentor | Blog Preview Card" />} />
+
 
           <Route path="/website-portfolio/database" element={<Database_List />} />
           <Route path="/website-portfolio/database/:studentId" element={<SpecificStudent />} />

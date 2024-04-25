@@ -420,7 +420,6 @@ export default function Homepage(props) {
   useEffect(() => {document.title = props.title}, [])
   useEffect(() => {
     import('../styles/App.css')
-    import('../styles/modern-normalize.css')
     import('../styles/utils.css')
 
     import('../styles/components/preload.css')

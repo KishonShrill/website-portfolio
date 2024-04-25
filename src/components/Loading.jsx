@@ -1,5 +1,4 @@
 import $ from 'jquery';
-import '../styles/components/preload.css'
 
 export default function Loader() {
   setTimeout(async function() {

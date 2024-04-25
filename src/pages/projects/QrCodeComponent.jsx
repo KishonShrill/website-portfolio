@@ -3,7 +3,7 @@ import { useEffect } from "react"
 const QrCodeComponent = (props) => {
   useEffect(() => {document.title = props.title}, [])
   useEffect(() => {
-    import('./styles/utils.css')
+    // import('./styles/utils.css')
     import('./styles/qr-code.css')
   })
 

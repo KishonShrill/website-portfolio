@@ -1,6 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap');
 
 * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
 
   --weight-400i: 400, 1;
@@ -17,14 +20,16 @@
   --clr-offblack: hsl(0, 0%, 8%);
 }
 
-body {
+main.age-calculator {
+  width: 100%;
+  height: 100dvh;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: var(--clr-offlight);
 }
 
-main {
+main.age-processor {
   width: min(840px, 100%);
   height: 650px;
   padding: 55px;
@@ -115,8 +120,8 @@ button:hover {
 
 @media screen and (max-width: 768px) {
   .web {display: none;}
-  body {padding: 0 1rem;}
-  main {
+  main.age-calculator {padding: 0 .5rem;}
+  main.age-processor {
     height: auto;
     padding: 30px;
     border-radius: 23px 23px 100px 23px;
@@ -147,4 +152,29 @@ button:hover {
     font-size: 3.3rem;
     line-height: 4rem;
   }
+}
+
+/* Attribution Div */
+.attribution {
+  width: 100%;
+  height: 3vh;
+  padding: 0 20px 0 20px;
+  
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background-color: #232323;
+  color: #fff;
+  overflow: hidden;
+}
+.attribution p {
+  font-size: 0.9375rem;
+}
+.attribution p a:visited {
+  color: rgb(23, 226, 23);
 }

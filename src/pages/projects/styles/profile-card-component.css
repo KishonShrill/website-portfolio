@@ -24,8 +24,8 @@ main.profile-card-component {
   justify-content: center;
   background-color: var(--clr-darkCyan);
   background-image: 
-    url("/website-portfolio/images/project-assets/bg-pattern-top.svg"),
-    url("/website-portfolio/images/project-assets/bg-pattern-bottom.svg");
+    url("../images/bg-pattern-top.svg"),
+    url("../images/bg-pattern-bottom.svg");
   background-repeat: 
     no-repeat,
     no-repeat;
@@ -44,7 +44,7 @@ main.profile-card-component {
   height: 978px;
   top: -50vh;
   left: -20vw;
-  background-image: url('/website-portfolio/images/project-assets/bg-pattern-top.svg');
+  background-image: url('../images/bg-pattern-top.svg');
   z-index: 1;
 }
 .bg-pattern-bottom {
@@ -52,7 +52,7 @@ main.profile-card-component {
   height: 978px;
   bottom: -50vh;
   right: -20vw;
-  background-image: url('/website-portfolio/images/project-assets/bg-pattern-bottom.svg');
+  background-image: url('../images/bg-pattern-bottom.svg');
   z-index: 1;
 }
 
@@ -85,7 +85,7 @@ main.profile-card-component {
   width: 100%;
   height: 140px;
 
-  background-image: url('/website-portfolio/images/project-assets/bg-pattern-card.svg');
+  background-image: url('../images/bg-pattern-card.svg');
   z-index: 1;
 }
 .profile__picture {
@@ -172,18 +172,6 @@ main.profile-card-component {
 
 @media (max-width: 376px) {
   .attribution {display: none;}
-  .bg-pattern-top {
-    width: 978px;
-    height: 978px;
-    top: -50vh;
-    left: -200vw;
-    background-image: url('/website-portfolio/images/project-assets/bg-pattern-top.svg');
-  }
-  .bg-pattern-bottom {
-    width: 978px;
-    height: 978px;
-    bottom: -50vh;
-    right: -200vw;
-    background-image: url('/website-portfolio/images/project-assets/bg-pattern-bottom.svg');
-  }
+  .bg-pattern-top {left: -200vw;}
+  .bg-pattern-bottom {right: -200vw;}
 }

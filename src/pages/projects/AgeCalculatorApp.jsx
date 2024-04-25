@@ -6,12 +6,11 @@ const AgeCalculatorApp = (props) => {
   useEffect(() => {
     ageCalculator();
     import('./styles/age-calculator.css')
-    import('./styles/utils.css')
   }, [])
 
   return(
-    <>
-      <main>
+    <main className="age-calculator">
+      <main className="age-processor">
         <section className="date__inputs-container">
           <div><h2 className="date__legend">D A Y</h2>
             <input className="date__input input__day" type="number" min="1" max="2" placeholder="DD" />
@@ -60,7 +59,7 @@ const AgeCalculatorApp = (props) => {
 
         <p className="phone">Go back <a href="../../"> Home</a>.</p>
       </footer>
-    </>
+    </main>
   )
 }
 export default AgeCalculatorApp

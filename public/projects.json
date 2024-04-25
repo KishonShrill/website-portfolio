@@ -70,5 +70,11 @@
     "name": "Interactive Card Details Form",
     "image": "/website-portfolio/images/project_snapshot/interactive_card_details_form.jpg",
     "link": "./projects/interactive_card_details_form/"
+  },
+  {
+    "id": 13,
+    "name": "Calculator App",
+    "image": "/website-portfolio/images/project_snapshot/calculator-app.jpg",
+    "link": "./projects/calculator_app/"
   }
 ]
