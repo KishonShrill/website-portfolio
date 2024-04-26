@@ -75,7 +75,7 @@ export default function App() {
     <QueryClientProvider client={queryClient}>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Homepage title="Website-Portfolio" />} exact />
+          <Route path="/" element={<Homepage title="Chriscent's Portfolio: Computer Science Student & Web Developer | Blender 3D Artist" />} exact />
           <Route path="/projects/age_calculator_app" element={<AgeCalculatorApp title="Frontend Mentor | Age Calculator App" />} />
           <Route path="/projects/qr_code_component" element={<QrCodeComponent title="Frontend Mentor | QR Code Component" />} />
           <Route path="/projects/news_homepage" element={<NewsHomepage title="Frontend Mentor | News Homepage" />} />
