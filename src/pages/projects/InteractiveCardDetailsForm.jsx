@@ -13,7 +13,7 @@ const InteractiveCardDetailsForm = (props) => {
       <main className="interactive-wrapper">
         <section className="card-wrapper">
           <div className="card card1">
-            <img className="card__logo" src="/website-portfolio/images/project-assets/card-logo.svg" alt="" />
+            <img className="card__logo" src="/images/project-assets/card-logo.svg" alt="" />
             <div>
               <p className="card__number">0000 0000 0000 0000</p>
               <div id="flex-space-between">
@@ -52,7 +52,7 @@ const InteractiveCardDetailsForm = (props) => {
           </div>
 
           <div className="form-complete">
-            <img src="/website-portfolio/images/project-assets/icon-complete.svg" alt="" />
+            <img src="/images/project-assets/icon-complete.svg" alt="" />
             <h1>Thank you!</h1>
             <p>We've added your card details</p>
             <a id="btn-complete">Continue</a>
@@ -66,7 +66,7 @@ const InteractiveCardDetailsForm = (props) => {
           Coded by <a href="https://github.com/KishonShrill"> Chriscent Pingol</a>.</p>
         </div>
       
-        <p>Go back <a href="/website-portfolio/"> Home</a>.</p>
+        <p>Go back <a href="/"> Home</a>.</p>
       </footer>
     </main>
   )

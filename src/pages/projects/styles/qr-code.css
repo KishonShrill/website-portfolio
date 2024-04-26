@@ -5,7 +5,7 @@
   padding: 0;
 }
 
-body {
+main.qr-code-component {
   height: 100vh;
   width: 100%;
   display: flex;

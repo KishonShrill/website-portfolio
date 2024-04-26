@@ -4,9 +4,94 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <style>
+      html {
+        overflow-x: hidden;
+      }
+
+      /* Scrollbar  */
+      body::-webkit-scrollbar {
+        width: 8px;
+      }
+
+      body::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 0 rgba(0, 0, 0, 0);
+      }
+
+      body::-webkit-scrollbar-thumb {
+        background-color: var(--clr-rose);
+        outline: 1px solid var(--clr-rose);
+      }
+
+      .loader-wrapper{
+        width: 100%;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 9999;
+      }
+
+      .imageSpin{
+        width: 10rem;
+        aspect-ratio: 2 / 2;
+        object-fit: cover;
+        
+        animation-name: spin;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        animation-duration: 2s;
+        
+        /*  Multiple Broser  */
+        -webkit-animation-name: spin;
+        -webkit-animation-timing-function: linear;
+        -webkit-animation-iteration-count: infinite;
+        -webkit-animation-duration: 2s;
+      }
+
+      @keyframes spin{
+        from{
+          transform: rotateY(0deg);
+          
+          /*   Multiple Brosers   */
+          moz-transform: rotateY(0deg);
+          ms-transform: rotateY(0deg);
+        }
+        to{
+          transform: rotateY(360deg);
+          
+          /*   Multiple Brosers   */
+          moz-transform: rotateY(360deg);
+          ms-transform: rotateY(360deg);
+        }
+      }
+      @-webkit-keyframes spin{
+        from{-webkit-transform: rotateY(0deg);}
+        to{-webkit-transform: rotateY(360deg);}
+      }
+      @media (min-width: 1024px) {
+        .imageSpin{
+          width: 20rem;
+        }
+      }
+    </style>
+    <script>
+      setTimeout(function() {
+        $(".loader-wrapper").fadeOut("slow");
+      }, 1000);
+    </script>
   </head>
   <body>
-    <div id="root"></div>
+    <div class="loader-wrapper">
+      <img class="imageSpin" src="/images/home/preloadLogo.jpg" alt="" />
+    </div>
+    <div id="root">
+    </div>
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>

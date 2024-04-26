@@ -10,7 +10,7 @@ const NFTPreviewCard = (props) => {
     <main className="body">
       <section className="card">
         <div className="preview-container">
-          <img className="preview__image" src="/website-portfolio/images/project-assets/image-equilibrium.jpg" alt="NFT PREVIEW CARD" />
+          <img className="preview__image" src="/images/project-assets/image-equilibrium.jpg" alt="NFT PREVIEW CARD" />
         </div>
         <h1>Equilibrium #3429</h1>
         <p>Our Equilibrium collection promotes balance and calm.</p>
@@ -26,7 +26,7 @@ const NFTPreviewCard = (props) => {
         </div>
         <hr />
         <div id="author">
-          <img src="/website-portfolio/images/project-assets/image-avatar.png" alt="PROFILE AVATAR" />
+          <img src="/images/project-assets/image-avatar.png" alt="PROFILE AVATAR" />
           <p>Creation of <span>Jules Wyvern</span></p>
         </div>
       </section>
@@ -37,8 +37,8 @@ const NFTPreviewCard = (props) => {
           Coded by <a href="https://github.com/KishonShrill"> Chriscent Pingol</a>.</p>
         </div>
     
-        <p className="web">Go back <a href="/website-portfolio/" > Home</a>.</p>
-        <p className="phone">Go back <a href="/website-portfolio/" > Home</a>.</p>
+        <p className="web">Go back <a href="/" > Home</a>.</p>
+        <p className="phone">Go back <a href="/" > Home</a>.</p>
       </footer>
     </main>
   )

@@ -75,7 +75,7 @@ const InteractiveRatingComponent = (props) => {
           Coded by <a href="https://github.com/KishonShrill"> Chriscent Pingol</a>.</p>
         </div>
 
-        <p className="phone">Go back <a href="/website-portfolio/"> Home</a>.</p>
+        <p className="phone">Go back <a href="/"> Home</a>.</p>
       </footer>
     </main>
   )

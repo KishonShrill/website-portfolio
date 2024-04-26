@@ -10,9 +10,9 @@ const NewsHomepage = (props) => {
     <main className="body">
       <div className="navigation-sidebar phone">
         <div className="navigation-content">
-          <img className="navbar-btnClose" src="/website-portfolio/images/project-assets/icon-menu-close.svg" alt="Close Navigation" />
+          <img className="navbar-btnClose" src="/images/project-assets/icon-menu-close.svg" alt="Close Navigation" />
           <div className="navbar">
-            <a href="/website-portfolio/">Home</a>
+            <a href="/">Home</a>
             <a href="#new">New</a>
             <a href="#popular">Popular</a>
             <a href="#trending">Trending</a>
@@ -23,22 +23,22 @@ const NewsHomepage = (props) => {
 
       <main className="content">
         <header>
-          <img className="header__logo" src="/website-portfolio/images/project-assets/logo.svg" alt="News Logo" />
+          <img className="header__logo" src="/images/project-assets/logo.svg" alt="News Logo" />
           <ul className="header__link-wrapper web">
-            <li className="header__link"><a href="/website-portfolio/">Home</a></li>
+            <li className="header__link"><a href="/">Home</a></li>
             <li className="header__link"><a href="#New">New</a></li>
             <li className="header__link"><a href="#Popular">Popular</a></li>
             <li className="header__link"><a href="#Trending">Trending</a></li>
             <li className="header__link"><a href="#Categories">Categories</a></li>
           </ul>
-          <img className="navbar-btnOpen phone" src="/website-portfolio/images/project-assets/icon-menu.svg" alt="Navigation Menu" />
+          <img className="navbar-btnOpen phone" src="/images/project-assets/icon-menu.svg" alt="Navigation Menu" />
         </header>
 
         <div className="featured-news">
           <section>
             <picture className="featured-news__graphic">
-              <source media="(max-width:435px)" srcSet="./assets/images/image-web-3-mobile.jpg" />
-              <img src="/website-portfolio/images/project-assets/image-web-3-desktop.jpg" alt="Featured Graphic" />
+              <source media="(max-width:435px)" srcSet="/images/project-assets/image-web-3-mobile.jpg" />
+              <img src="/images/project-assets/image-web-3-desktop.jpg" alt="Featured Graphic" />
             </picture>
             <div className="featured-news__context">
               <h1>The Bright Future of Web 3.0?</h1>
@@ -72,7 +72,7 @@ const NewsHomepage = (props) => {
 
         <article>
           <a className="article-wrapper" href="#">
-            <img className="article__img" src="/website-portfolio/images/project-assets/image-retro-pcs.jpg" alt="Reviving Retro PCs" />
+            <img className="article__img" src="/images/project-assets/image-retro-pcs.jpg" alt="Reviving Retro PCs" />
             <div className="article__contexts">
               <h1>01</h1>
               <h2>Reviving Retro PCs</h2>
@@ -80,7 +80,7 @@ const NewsHomepage = (props) => {
             </div>
           </a>
           <a className="article-wrapper" href="#">
-            <img className="article__img" src="/website-portfolio/images/project-assets/image-top-laptops.jpg" alt="Top 10 Laptops of 2022" />
+            <img className="article__img" src="/images/project-assets/image-top-laptops.jpg" alt="Top 10 Laptops of 2022" />
             <div className="article__contexts">
               <h1>02</h1>
               <h2>Top 10 Laptops of 2022</h2>
@@ -88,7 +88,7 @@ const NewsHomepage = (props) => {
             </div>
           </a>
           <a className="article-wrapper" href="#">
-            <img className="article__img" src="/website-portfolio/images/project-assets/image-gaming-growth.jpg" alt="The Growth of Gaming" />
+            <img className="article__img" src="/images/project-assets/image-gaming-growth.jpg" alt="The Growth of Gaming" />
             <div className="article__contexts">
               <h1>03</h1>
               <h2>The Growth of Gaming</h2>

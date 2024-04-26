@@ -23,7 +23,7 @@ const FourCardFeature = (props) => {
               <h1>Team Builder</h1>
               <p>Scans out talent network to create the optimal team for your project</p>
             </div>
-            <img className="card-icon" src="/website-portfolio/images/project-assets/icon-team-builder.svg" alt="Team Builder" />
+            <img className="card-icon" src="/images/project-assets/icon-team-builder.svg" alt="Team Builder" />
           </div>
           <div className="card card2">
             <div>
@@ -31,7 +31,7 @@ const FourCardFeature = (props) => {
               <h1>Supervisor</h1>
               <p>Monitors activity to identify project roadblocks</p>
           </div>
-            <img className="card-icon" src="/website-portfolio/images/project-assets/icon-supervisor.svg" alt="Supervisor" />
+            <img className="card-icon" src="/images/project-assets/icon-supervisor.svg" alt="Supervisor" />
           </div>
           <div className="card card3">
             <div>
@@ -39,7 +39,7 @@ const FourCardFeature = (props) => {
               <h1>Calculator</h1>
               <p>Uses data from past projects to provide better delivery estimates</p>
           </div>
-            <img className="card-icon" src="/website-portfolio/images/project-assets/icon-calculator.svg" alt="Calculator" />
+            <img className="card-icon" src="/images/project-assets/icon-calculator.svg" alt="Calculator" />
           </div>
           <div className="card card4">
             <div>
@@ -47,7 +47,7 @@ const FourCardFeature = (props) => {
               <h1>Karma</h1>
               <p>Regularly evaluates out talent to ensure quality</p>
           </div>
-            <img className="card-icon" src="/website-portfolio/images/project-assets/icon-karma.svg" alt="Karma" />
+            <img className="card-icon" src="/images/project-assets/icon-karma.svg" alt="Karma" />
           </div>
         </section>
       </main>
@@ -58,7 +58,7 @@ const FourCardFeature = (props) => {
           Coded by <a href="https://github.com/KishonShrill"> Chriscent Pingol</a>.</p>
         </div>
 
-        <p>Go back <a href="/website-portfolio/"> Home</a>.</p>
+        <p>Go back <a href="/"> Home</a>.</p>
       </footer>
     </main>
   )

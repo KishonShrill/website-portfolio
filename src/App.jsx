@@ -5,7 +5,6 @@ import { ReactQueryDevtools } from 'react-query/devtools'
 
 const queryClient = new QueryClient();
 
-import Loader from './components/Loading.jsx';
 import Homepage from "./pages/Homepage.jsx";
 import Database_List from "./pages/Database_List.jsx";
 import NoPage from './components/NoPage.jsx'
@@ -75,27 +74,26 @@ export default function App() {
   return (
     <QueryClientProvider client={queryClient}>
       <BrowserRouter>
-        <Loader />
         <Routes>
-          <Route path="/website-portfolio/" element={<Homepage title="Website-Portfolio" />} exact />
-          <Route path="/website-portfolio/projects/age_calculator_app" element={<AgeCalculatorApp title="Frontend Mentor | Age Calculator App" />} />
-          <Route path="/website-portfolio/projects/qr_code_component" element={<QrCodeComponent title="Frontend Mentor | QR Code Component" />} />
-          <Route path="/website-portfolio/projects/news_homepage" element={<NewsHomepage title="Frontend Mentor | News Homepage" />} />
-          <Route path="/website-portfolio/projects/product_preview_card_component" element={<ProductPreviewCard title="Frontend Mentor | Product Preview Card" />} />
-          <Route path="/website-portfolio/projects/nft_preview_card_component" element={<NFTPreviewCard title="Frontend Mentor | NFT Preview Card Component" />} />
-          <Route path="/website-portfolio/projects/four_card_feature_component" element={<FourCardFeature title="Frontend Mentor | Four Card Feature Component" />} />
-          <Route path="/website-portfolio/projects/profile_card_component" element={<ProfileCardComponent title="Frontend Mentor | Profile Card Component" />} />
-          <Route path="/website-portfolio/projects/results_summary_component" element={<ResultSummaryComponent title="Frontend Mentor | Results Summary Component" />} />
-          <Route path="/website-portfolio/projects/interactive_card_details_form" element={<InteractiveCardDetailsForm title="Frontend Mentor | Interactive Card Details Form Component" />} />
-          <Route path="/website-portfolio/projects/interactive_rating_component" element={<InteractiveRatingComponent title="Frontend Mentor | Interactive Rating Component" />} />
-          <Route path="/website-portfolio/projects/newsletter_sign_up_with_success_message" element={<NewsletterSignUpProject title="Frontend Mentor | Newsletter Sign Up" />} />
-          <Route path="/website-portfolio/projects/newsletter_sign_up_with_success_message/success" element={<NewsletterSignUpProjectSuccess title="Frontend Mentor | Newsletter Sign Up Success" />} />
-          <Route path="/website-portfolio/projects/calculator_app" element={<CalculatorApp title="Frontend Mentor | CalculatorApp" />} />
-          <Route path="/website-portfolio/projects/blog_preview_card" element={<BlogPreviewCard title="Frontend Mentor | Blog Preview Card" />} />
+          <Route path="/" element={<Homepage title="Website-Portfolio" />} exact />
+          <Route path="/projects/age_calculator_app" element={<AgeCalculatorApp title="Frontend Mentor | Age Calculator App" />} />
+          <Route path="/projects/qr_code_component" element={<QrCodeComponent title="Frontend Mentor | QR Code Component" />} />
+          <Route path="/projects/news_homepage" element={<NewsHomepage title="Frontend Mentor | News Homepage" />} />
+          <Route path="/projects/product_preview_card_component" element={<ProductPreviewCard title="Frontend Mentor | Product Preview Card" />} />
+          <Route path="/projects/nft_preview_card_component" element={<NFTPreviewCard title="Frontend Mentor | NFT Preview Card Component" />} />
+          <Route path="/projects/four_card_feature_component" element={<FourCardFeature title="Frontend Mentor | Four Card Feature Component" />} />
+          <Route path="/projects/profile_card_component" element={<ProfileCardComponent title="Frontend Mentor | Profile Card Component" />} />
+          <Route path="/projects/results_summary_component" element={<ResultSummaryComponent title="Frontend Mentor | Results Summary Component" />} />
+          <Route path="/projects/interactive_card_details_form" element={<InteractiveCardDetailsForm title="Frontend Mentor | Interactive Card Details Form Component" />} />
+          <Route path="/projects/interactive_rating_component" element={<InteractiveRatingComponent title="Frontend Mentor | Interactive Rating Component" />} />
+          <Route path="/projects/newsletter_sign_up_with_success_message" element={<NewsletterSignUpProject title="Frontend Mentor | Newsletter Sign Up" />} />
+          <Route path="/projects/newsletter_sign_up_with_success_message/success" element={<NewsletterSignUpProjectSuccess title="Frontend Mentor | Newsletter Sign Up Success" />} />
+          <Route path="/projects/calculator_app" element={<CalculatorApp title="Frontend Mentor | CalculatorApp" />} />
+          <Route path="/projects/blog_preview_card" element={<BlogPreviewCard title="Frontend Mentor | Blog Preview Card" />} />
 
 
-          <Route path="/website-portfolio/database" element={<Database_List />} />
-          <Route path="/website-portfolio/database/:studentId" element={<SpecificStudent />} />
+          <Route path="/database" element={<Database_List />} />
+          <Route path="/database/:studentId" element={<SpecificStudent />} />
           <Route path="*" element={<NoPage />} />
         </Routes>
       </BrowserRouter>

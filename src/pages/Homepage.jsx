@@ -27,15 +27,15 @@ function Header() {
         <a href="https://www.facebook.com/ChriscentProduction/">
           <img 
           className="header__logo"
-          src="/website-portfolio/images/home/myLogo.png"
+          src="/images/home/myLogo.png"
           alt="Cyberpunk Image made with Blender 3D"
           />
         </a>
         <nav>
           <ul className="header__menu">
-            <li><Link className="header__link" to='/website-portfolio/'>Home</Link></li>
-            <li><Link className="header__link" to='/website-portfolio/database'>Work</Link></li>
-            <li><a className="header__link" href="/website-portfolio/#contact">Contact</a></li>
+            <li><Link className="header__link" to='/'>Home</Link></li>
+            <li><Link className="header__link" to='/database'>Work</Link></li>
+            <li><a className="header__link" href="/#contact">Contact</a></li>
             <li className="header__line"></li>
             <li>
               <button id="theme-toggle" className="header__sun">
@@ -102,8 +102,8 @@ function MobileNav() {
       <div className="mobile-nav">
         <nav>
           <ul className="mobile-nav__menu">
-            <li><Link className="mobile-nav__link" to='/website-portfolio/'>Home</Link></li>
-            <li><Link className="mobile-nav__link" to="/website-portfolio/database">Work</Link></li>
+            <li><Link className="mobile-nav__link" to='/'>Home</Link></li>
+            <li><Link className="mobile-nav__link" to="/database">Work</Link></li>
             <li><a className="mobile-nav__link" href="#contact">Contact </a></li>
             <li className="mobile-nav__link-line"></li>
             <li>
@@ -137,7 +137,7 @@ function MobileNav() {
 function Hero() {
   return(
     <section className="hero container">
-        <img className="hero__img" src="/website-portfolio/images/home/author_picture.jpg" alt="Profile Picture" />
+        <img className="hero__img" src="/images/home/author_picture.jpg" alt="Profile Picture" />
         <h2 className="hero__subtitle">Hello, I am Chriscent 👋</h2>
         <h1 className="hero__title">COMPUTER SCIENCE <br /> WEB DEVELOPER</h1>
         <p className="hero__description">
@@ -181,37 +181,37 @@ function About() {
             <div className="about__list"><img 
               className='lazy loading' 
               src="https://fakeimg.pl/300x300" 
-              data-src="/website-portfolio/images/components/icons8-html-logo.svg"
+              data-src="/images/components/icons8-html-logo.svg"
               alt="HTML" /><p>HTML</p>
             </div>
             <div className="about__list"><img 
               className='lazy loading' 
               src="https://fakeimg.pl/300x300" 
-              data-src="/website-portfolio/images/components/icons8-css-logo.svg"
+              data-src="/images/components/icons8-css-logo.svg"
               alt="CSS" /><p>CSS</p>
             </div>
             <div className="about__list"><img 
               className='lazy loading' 
               src="https://fakeimg.pl/300x300" 
-              data-src="/website-portfolio/images/components/icons8-java-logo.svg"
+              data-src="/images/components/icons8-java-logo.svg"
               alt="Java" /><p>Java</p>
             </div>
             <div className="about__list"><img 
               className='lazy loading' 
               src="https://fakeimg.pl/300x300" 
-              data-src="/website-portfolio/images/components/icons8-c-programming.svg"
+              data-src="/images/components/icons8-c-programming.svg"
               alt="C" /><p>C</p>
             </div>
             <div className="about__list"><img 
               className='lazy loading' 
               src="https://fakeimg.pl/300x300" 
-              data-src="/website-portfolio/images/components/icons8-c++.svg"
+              data-src="/images/components/icons8-c++.svg"
               alt="C++" /><p>C++</p>
             </div>
             <div className="about__list" onClick={gotoBlender} style={{ cursor: 'pointer' }}><img 
               className='lazy loading' 
               src="https://fakeimg.pl/300x300" 
-              data-src="/website-portfolio/images/components/blender_icon_256x256.png"
+              data-src="/images/components/blender_icon_256x256.png"
               alt="Blender 3D" /><p>Blender 3D</p>
             </div>
           </div>
@@ -220,7 +220,7 @@ function About() {
           <img 
             className="about__img lazy loading"
             src="https://fakeimg.pl/2160/?retina=1&text=ニャー&font=noto"
-            data-src="/website-portfolio/images/home/Cyberpunk_Final_Render_woBack.png"
+            data-src="/images/home/Cyberpunk_Final_Render_woBack.png"
             alt="Cyberpunk Image made with Blender 3D" />
         </div>
       </section>
@@ -273,56 +273,56 @@ function Featured() {
           <img 
             className="lazy loading" 
             src="https://fakeimg.pl/1050x600/?retina=1&text=こんにちは&font=noto"
-            data-src="/website-portfolio/images/featured/MAS-AMiCUS.png" 
+            data-src="/images/featured/MAS-AMiCUS.png" 
             alt="Chriscent Production" />
         </div>
         <div className="featured__img-wrapper">
           <img 
             className="lazy loading" 
             src="https://fakeimg.pl/1920x1080/?retina=1&text=こんにちは&font=noto"
-            data-src="/website-portfolio/images/featured/love.png" 
+            data-src="/images/featured/love.png" 
             alt="Chriscent Production" />
         </div>  
         <div className="featured__img-wrapper">
           <img 
             className="lazy loading" 
             src="https://fakeimg.pl/1920x1080/?retina=1&text=こんにちは&font=noto"
-            data-src="/website-portfolio/images/featured/DadDay.png" 
+            data-src="/images/featured/DadDay.png" 
             alt="Chriscent Production" />
         </div>
         <div className="featured__img-wrapper">
           <img 
             className="lazy loading" 
             src="https://fakeimg.pl/1920x1080/?retina=1&text=こんにちは&font=noto"
-            data-src="/website-portfolio/images/featured/easyanimate0001.png"
+            data-src="/images/featured/easyanimate0001.png"
             alt="Chriscent Production" />
         </div>
         <div className="featured__img-wrapper">
           <img 
             className="lazy loading" 
             src="https://fakeimg.pl/1920x1001/?retina=1&text=こんにちは&font=noto"
-            data-src="/website-portfolio/images/featured/news-home.png" 
+            data-src="/images/featured/news-home.png" 
             alt="Chriscent Production" />
         </div>
         <div className="featured__img-wrapper">
           <img 
             className="lazy loading" 
             src="https://fakeimg.pl/1920x1080/?retina=1&text=こんにちは&font=noto"
-            data-src="/website-portfolio/images/featured/car.png" 
+            data-src="/images/featured/car.png" 
             alt="Chriscent Production" />
         </div>
         <div className="featured__img-wrapper">
           <img 
             className="lazy loading" 
             src="https://fakeimg.pl/1920x1080/?retina=1&text=こんにちは&font=noto"
-            data-src="/website-portfolio/images/featured/CouchFinalDesktop.png"
+            data-src="/images/featured/CouchFinalDesktop.png"
             alt="Chriscent Production" />
         </div>
         <div className="featured__img-wrapper">
           <img 
             className="lazy loading" 
             src="https://fakeimg.pl/1920x1080/?retina=1&text=こんにちは&font=noto"
-            data-src="/website-portfolio/images/featured/leche_flan.png" 
+            data-src="/images/featured/leche_flan.png" 
             alt="Chriscent Production" />
         </div>
       </div>
@@ -345,7 +345,7 @@ function Work() {
           <img 
             className="lazy loading"  
             src="https://fakeimg.pl/1080x1080/?retina=1&text=ニャー&font=noto"
-            data-src="/website-portfolio/images/work/Earth.png"
+            data-src="/images/work/Earth.png"
             alt="A 3D Model picture of planet Earth" />
         </div>
         <div className="work__project work__project-content1">
@@ -368,7 +368,7 @@ function Work() {
           <img 
             className="lazy loading" 
             src="https://fakeimg.pl/1080x1080/?retina=1&text=ニャー&font=noto" 
-            data-src="/website-portfolio/images/work/somewhat low poly.png"
+            data-src="/images/work/somewhat low poly.png"
             alt="A low-poly 3D modeled bedroom" />
         </div>
         <div className="work__project work__project-content2">
@@ -392,7 +392,7 @@ function Work() {
           <img 
             className="lazy loading"  
             src="https://fakeimg.pl/2160x2160/?retina=1&text=ニャー&font=noto"
-            data-src="/website-portfolio/images/work/Weird Object.png"
+            data-src="/images/work/Weird Object.png"
             alt="A 3D model of a weird shaped object" />
         </div>
         <div className="work__project work__project-content3">

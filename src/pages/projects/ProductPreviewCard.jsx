@@ -11,7 +11,7 @@ const ProductPreviewCard = (props) => {
     <>
       <main className="project-PPC">
         <section className="card">
-          <img src="/website-portfolio/images/project-assets/image-product-desktop.jpg" alt="Preview" />
+          <img src="/images/project-assets/image-product-desktop.jpg" alt="Preview" />
           <div className="cardinfo">
             <p id="itemtype">P E R F U M E</p>
             <h1>Gabrielle Essence Eau De Parfum</h1>
@@ -32,8 +32,8 @@ const ProductPreviewCard = (props) => {
           Coded by <a href="https://github.com/KishonShrill"> Chriscent Pingol</a>.</p>
         </div>
 
-        <p className="web">Go back <a href="/website-portfolio/"> Home</a>.</p>
-        <p className="phone">Go back <a href="/website-portfolio/"> Home</a>.</p>
+        <p className="web">Go back <a href="/"> Home</a>.</p>
+        <p className="phone">Go back <a href="/"> Home</a>.</p>
       </footer>
     </>
   )

@@ -2,7 +2,7 @@ import { useQuery } from 'react-query'
 import axios from 'axios';
 
 const fetshProjects = () => {
-  return axios.get("/website-portfolio/projects.json");
+  return axios.get("/projects.json");
 }
 
 export default function LoadProjects() {

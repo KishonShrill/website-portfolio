@@ -11,7 +11,7 @@ const ProfileCardComponent = (props) => {
 
       <main className="profile__card">
         <span role="banner" className="profile__banner"></span>
-        <img className="profile__picture" src="/website-portfolio/images/project-assets/image-victor.jpg" alt="Profile Picture" />
+        <img className="profile__picture" src="/images/project-assets/image-victor.jpg" alt="Profile Picture" />
         <h1 className="profile__name"><span>Victor Crest</span><span className="profile__age">26</span></h1>
         <h2 className="profile__location">London</h2>
         <hr className="profile__divider" />
@@ -38,7 +38,7 @@ const ProfileCardComponent = (props) => {
           Coded by <a href="https://github.com/KishonShrill"> Chriscent Pingol</a>.</p>
         </div>
       
-        <p>Go back <a href="/website-portfolio/"> Home</a>.</p>
+        <p>Go back <a href="/"> Home</a>.</p>
       </footer>
     </main>
   )
