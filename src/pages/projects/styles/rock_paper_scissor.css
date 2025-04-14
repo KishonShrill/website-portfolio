@@ -1,0 +1,509 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@400;600;700&display=swap');
+
+/* FONT UTILITIES */
+/* FONT UTILITIES */
+/* FONT UTILITIES */
+.barlow-semi-condensed-regular {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.barlow-semi-condensed-semibold {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+.barlow-semi-condensed-bold {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+/* FONT UTILITIES */
+/* FONT UTILITIES */
+/* FONT UTILITIES */
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: white;
+
+  --dark-text:hsl(229, 25%, 31%);
+  --score-textt: hsl(229, 64%, 46%);
+
+  --clr-scissors:linear-gradient( hsl(39, 89%, 53%), hsl(40, 84%, 49%));
+  --clr-paper:linear-gradient( hsl(230, 89%, 65%), hsl(230, 89%, 62%));
+  --clr-rock:linear-gradient( hsl(349, 71%, 56%), hsl(349, 71%, 52%));
+  --clr-lizard:linear-gradient( hsl(261, 72%, 63%), hsl(261, 72%, 60%));
+  --clr-spock:linear-gradient( hsl(189, 58%, 57%), hsl(189, 58%, 53%));
+
+  /* Button Configuration */
+  --button-size: 200px;
+  --white-circle: 0.77;
+}
+
+.rock_paper_scissors {
+  width: 100%;
+  height: 100dvh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  /* overflow-y: hidden; */
+  background: radial-gradient(ellipse at top, hsl(214, 47%, 23%), hsl(237, 49%, 15%));
+}
+.rock_paper_scissors > header {
+  top: 2.5rem;
+  min-width: 700px;
+  height: 150px;
+  padding: 1rem 1.25rem 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 3px solid hsl(217, 16%, 45%);
+  border-radius: 15px;
+}
+.rock_paper_scissors > header > div:first-child {width: 100%;}
+.rock_paper_scissors > header > div:first-child > p {
+  font-size: 2.5rem;
+  line-height: 2rem;
+}
+.rock_paper_scissors > header > div:last-child {
+  width: 200px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: white;
+  border-radius: 8px;
+}
+.rock_paper_scissors > header > div:last-child > p:last-child {
+  font-size: 4rem;
+  line-height: 4rem;
+}
+.display_score {color: #3b4fab;}
+.score_count {color: #575269;}
+
+.btn-rule {
+  bottom: 2rem;
+  right: 2rem;
+  padding: 1rem 2.5rem;
+  border: 2px solid white;
+  border-radius: 10px;
+  color: white;
+}
+.btn-rule:hover {
+  cursor: pointer;
+  color: black;
+  background-color: white;
+}
+#game-display {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 1;
+  transition: opacity 1s ease-in-out;
+  z-index: 5;
+}
+.triangle {width: 313px;}
+
+/* Play Buttons */
+/* Play Buttons */
+/* Play Buttons */
+.pushable {
+  width: var(--button-size);
+  height: var(--button-size);
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  outline-offset: 4px;
+  transition: box-shadow 0.3s ease-in-out,
+              opacity 0.5s ease-in-out;
+}
+.front {
+  display: block;
+  padding: calc(var(--button-size) / 2);
+  border-radius: 50%;
+  background-color: red; /*TODO: Change this later */
+  transform: translateY(-6px);
+  will-change: transform;
+  transition: 
+    transform 
+    250ms
+    cubic-bezier(.3, .7, .4, 1);
+
+  color: black;
+}
+.front::before {
+  position: absolute;
+  content: '';
+  display: block;
+  width: calc(var(--button-size) * var(--white-circle));
+  height: calc(var(--button-size) * var(--white-circle));
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background-color: aliceblue;
+  /* z-index: 2; */
+}
+.pushable:hover .front {
+  transform: translateY(-10px);
+  transition: 
+    transform
+    250ms
+    cubic-bezier(.3, .7, .4, 1.5);
+}
+.pushable:active .front {
+  transform: translateY(-2px);
+  transition: transform 34ms;
+}
+.pushable:focus:not(:focus-visible) {
+  outline: none;
+}
+#paper {
+  top: calc(0px - var(--button-size) / 2); 
+  left: calc(0px - var(--button-size) / 2);
+}
+#scissors {
+  top: calc(0px - var(--button-size) / 2);;
+  right: calc(0px - var(--button-size) / 2);;
+}
+#rock {
+  bottom: calc(25px - var(--button-size) / 2);;
+  right: 50%;
+  transform: translateX(50%);
+}
+.paper {background: var(--clr-paper);}
+.paper-back{background: hsl(230, 47%, 43%);}
+.paper::before {box-shadow: inset 0 7px hsla(230, 47%, 43%, 0.579);}
+
+.scissors {  background: var(--clr-scissors);}
+.scissors-back {  background: hsl(39, 79%, 38%);}
+.scissors::before {box-shadow: inset 0 7px hsla(39, 79%, 38%, 0.282);}
+
+.rock {  background: var(--clr-rock);}
+.rock-back {  background: hsl(349, 56%, 33%);}
+.rock::before {box-shadow: inset 0 7px hsla(349, 56%, 33%, 0.279);}
+
+
+/* Versus Display */
+/* Versus Display */
+/* Versus Display */
+#versus-display {
+  display: none; /* Arrange boxes horizontally */
+  align-items: center; /* Vertically align boxes */
+  justify-content: center; /* Center boxes horizontally */
+  margin-top: 5%;
+  padding: 20px;
+  top: 5%;
+  /* background-color: #e0e0e0; */
+  border-radius: 8px;
+  /* The gap applies between items that have space */
+  gap: 20px;
+  opacity: 0;
+  /* Transitioning gap can add smoothness but isn't strictly necessary */
+  transition: gap 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  z-index: 1;
+}
+#player::after {
+  content: 'YOU PICKED';
+  width: 300px;
+  position: absolute;
+  top: -30%;
+  left: 50%;
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.2rem;
+  transform: translateX(-50%);
+}
+#opponent::after {
+  content: 'THE HOUSE  PICKED';
+  width: 300px;
+  position: absolute;
+  top: -30%;
+  left: 50%;
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.2rem;
+  transform: translateX(-50%);
+}
+
+.icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 4.5rem;
+}
+.selector {
+  user-drag: none;
+  -webkit-user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+.phone {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  *,
+  *::after,
+  *::before {
+    /* Button Configuration */
+    --button-size: 140px;
+    --white-circle: 0.77;
+  }
+  .rock_paper_scissors > header {
+    /* top: 2.5rem; */
+    min-width: min(90%, 350px);
+    height: 120px;
+    padding: 0.8rem 0.8rem 0.8rem 2rem;
+    /* display: flex; */
+    /* justify-content: space-between; */
+    /* align-items: center; */
+    border: 3px solid hsl(217, 16%, 45%);
+    border-radius: 8px;
+  }
+  .rock_paper_scissors > header > div:first-child {width: 100%;}
+  .rock_paper_scissors > header > div:first-child > p {
+    font-size: 1.5rem;
+    line-height: 1.2rem;
+  }
+  .rock_paper_scissors > header > div:last-child {
+    width: 156px;
+    /* height: 100%; */
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* justify-content: center; */
+    /* align-items: center; */
+    /* background: white; */
+    border-radius: 6px;
+  }
+  .rock_paper_scissors > header > div:last-child > p:last-child {
+    font-size: 3rem;
+    line-height: 2.7rem;
+  }
+  .display_score {
+    font-size: 0.7rem;
+    /* color: #3b4fab; */
+  }
+  .btn-rule {
+    bottom: 2rem;
+    right: 50%;
+    transform: translateX(+50%);
+    padding: 1rem 2.5rem;
+    font-size: 1rem;
+    border: 2px solid white;
+    border-radius: 8px;
+    color: white;
+  }
+
+  .pushable {
+    z-index: 2;
+    -webkit-tap-highlight-color: transparent;
+  }
+  #paper {
+    top: calc(10px - var(--button-size) / 2); 
+    left: calc(15px - var(--button-size) / 2);
+  }
+  #scissors {
+    top: calc(10px - var(--button-size) / 2);;
+    right: calc(15px - var(--button-size) / 2);;
+  }
+  #rock {
+    bottom: calc(25px - var(--button-size) / 2);;
+    right: 50%;
+    transform: translateX(50%);
+  }
+  .icon {
+    /* position: absolute; */
+    /* top: 50%; */
+    /* left: 50%; */
+    /* transform: translate(-50%, -50%); */
+    width: 2.9rem;
+  }
+  .triangle {
+    width: 200px;
+    transform: scale(1.1);
+    z-index: 1;
+  }
+
+
+  /* Versus Display */
+  /* Versus Display */
+  /* Versus Display */
+  #versus-display {
+    display: none; /* Arrange boxes horizontally */
+    flex-direction: column;
+    align-items: center; /* Vertically align boxes */
+    justify-content: center; /* Center boxes horizontally */
+    margin-top: 5%;
+    padding: 20px;
+    top: 0%;
+    /* background-color: #e0e0e0; */
+    border-radius: 8px;
+    /* The gap applies between items that have space */
+    gap: 20px;
+    opacity: 0;
+    /* Transitioning gap can add smoothness but isn't strictly necessary */
+    transition: gap 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    z-index: 1;
+  }
+  #player::after {
+    content: 'YOU PICKED';
+    width: 200px !important;
+    position: absolute;
+    top: 170px;
+    left: 50%;
+    /* font-family: "Barlow Semi Condensed", sans-serif; */
+    /* font-weight: 700; */
+    letter-spacing: 0.12rem;
+    transform: translateX(-50%);
+  }
+  #opponent::after {
+    content: 'THE HOUSE PICKED';
+    width: 200px !important;
+    position: absolute;
+    top: 170px;
+    left: 50%;
+    /* font-family: "Barlow Semi Condensed", sans-serif; */
+    /* font-weight: 700; */
+    letter-spacing: 0.12rem;
+    transform: translateX(-50%);
+  }
+  .feature {transform: scale(0.9) !important;}
+  #results {
+    margin-top: 5rem;
+  }
+  #display-result {
+    width: 220px;
+    /* text-align: center; */
+    /* font-family: "Barlow Semi Condensed", sans-serif; */
+    /* font-weight: 700; */
+    font-size: 3.5rem;
+    margin: 0 auto 1.5rem;
+  }
+  #play-again {
+    width: 214px;
+    margin-inline: 2rem;
+    padding: 14px 50px;
+    font-family: "Barlow Semi Condensed", sans-serif;
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+    border: none;
+    border-radius: 5px;
+    /* color: var(--dark-text); */
+  }
+}
+
+/* UTILITIES */
+.absolute {position: absolute;}
+.relative {position: relative;}
+.text_shadow {text-shadow: 0px 2px #558abb;}
+.feature {transform: scale(1.5);}
+.halo {
+  box-shadow:
+      /* Shadow 1 (Closest, least faded) */
+      0 0 0 20px rgba(255, 255, 255, 0.089),
+      /* Shadow 2 (Middle) */
+      0 0 0 55px rgba(255, 255, 255, 0.067),
+      /* Shadow 3 (Furthest, most faded) */
+      0 0 0 100px rgba(255, 255, 255, 0.02);
+}
+#display-result {
+  text-align: center;
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-weight: 700;
+  font-size: 3.5rem;
+  margin-bottom: 1.5rem;
+  overflow: hidden;
+}
+#play-again {
+  margin-inline: 2rem;
+  padding: 14px 60px;
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.1rem;
+  border: none;
+  border-radius: 5px;
+  color: var(--dark-text);
+}
+#play-again:hover {
+  cursor: pointer;
+  color: hsl(349, 71%, 56%);
+}
+
+#game-display.fade-out {opacity: 0;}
+#versus-display.fade-in {opacity: 1;}
+#opponent.fade-in {opacity: 1 !important;}
+
+#results {
+  /* Initial state: Hidden and takes no space */
+  max-width: 0;
+  opacity: 0;
+  overflow: hidden; /* Prevent content visibility during transition */
+  padding-left: 0; /* Collapse padding */
+  padding-right: 0; /* Collapse padding */
+  margin-left: 0; /* Collapse margin */
+  margin-right: 0; /* Collapse margin */
+  border: none; /* Collapse border */
+  overflow-y: hidden;
+
+  /* Define the transition */
+  transition: max-width 0.5s ease-in-out,
+              opacity 0.5s ease-in-out 0.1s, /* Slight delay for opacity */
+              padding 0.5s ease-in-out,
+              margin 0.5s ease-in-out,
+              border 0.5s ease-in-out;
+}
+
+/* State when the middle box should be visible */
+#results.visible {
+  max-width: 100%; /* Target width */
+  opacity: 1;
+   /* Restore padding if needed, or remove if box class handles it */
+  padding-left: 20px;
+  padding-right: 20px;
+  /* Margins are usually handled by flex gap, but can be explicitly set if needed */
+  margin-left: 0; /* Use flex gap */
+  margin-right: 0; /* Use flex gap */
+}
+
+
+/* Dialog */
+/* Dialog */
+/* Dialog */
+dialog:-internal-dialog-in-top-layer::backdrop {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.modal {
+  padding: 2rem;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  background: white;
+  border-radius: 0.25rem;
+  z-index: 10;
+  transition: all 0.3s;
+}
+.modal div {
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+.modal div h1 {color: var(--dark-text);}
+.modal div button {
+  cursor: pointer;
+  color: rgb(85, 85, 85);
+  border: none;
+  background: none;
+}

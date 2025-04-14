@@ -6,12 +6,15 @@ yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
-
-node_modules
+# Build Artifacts
 dist
 dist-ssr
+coverage/
+# Common Environment/Local Settings
+node_modules
 *.local
-
+.DS_Store
+.env
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json

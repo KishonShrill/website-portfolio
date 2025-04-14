@@ -1,9 +1,10 @@
+import { scan } from 'react-scan'
 import React, { useEffect } from 'react';
 import { BrowserRouter, Route, Routes, useLocation } from "react-router-dom";
 import { QueryClientProvider, QueryClient } from 'react-query';
-import { ReactQueryDevtools } from 'react-query/devtools'
 
 const queryClient = new QueryClient();
+scan({enabled: import.meta.env.VITE_SCAN === "true",});
 
 import Homepage from "./pages/Homepage.jsx";
 import Database_List from "./pages/Database_List.jsx";
@@ -24,6 +25,7 @@ import NewsletterSignUpProject from './pages/projects/NewsletterSignUpProject.js
 import NewsletterSignUpProjectSuccess from './pages/projects/NewsletterSignUpProjectSuccess.jsx';
 import CalculatorApp from './pages/projects/CalculatorApp.jsx';
 import BlogPreviewCard from './pages/projects/BlogPreviewCard.jsx';
+import RockPaperScissor from './pages/projects/RockPaperScissor.jsx';
 
 export default function App() {
   // Theme getter for local user setting
@@ -90,6 +92,7 @@ export default function App() {
           <Route path="/projects/newsletter_sign_up_with_success_message/success" element={<NewsletterSignUpProjectSuccess title="Frontend Mentor | Newsletter Sign Up Success" />} />
           <Route path="/projects/calculator_app" element={<CalculatorApp title="Frontend Mentor | CalculatorApp" />} />
           <Route path="/projects/blog_preview_card" element={<BlogPreviewCard title="Frontend Mentor | Blog Preview Card" />} />
+          <Route path="/projects/rock_paper_scissor" element={<RockPaperScissor title="Frontend Mentor | Rock Paper Scissor" />} />
 
 
           <Route path="/database" element={<Database_List />} />
@@ -97,7 +100,7 @@ export default function App() {
           <Route path="*" element={<NoPage />} />
         </Routes>
       </BrowserRouter>
-      <ReactQueryDevtools initialIsOpem={false} position='bottom-right'/>
+      {/* <ReactQueryDevtools initialIsOpem={false} position='bottom-right'/> */}
     </QueryClientProvider>
   );
 }
