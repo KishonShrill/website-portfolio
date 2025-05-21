@@ -19,10 +19,7 @@
   max-width: 60ch;
 }
 
-.contact__socials {
-  display: flex;
-  gap: 2rem;
-}
+
 .contact__socials a {
   text-decoration: none;
   color: var(--clr-primary);
@@ -31,8 +28,23 @@
   color: var(--clr-rose);
 }
 
+
 .contact__btn {
   font-size: var(--size-s);
+}
+
+@media (min-width: 1px) {
+  .contact__socials {
+    padding: 0.75rem;
+    display: flex;
+    gap: 1.5rem;
+    border-radius: 50px;
+    background-color: rgb(199, 199, 199);
+  }
+  .contact__socials-item {
+    width: 2rem;
+    height: 2rem;
+  }
 }
 
 /* xs */
@@ -69,6 +81,15 @@
   
   .contact__btn {
     font-size: var(--size-l);
+  }
+
+  .contact__socials {
+    padding: 1rem;
+    gap: 2rem;
+  }
+  .contact__socials-item {
+    width: 3rem;
+    height: 3rem;
   }
 }
 /* xl */

@@ -1,3 +1,13 @@
+@keyframes wave {
+  0% { transform: rotate(0deg); }
+  15% { transform: rotate(14deg); }
+  30% { transform: rotate(-8deg); }
+  45% { transform: rotate(14deg); }
+  60% { transform: rotate(-4deg); }
+  75% { transform: rotate(10deg); }
+  100% { transform: rotate(0deg); }
+}
+
 /* default */
 @media (min-width: 1px) {
   .hero {
@@ -22,6 +32,16 @@
     font-size: var(--size-base);
     line-height: 0.9;
   }
+
+  .hero__subtitle:hover .hero__subtitle-wave {
+    animation: wave 1s ease-in-out;
+
+  }
+
+  .hero__subtitle-wave {
+    display: inline-block;
+    transform-origin: 70% 70%; /* pivot point to make it wave naturally */
+  }
   
   .hero__title {
     color: var(--clr-secondary);
@@ -37,6 +57,11 @@
     max-width: 60ch;
     font-size: var(--size-s);
     color: var(--clr-secondary);
+  }
+
+  .hero__actions {
+    display: flex;
+    gap: 0.5rem;
   }
   
   .hero__btn {
@@ -80,6 +105,9 @@
 }
 /* m */
 @media (min-width: 768px) {
+  .hero__actions {
+    gap: 1rem;
+  }
   .hero__title {
     font-size: var(--size-6xl);
   }

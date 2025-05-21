@@ -11,6 +11,12 @@
 /* xxl */
 /* @media (min-width: 1536px) {} */
 
+.relative {position: relative;}
+.absolute {position: absolute;}
+.fixed {position: fixed;}
+.static {position: static;}
+.sticky {position: sticky;}
+
 .placeCenter {
   display: flex;
   flex-direction: column;

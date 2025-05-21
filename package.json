@@ -8,7 +8,7 @@
     "publicdev": "vite --host",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
-    "start": "concurrently \"vite\" \"node ./server/server.mjs\"",
+    "start": "concurrently \"vite --host\" \"node ./server/server.mjs\"",
     "test": "vitest",
     "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
