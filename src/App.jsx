@@ -1,5 +1,5 @@
 import { scan } from 'react-scan'
-import React, { useEffect } from 'react';
+import React, { useEffect, lazy } from 'react';
 import { BrowserRouter, Route, Routes, useLocation } from "react-router-dom";
 import { QueryClientProvider, QueryClient } from 'react-query';
 
@@ -8,24 +8,24 @@ scan({enabled: import.meta.env.VITE_SCAN === "true",});
 
 import Homepage from "./pages/Homepage.jsx";
 import Database_List from "./pages/Database_List.jsx";
-import NoPage from './components/NoPage.jsx'
 import SpecificStudent from './components/SpecificStudent.jsx';
+const NoPage = lazy(() => import('./components/NoPage.jsx'))
 
-import AgeCalculatorApp from './pages/projects/AgeCalculatorApp.jsx';
-import QrCodeComponent from './pages/projects/QrCodeComponent.jsx';
-import NewsHomepage from './pages/projects/NewsHomepage.jsx';
-import ProductPreviewCard from './pages/projects/ProductPreviewCard.jsx';
-import NFTPreviewCard from './pages/projects/NftPreviewCard.jsx';
-import FourCardFeature from './pages/projects/FourCardFeature.jsx';
-import ProfileCardComponent from './pages/projects/ProfileCardComponent.jsx';
-import ResultSummaryComponent from './pages/projects/ResultsSummaryComponent.jsx';
-import InteractiveCardDetailsForm from './pages/projects/InteractiveCardDetailsForm.jsx';
-import InteractiveRatingComponent from './pages/projects/InteractiveRatingComponent.jsx';
-import NewsletterSignUpProject from './pages/projects/NewsletterSignUpProject.jsx';
-import NewsletterSignUpProjectSuccess from './pages/projects/NewsletterSignUpProjectSuccess.jsx';
-import CalculatorApp from './pages/projects/CalculatorApp.jsx';
-import BlogPreviewCard from './pages/projects/BlogPreviewCard.jsx';
-import RockPaperScissor from './pages/projects/RockPaperScissor.jsx';
+const AgeCalculatorApp = lazy(() => import('./pages/projects/AgeCalculatorApp.jsx'))
+const QrCodeComponent = lazy(() => import('./pages/projects/QrCodeComponent.jsx'))
+const NewsHomepage = lazy(() => import('./pages/projects/NewsHomepage.jsx'))
+const ProductPreviewCard = lazy(() => import('./pages/projects/ProductPreviewCard.jsx'))
+const NFTPreviewCard = lazy(() => import('./pages/projects/NftPreviewCard.jsx'))
+const FourCardFeature = lazy(() => import('./pages/projects/FourCardFeature.jsx'))
+const ProfileCardComponent = lazy(() => import('./pages/projects/ProfileCardComponent.jsx'))
+const ResultSummaryComponent = lazy(() => import('./pages/projects/ResultsSummaryComponent.jsx'))
+const InteractiveCardDetailsForm = lazy(() => import('./pages/projects/InteractiveCardDetailsForm.jsx'))
+const InteractiveRatingComponent = lazy(() => import('./pages/projects/InteractiveRatingComponent.jsx'))
+const NewsletterSignUpProject = lazy(() => import('./pages/projects/NewsletterSignUpProject.jsx'))
+const NewsletterSignUpProjectSuccess = lazy(() => import('./pages/projects/NewsletterSignUpProjectSuccess.jsx'))
+const CalculatorApp = lazy(() => import('./pages/projects/CalculatorApp.jsx'))
+const BlogPreviewCard = lazy(() => import('./pages/projects/BlogPreviewCard.jsx'))
+const RockPaperScissor = lazy(() => import('./pages/projects/RockPaperScissor.jsx'))
 
 export default function App() {
   // Theme getter for local user setting

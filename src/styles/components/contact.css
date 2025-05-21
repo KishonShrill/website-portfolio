@@ -19,6 +19,18 @@
   max-width: 60ch;
 }
 
+.contact__socials {
+  display: flex;
+  gap: 2rem;
+}
+.contact__socials a {
+  text-decoration: none;
+  color: var(--clr-primary);
+}
+.contact__socials a:hover {
+  color: var(--clr-rose);
+}
+
 .contact__btn {
   font-size: var(--size-s);
 }

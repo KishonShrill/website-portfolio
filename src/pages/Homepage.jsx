@@ -2,6 +2,23 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
 import LoadProjects from '../components/FetshProjects.jsx'
+import DisplayTools from '../components/DisplayTools.jsx';
+import DisplayProject from '../components/DisplayProject.jsx';
+
+import('../styles/App.css')
+import('../styles/utils.css')
+
+import('../styles/components/preload.css')
+import('../styles/components/header.css')
+import('../styles/components/hero.css')
+import('../styles/components/about-me.css')
+import('../styles/components/featured.css')
+import('../styles/components/work.css')
+import('../styles/components/contact.css')
+import('../styles/components/footer.css')
+import('../styles/components/comments.css')
+import('../styles/components/mobile-nav.css')
+import('../styles/components/explore-container.css')
 
 function Header() {
   const [isNavOpen, setIsNavOpen] = useState(false);
@@ -39,19 +56,23 @@ function Header() {
             <li className="header__line"></li>
             <li>
               <button id="theme-toggle" className="header__sun">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                <svg 
+                  xmlns="http://www.w3.org/2000/svg" 
+                  viewBox="0 0 24 24"
                   fill="currentColor">
-                  <path
-                    d="M12 2.25a.75.75 0 01.75.75v2.25a.75.75 0 01-1.5 0V3a.75.75 0 01.75-.75zM7.5 12a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM18.894 6.166a.75.75 0 00-1.06-1.06l-1.591 1.59a.75.75 0 101.06 1.061l1.591-1.59zM21.75 12a.75.75 0 01-.75.75h-2.25a.75.75 0 010-1.5H21a.75.75 0 01.75.75zM17.834 18.894a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 10-1.061 1.06l1.59 1.591zM12 18a.75.75 0 01.75.75V21a.75.75 0 01-1.5 0v-2.25A.75.75 0 0112 18zM7.758 17.303a.75.75 0 00-1.061-1.06l-1.591 1.59a.75.75 0 001.06 1.061l1.591-1.59zM6 12a.75.75 0 01-.75.75H3a.75.75 0 010-1.5h2.25A.75.75 0 016 12zM6.697 7.757a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 00-1.061 1.06l1.59 1.591z" />
+                  <path d="M12 2.25a.75.75 0 01.75.75v2.25a.75.75 0 01-1.5 0V3a.75.75 0 01.75-.75zM7.5 12a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM18.894 6.166a.75.75 0 00-1.06-1.06l-1.591 1.59a.75.75 0 101.06 1.061l1.591-1.59zM21.75 12a.75.75 0 01-.75.75h-2.25a.75.75 0 010-1.5H21a.75.75 0 01.75.75zM17.834 18.894a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 10-1.061 1.06l1.59 1.591zM12 18a.75.75 0 01.75.75V21a.75.75 0 01-1.5 0v-2.25A.75.75 0 0112 18zM7.758 17.303a.75.75 0 00-1.061-1.06l-1.591 1.59a.75.75 0 001.06 1.061l1.591-1.59zM6 12a.75.75 0 01-.75.75H3a.75.75 0 010-1.5h2.25A.75.75 0 016 12zM6.697 7.757a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 00-1.061 1.06l1.59 1.591z" />
                 </svg>
               </button>
             </li>
             <li><a className="header__explore btn">Explore</a></li>
           </ul>
           <button className="header__bars" onClick={handleHeaderBtnClick}>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+            <svg 
+              xmlns="http://www.w3.org/2000/svg" 
+              viewBox="0 0 24 24"
               fill="currentColor">
-              <path fillRule="evenodd"
+              <path 
+                fillRule="evenodd"
                 d="M3 6.75A.75.75 0 013.75 6h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 6.75zM3 12a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 12zm0 5.25a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75a.75.75 0 01-.75-.75z"
                 clipRule="evenodd" />
             </svg>
@@ -134,99 +155,6 @@ function MobileNav() {
   )
 }
 
-function Hero() {
-  return(
-    <section className="hero container">
-        <img className="hero__img" src="/images/home/author_picture.jpg" alt="Profile Picture" />
-        <h2 className="hero__subtitle">Hello, I am Chriscent 👋</h2>
-        <h1 className="hero__title">COMPUTER SCIENCE <br /> WEB DEVELOPER</h1>
-        <p className="hero__description">
-          I am an aspiring <strong>Front-End Web Developer</strong> currently 
-          pursuing a degree in <strong>Computer Science</strong>. I'm also deeply 
-          passionate about 3D Art, and I regularly create captivating designs using 
-          the software <strong><a href="https://www.blender.org/" target="_blank">Blender</a></strong>.
-        </p>
-        <a className="hero__btn btn" href="https://www.facebook.com/ChriscentProduction/">My Social</a>
-    </section>
-  );
-}
-
-function About() {
-  const gotoBlender = () => {
-    window.location.href = 'https://www.blender.org/';
-  };  
-
-  return(
-    <section id="about" className="about container section">
-        <div className="about__content">
-          <h2 className="about__title">About</h2>
-          <p className="about__description">I'm <strong>Chriscent</strong>, a
-            computer science student studying at
-            Mindanao State University Iligan Instutie of Technology
-            with a passion for front-end development.
-          </p>
-          <p className="about__description">
-            When I'm not coding, you'll often find me castling a line while
-            fishing, knocking
-            down pins at the bowling alley, or jamming out to music.
-          </p>
-          <p className="about__description">I embrace my unique quirks,
-            comining a touch of weirdness with boundless enthusiasm. I may be a
-            bit crazy at times,
-            but I'm also a loyal fun-loving freind to have by your side.
-          </p>
-          <hr className="about__hr" />
-          <h3 className="about__subtitle">Technologies</h3>
-          <div className="about__ul">
-            <div className="about__list"><img 
-              className='lazy loading' 
-              src="https://fakeimg.pl/300x300" 
-              data-src="/images/components/icons8-html-logo.svg"
-              alt="HTML" /><p>HTML</p>
-            </div>
-            <div className="about__list"><img 
-              className='lazy loading' 
-              src="https://fakeimg.pl/300x300" 
-              data-src="/images/components/icons8-css-logo.svg"
-              alt="CSS" /><p>CSS</p>
-            </div>
-            <div className="about__list"><img 
-              className='lazy loading' 
-              src="https://fakeimg.pl/300x300" 
-              data-src="/images/components/icons8-java-logo.svg"
-              alt="Java" /><p>Java</p>
-            </div>
-            <div className="about__list"><img 
-              className='lazy loading' 
-              src="https://fakeimg.pl/300x300" 
-              data-src="/images/components/icons8-c-programming.svg"
-              alt="C" /><p>C</p>
-            </div>
-            <div className="about__list"><img 
-              className='lazy loading' 
-              src="https://fakeimg.pl/300x300" 
-              data-src="/images/components/icons8-c++.svg"
-              alt="C++" /><p>C++</p>
-            </div>
-            <div className="about__list" onClick={gotoBlender} style={{ cursor: 'pointer' }}><img 
-              className='lazy loading' 
-              src="https://fakeimg.pl/300x300" 
-              data-src="/images/components/blender_icon_256x256.png"
-              alt="Blender 3D" /><p>Blender 3D</p>
-            </div>
-          </div>
-        </div>
-        <div className="about__img-wrapper">
-          <img 
-            className="about__img lazy loading"
-            src="https://fakeimg.pl/2160/?retina=1&text=ニャー&font=noto"
-            data-src="/images/home/Cyberpunk_Final_Render_woBack.png"
-            alt="Cyberpunk Image made with Blender 3D" />
-        </div>
-      </section>
-  )
-}
-
 function Featured() {
   return(
     <section id="featured" className="featured container section">
@@ -253,78 +181,34 @@ function Featured() {
           <ul className="featured__skill-stack">
             <li className="featured__info">Web Development</li>
             <li className="featured__info">Blender 3D</li>
-            <li className="featured__info">Social Media Analyst</li>
             <li className="featured__info">Camera Operator</li>
             <li className="featured__info">Video Editor</li>
             <li className="featured__info">Photographer</li>
           </ul>
         </div>
+
         <div>
           <h3 className="featured__label">Project Type</h3>
           <p className="featured__info">Web Design & 3D Art</p>
         </div>
+
         <div>
           <h3 className="featured__label">Timeline</h3>
           <p className="featured__info">September 2023 - present</p>
         </div>
       </div>
+
+      <br />
+      <br />
+      <br />
+      <h2 className="featured__title" style={{textAlign: "center"}}>3D Art Projects</h2>
       <div className="featured__img-container">
-        <div className="featured__img-wrapper">
-          <img 
-            className="lazy loading" 
-            src="https://fakeimg.pl/1050x600/?retina=1&text=こんにちは&font=noto"
-            data-src="/images/featured/MAS-AMiCUS.png" 
-            alt="Chriscent Production" />
-        </div>
-        <div className="featured__img-wrapper">
-          <img 
-            className="lazy loading" 
-            src="https://fakeimg.pl/1920x1080/?retina=1&text=こんにちは&font=noto"
-            data-src="/images/featured/love.png" 
-            alt="Chriscent Production" />
-        </div>  
-        <div className="featured__img-wrapper">
-          <img 
-            className="lazy loading" 
-            src="https://fakeimg.pl/1920x1080/?retina=1&text=こんにちは&font=noto"
-            data-src="/images/featured/DadDay.png" 
-            alt="Chriscent Production" />
-        </div>
-        <div className="featured__img-wrapper">
-          <img 
-            className="lazy loading" 
-            src="https://fakeimg.pl/1920x1080/?retina=1&text=こんにちは&font=noto"
-            data-src="/images/featured/easyanimate0001.png"
-            alt="Chriscent Production" />
-        </div>
-        <div className="featured__img-wrapper">
-          <img 
-            className="lazy loading" 
-            src="https://fakeimg.pl/1920x1001/?retina=1&text=こんにちは&font=noto"
-            data-src="/images/featured/news-home.png" 
-            alt="Chriscent Production" />
-        </div>
-        <div className="featured__img-wrapper">
-          <img 
-            className="lazy loading" 
-            src="https://fakeimg.pl/1920x1080/?retina=1&text=こんにちは&font=noto"
-            data-src="/images/featured/car.png" 
-            alt="Chriscent Production" />
-        </div>
-        <div className="featured__img-wrapper">
-          <img 
-            className="lazy loading" 
-            src="https://fakeimg.pl/1920x1080/?retina=1&text=こんにちは&font=noto"
-            data-src="/images/featured/CouchFinalDesktop.png"
-            alt="Chriscent Production" />
-        </div>
-        <div className="featured__img-wrapper">
-          <img 
-            className="lazy loading" 
-            src="https://fakeimg.pl/1920x1080/?retina=1&text=こんにちは&font=noto"
-            data-src="/images/featured/leche_flan.png" 
-            alt="Chriscent Production" />
-        </div>
+        <DisplayProject image={"/images/featured/love.png"} text={"Chriscent Production"} link={"#"} />
+        <DisplayProject image={"/images/featured/DadDay.png"} text={"Chriscent Production"} link={"#"} />
+        <DisplayProject image={"/images/featured/easyanimate0001.png"} text={"Chriscent Production"} link={"#"} />
+        <DisplayProject image={"/images/featured/car.png"} text={"Chriscent Production"} link={"#"} />
+        <DisplayProject image={"/images/featured/CouchFinalDesktop.png"} text={"Chriscent Production"} link={"#"} />
+        <DisplayProject image={"/images/featured/leche_flan.png"} text={"Chriscent Production"} link={"#"} />
       </div>
     </section>
   )
@@ -333,62 +217,65 @@ function Featured() {
 function Work() {
   return(
     <section className="work container section">
-      <h2 className="work__title">Projects</h2>
+      <h2 className="work__title">Personal Web Projects</h2>
       <p className="work__description">
         Here are some of the rendered artworks I've created during 
         moments when I needed a break or found myself looking for 
         creative inspiration outside of web development. Explore my 
         artistic side below:</p>
+
       <div className="work__container">
-        <h3 className="work__project-title">Planet Earth</h3>
-        <div className="work__img-wrapper work__project-image1">
-          <img 
-            className="lazy loading"  
-            src="https://fakeimg.pl/1080x1080/?retina=1&text=ニャー&font=noto"
-            data-src="/images/work/Earth.png"
-            alt="A 3D Model picture of planet Earth" />
-        </div>
-        <div className="work__project work__project-content1">
-          <h3 className="work__project-subtitle">Planet Earth</h3>
-          <p className="work__project-description1">
-            Picture Earth as a masterpiece of vibrant colors and intricate 
-            details. From space, it's a breathtaking canvas painted with various 
-            shades of blue, with the deep oceans resembling rich indigo and the 
-            continents adorned in lush greens and earthy browns.
-          </p>
-          <p className="work__project-description2">
-            It's a picture of harmony, where the delicate balance of ecosystems and 
-            the interconnectedness of all life forms create an awe-inspiring visual symphony.
-          </p>
-          <a className="btn work__project-btn" href="https://www.instagram.com/arts.tic_musician/">See More</a>
-        </div>
-        
-        <h3 className="work__project-title">Low Poly Room</h3>
-        <div className="work__img-wrapper work__project-image2">
-          <img 
-            className="lazy loading" 
-            src="https://fakeimg.pl/1080x1080/?retina=1&text=ニャー&font=noto" 
-            data-src="/images/work/somewhat low poly.png"
-            alt="A low-poly 3D modeled bedroom" />
-        </div>
-        <div className="work__project work__project-content2">
-          <h3 className="work__project-subtitle">Low Poly Room</h3>
-          <p className="work__project-description1">
-            In this low-poly 3D-rendered student bedroom, simplicity meets 
-            functionality. The minimalist design features clean lines, muted 
-            colors, and basic geometric shapes, creating a tranquil space 
-            conducive to focused study.
-          </p>
-          <p className="work__project-description2">
-            Compact and efficient, this room maximizes every inch, offering a 
-            cozy haven where students can find both comfort and inspiration in 
-            their academic pursuits.
-          </p>
-          <a className="btn work__project-btn" href="https://www.instagram.com/arts.tic_musician/">See More</a>
+        <div className='work__row'>
+          <div>
+            <img 
+              className="lazy loading"  
+              src="https://fakeimg.pl/1080x1080/?retina=1&text=ニャー&font=noto"
+              data-src="/images/featured/budgetbuddy-preview.png"
+              alt="Budget Buddy: A budgeting web app for students"
+              style={{}} />
+          </div>
+          <div className="work__project work__project-content1">
+            <h3 className="work__project-subtitle">Budget Buddy</h3>
+            <p className="work__project-description1">
+              <strong>Budget Buddy</strong> is a simple and intuitive web app designed to help users manage their expenses, track their income, and stay on top of their budgets!
+            </p>
+            <p className="work__project-description2">
+              <b>~~~ Technologies Used ~~~</b>
+              <div>
+
+              </div>
+            </p>
+            <a className="btn work__project-btn" href="https://productprice-iligan.vercel.app/">Visit</a>
+          </div>
         </div>
         
-        <h3 className="work__project-title">Weird Object</h3>
-        <div className="work__img-wrapper work__project-image3">
+        <div className="work__row">
+          <div>
+            <img 
+              className="lazy loading" 
+              src="https://fakeimg.pl/1080x1080/?retina=1&text=ニャー&font=noto" 
+              data-src="/images/featured/qrcode-preview.png"
+              alt="QR Maker, QR Reader" />
+          </div>
+          <div className="work__project work__project-content2">
+            <h3 className="work__project-subtitle">QR Code Maker/Reader</h3>
+            <p className="work__project-description1">
+              In this low-poly 3D-rendered student bedroom, simplicity meets 
+              functionality. The minimalist design features clean lines, muted 
+              colors, and basic geometric shapes, creating a tranquil space 
+              conducive to focused study.
+            </p>
+            <p className="work__project-description2">
+              <b>~~~ Technologies Used ~~~</b>
+              <div>
+
+              </div>
+            </p>
+            <a className="btn work__project-btn" href="https://chriscent-qr-code.vercel.app/">Visit</a>
+          </div>
+        </div>
+        
+        {/* <div className=" work__project-image3">
           <img 
             className="lazy loading"  
             src="https://fakeimg.pl/2160x2160/?retina=1&text=ニャー&font=noto"
@@ -410,30 +297,14 @@ function Work() {
             inexplicable and mysterious.
           </p>
           <a className="btn work__project-btn" href="https://www.instagram.com/arts.tic_musician/">See More</a>
-        </div>
+        </div> */}
       </div>
     </section>
   )
 }
 
 export default function Homepage(props) {
-  useEffect(() => {document.title = props.title}, [])
-  useEffect(() => {
-    import('../styles/App.css')
-    import('../styles/utils.css')
-
-    import('../styles/components/preload.css')
-    import('../styles/components/header.css')
-    import('../styles/components/hero.css')
-    import('../styles/components/about-me.css')
-    import('../styles/components/featured.css')
-    import('../styles/components/work.css')
-    import('../styles/components/contact.css')
-    import('../styles/components/footer.css')
-    import('../styles/components/comments.css')
-    import('../styles/components/mobile-nav.css')
-    import('../styles/components/explore-container.css')
-  }, [])
+  document.title = props.title
 
   return(
     <>
@@ -441,10 +312,62 @@ export default function Homepage(props) {
       <MobileNav />
 
       <main className="container">
-        <Hero />
-        <About />
-        <Featured />
+        <section className="hero container">
+          <img className="hero__img" src="/images/home/author_picture.jpg" alt="Profile Picture" />
+          <h2 className="hero__subtitle">Hello, I am Chriscent 👋</h2>
+          <h1 className="hero__title">FRONT-END <br /> WEB DEVELOPER</h1>
+          <p className="hero__description">
+            I’m a <strong>Front-End Web Developer</strong> based in Iligan City, 
+            Philippines, currently pursuing a degree in <strong>Computer Science</strong>. 
+            I also explore <strong>3D Art</strong> in my free time, occasionally creating 
+            visual designs using <strong><a href="https://www.blender.org/" target="_blank">Blender</a></strong>.
+          </p>
+          <div style={{display: "flex", gap: "1rem"}}>
+            <a className="hero__btn btn" href="#contact">My Socials</a>
+            <a className="hero__btn btn" href="https://www.facebook.com/ChriscentProduction/">Resume</a>
+          </div>
+        </section>
+
+        <section id="about" className="about container section">
+          <div className="about__content">
+            <h2 className="about__title">About</h2>
+            <p className="about__description">I'm <strong>Chriscent</strong>, a
+              computer science student at
+              Mindanao State University Iligan - Institute of Technology,
+              focused on front-end development and building real-world web applications.
+            </p>
+            <p className="about__description">
+              Outside of tech, I'm into fishing, bowling, and music — hobbies that keep me grounded and refreshed.
+            </p>
+            <p className="about__description">
+              I value <b>curiosity</b>, <b>good energy</b>, and <strong>teamwork</strong>, and I'm always up for learning something new or solving interesting problems.
+            </p>
+
+            <hr className="about__hr" />
+            <h3 className="about__subtitle">Technologies</h3>
+
+            <div className="about__ul">
+              <DisplayTools className="about__list" image="/images/components/icons8-html-logo.svg" text="HTML" />
+              <DisplayTools className="about__list" image="/images/components/icons8-css-logo.svg" text="CSS" />
+              <DisplayTools className="about__list" image="#" text="JavaScript" />
+              <DisplayTools className="about__list" image="#" text="MongoDB" />
+              <DisplayTools className="about__list" image="#" text="Express.js" />
+              <DisplayTools className="about__list" image="#" text="React.js" />
+              <DisplayTools className="about__list" image="#" text="Node.js" />
+            </div>
+          </div>
+
+          <div className="about__img-wrapper">
+            <img 
+              className="about__img lazy loading"
+              src="https://fakeimg.pl/2160/?retina=1&text=ニャー&font=noto"
+              data-src="/images/home/Cyberpunk_Final_Render_woBack.png"
+              alt="Cyberpunk Image made with Blender 3D" />
+          </div>
+        </section>
+
         <Work />
+        <Featured />
       </main>
 
       <section className="contact container section" id="contact">
@@ -458,11 +381,23 @@ export default function Homepage(props) {
         </p>
         <a className="contact__btn btn"
           href="mailto:chriscentlouisjune.pingol@g.msuiit.edu.ph"
-          target="_blank">Reach out!</a>
+          target="_blank">Reach out!
+        </a>
+        <div className='contact__socials'>
+          <a href="https://www.frontendmentor.io/profile/KishonShrill">Frontend Mentor</a>
+          <a href="https://www.linkedin.com/in/chriscent-louis-june-pingol">LinkedIn</a>
+          <a href="https://github.com/KishonShrill">Github</a>
+        </div>
       </section>
 
       <footer className="footer container section">
         <h3 className="footer__title"><strong>~ Chriscent Production ~</strong></h3>
+        
+        <ul className='footer__list'>
+          <li>
+            <a target="_blank" href="https://icons8.com/">Icons</a> by <a target="_blank" href="https://icons8.com">Icons8</a>
+          </li>
+        </ul>
       </footer>
     </>
   );
