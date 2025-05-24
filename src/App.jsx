@@ -1,5 +1,5 @@
 import { scan } from 'react-scan'
-import React, { useEffect, Suspense, lazy } from 'react';
+import { useEffect, Suspense, lazy } from 'react';
 import { BrowserRouter, Route, Routes, useLocation } from "react-router-dom";
 import { QueryClientProvider, QueryClient } from 'react-query';
 
@@ -59,50 +59,6 @@ export default function App() {
     };
   }, []);
 
-  //! Removed the useEffect hooks for theme toggling via direct DOM manipulation.
-  //! The theme button should now be a React component using `toggleTheme`.
-
-  //? Removed the useEffect hook for IntersectionObserver for lazy images.
-  //? You should create a <LazyImage src="..." placeholder="..." /> component
-  //? that handles its own IntersectionObserver logic internally using useRef.
-
-  //TODO - Example: Basic structure for a LazyImage component (implement fully separately)
-  /*
-  function LazyImage({ src, alt, placeholder, ...props }) {
-    const imgRef = useRef(null);
-    const [isLoaded, setIsLoaded] = useState(false);
-    const [currentSrc, setCurrentSrc] = useState(placeholder || ''); // Start with placeholder
-
-    useEffect(() => {
-      const observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting && !isLoaded) {
-              setCurrentSrc(src); // Set the actual source
-              setIsLoaded(true);
-              observer.unobserve(entry.target); // Stop observing
-            }
-          });
-        },
-        { threshold: 0.1 } // Adjust threshold as needed
-      );
-
-      if (imgRef.current) {
-        observer.observe(imgRef.current);
-      }
-
-      return () => {
-        if (imgRef.current) {
-          observer.unobserve(imgRef.current);
-        }
-        observer.disconnect();
-      };
-    }, [src, isLoaded, placeholder]); // Rerun if src changes
-
-    return <img ref={imgRef} src={currentSrc} alt={alt} {...props} />;
-  }
-  */
-
   // Intersection Observers for Lazy Classes
   useEffect(() => {
     const lazyImgs = document.querySelectorAll('.lazy');
@@ -126,11 +82,6 @@ export default function App() {
   return (
     <QueryClientProvider client={queryClient}>
       <BrowserRouter>
-        {/* <Suspense fallback={
-          <div className="loader-wrapper">
-            <img className="imageSpin" src="/images/home/preloadLogo.jpg" alt="" />
-          </div>
-        }> */}
           <Routes>
             <Route path="/" element={<Homepage />} exact />
             <Route path="/projects/age_calculator_app" element={<AgeCalculatorApp title="Frontend Mentor | Age Calculator App" />} />
@@ -154,7 +105,6 @@ export default function App() {
             <Route path="/database/:studentId" element={<SpecificStudent />} />
             <Route path="*" element={<NoPage />} />
           </Routes>
-        {/* </Suspense> */}
       </BrowserRouter>
       {/* <ReactQueryDevtools initialIsOpem={false} position='bottom-right'/> */}
     </QueryClientProvider>

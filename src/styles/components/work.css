@@ -55,11 +55,6 @@
   margin-bottom: 1rem;
 }
 
-.work__project-btn {
-  padding: 6px 12px;
-  font-size: var(--size-s);
-}
-
 .work__project-subtitle {
   display: none;
 }
@@ -76,6 +71,10 @@
     display: flex;
     flex-direction: column;
     gap: 3rem;
+  }
+  .work__project-btn {
+    padding: 6px 14px;
+    font-size: var(--size-s);
   }
 }
 

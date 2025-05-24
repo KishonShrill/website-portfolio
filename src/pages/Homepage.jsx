@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 import('../styles/App.css')
 import('../styles/utils.css')
 
-import('../styles/components/preload.css')
 import('../styles/components/header.css')
 import('../styles/components/hero.css')
 import('../styles/components/about-me.css')
@@ -263,7 +262,12 @@ function Work() {
               </div>
             </p>
             <div style={{display: "flex", alignItems: "center", justifyContent: "center"}}>
-              <Button className={"work__project-btn front"} weight={700} link={"https://productprice-iligan.vercel.app/"} text={"Visit"} />
+              <Button 
+                className={"work__project-btn front"} 
+                weight={700} 
+                link={"https://productprice-iligan.vercel.app/"} 
+                text={"Visit"} 
+              />
             </div>
           </div>
         </div>
@@ -294,7 +298,12 @@ function Work() {
               </div>
             </p>
             <div style={{display: "flex", alignItems: "center", justifyContent: "center"}}>
-              <Button className={"work__project-btn front"} weight={700} link={"https://chriscent-qr-code.vercel.app/"} text={"Visit"} />
+              <Button 
+                className={"work__project-btn front"} 
+                weight={700} 
+                link={"https://chriscent-qr-code.vercel.app/"} 
+                text={"Visit"} 
+              />
             </div>
           </div>
         </div>
