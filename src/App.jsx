@@ -33,32 +33,6 @@ const RockPaperScissor = lazy(() => import('./pages/projects/RockPaperScissor.js
 
 
 export default function App() {
-  // Theme getter for local user setting
-  useEffect(() => {
-    const themeToggleBtns = document.querySelectorAll('#theme-toggle');
-    const theme = localStorage.getItem('theme');
-    theme && document.body.classList.add(theme);
-    
-    function handleThemeToggle() {
-      let currentTheme = localStorage.getItem('theme');
-
-      if (currentTheme === 'dark-mode') {
-        localStorage.setItem('theme', 'light-mode');
-        document.body.classList.remove('dark-mode');
-        document.body.classList.add('light-mode');
-      } else {
-        localStorage.setItem('theme', 'dark-mode');
-        document.body.classList.remove('light-mode');
-        document.body.classList.add('dark-mode');
-      }
-    };
-    
-    themeToggleBtns.forEach(btn => btn.addEventListener('click', handleThemeToggle));
-    return () => {
-      themeToggleBtns.forEach(btn => btn.removeEventListener('click', handleThemeToggle));
-    };
-  }, []);
-
   // Intersection Observers for Lazy Classes
   useEffect(() => {
     const lazyImgs = document.querySelectorAll('.lazy');

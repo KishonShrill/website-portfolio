@@ -1,18 +1,18 @@
 import { useQuery } from 'react-query'
 import axios from 'axios';
 
-const fetshProjects = () => {
+const fetchProjects = () => {
   return axios.get("/projects.json");
 }
 
 export default function LoadProjects() {
   const { isLoading, data, isError, error, isFetching } = useQuery(
-    'fetshedProjects', 
-    fetshProjects,
+    'fetchedProjects', 
+    fetchProjects,
     {
       // cacheTime: int - keeps the data longer
       staleTime: 30000, // staleTime: int - default is 0 sec
-      // refetchOnMount: boolean or 'always' - data updater
+      refetchOnMount: false,// boolean or 'always' - data updater
       // refetshOnWindowFocus: boolean or 'always' - self explanatory
       // refetshInterval: int millisec
     }

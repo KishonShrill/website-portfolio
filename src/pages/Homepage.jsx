@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import { Link } from 'react-router-dom';
 
 import('../styles/App.css')
@@ -11,19 +11,23 @@ import('../styles/components/featured.css')
 import('../styles/components/work.css')
 import('../styles/components/contact.css')
 import('../styles/components/footer.css')
-// import('../styles/components/comments.css')
 import('../styles/components/mobile-nav.css')
 import('../styles/components/explore-container.css')
 
-import LoadProjects from '../components/FetshProjects.jsx'
+import LoadProjects from '../components/FetchProjects.jsx'
 import DisplayTools from '../components/DisplayTools.jsx';
 import DisplayProject from '../components/DisplayProject.jsx';
 import TechIcon from '../components/TechIcon.jsx';
 import Button from '../components/Button.jsx';
 
-function Header() {
+
+export default function Homepage() {
   const [isNavOpen, setIsNavOpen] = useState(false);
   const [isClicked, setIsClicked] = useState(false);
+  const [isThemeToggle, setIsThemeToggle] = useState(false)
+  const mobileNavRef = useRef(null)
+  const exploreBtnRef = useRef(null)
+  const body = document.body;
   
   const handleHeaderBtnClick = (outside) => {
     if (isClicked == false) setIsClicked(true)
@@ -31,18 +35,140 @@ function Header() {
   };
 
   useEffect(() => {
-    const mobileNav = document.querySelector('.mobile-nav');
-    const body = document.body;
-
     if (isNavOpen) {
-      mobileNav.style.display = 'flex';
+      mobileNavRef.current.style.display = 'flex';
       body.style.overflowY = 'hidden';
     } else {
-      mobileNav.style.display = 'none';
+      mobileNavRef.current.style.display = 'none';
       body.style.overflowY = 'auto';
     }
   }, [isNavOpen]);
-  
+
+  // Theme getter for local user setting
+  useEffect(() => {
+    // const themeToggleBtns = document.querySelectorAll('#theme-toggle');
+    const theme = localStorage.getItem('theme');
+    theme && body.classList.add(theme);
+    let currentTheme = localStorage.getItem('theme');
+
+    if (currentTheme === 'dark-mode') {
+      localStorage.setItem('theme', 'light-mode');
+      body.classList.remove('dark-mode');
+      body.classList.add('light-mode');
+    } else {
+      localStorage.setItem('theme', 'dark-mode');
+      body.classList.remove('light-mode');
+      body.classList.add('dark-mode');
+    }
+  }, [isThemeToggle]);
+
+  return (
+    <>
+      <title>Chriscent's Portfolio: Computer Science Student & Web Developer | Blender 3D Artist</title>
+      <Header 
+        handleClick={handleHeaderBtnClick}
+        exploreBtnRef={exploreBtnRef}
+        themeToggleRef={setIsThemeToggle}
+        isClicked={isClicked} />
+      <MobileNav 
+        handleClick={handleHeaderBtnClick}
+        exploreBtnRef={exploreBtnRef}
+        themeToggleRef={setIsThemeToggle}
+        mobileNavRef={mobileNavRef} body={body} />
+
+      <main className="container">
+        <section className="hero container">
+          <img className="hero__img" src="/images/home/author_picture.jpg" alt="Profile Picture" />
+          <h2 className="hero__subtitle">Hello, I am Chriscent <span className='hero__subtitle-wave'>👋</span></h2>
+          <h1 className="hero__title">FRONT-END <br /> WEB DEVELOPER</h1>
+          <p className="hero__description">
+            I’m a <strong>Front-End Web Developer</strong> based in Iligan City,
+            Philippines, currently pursuing a degree in <strong>Computer Science</strong>.
+            I also explore <strong>3D Art</strong> in my free time, occasionally creating
+            visual designs using <strong><a href="https://www.blender.org/" target="_blank">Blender</a></strong>.
+          </p>
+          <div className='hero__actions'>
+            <Button className={"hero__btn front"} weight={700} text={"My Socials"} link={"#contact"} />
+            <Button className={"hero__btn front"} weight={700} text={"Resume"} link={"https://www.facebook.com/ChriscentProduction/"} />
+          </div>
+        </section>
+
+        <section id="about" className="about container section">
+          <div className="about__content">
+            <h2 className="about__title">About</h2>
+            <p className="about__description">I'm <strong>Chriscent</strong>, a
+              computer science student at
+              Mindanao State University Iligan - Institute of Technology,
+              focused on front-end development and building real-world web applications.
+            </p>
+            <p className="about__description">
+              Outside of tech, I'm into fishing, bowling, and music — hobbies that keep me grounded and refreshed.
+            </p>
+            <p className="about__description">
+              I value <b>curiosity</b>, <b>good energy</b>, and <strong>teamwork</strong>, and I'm always up for learning something new or solving interesting problems.
+            </p>
+
+            <hr className="about__hr" />
+            <h3 className="about__subtitle">Technologies</h3>
+
+            <div className="about__ul">
+              <DisplayTools className="about__list" image="/images/components/icons8-html-logo.svg" text="HTML" />
+              <DisplayTools className="about__list" image="/images/components/icons8-css-logo.svg" text="CSS" />
+              <DisplayTools className="about__list" image="/images/components/icons8-javascript.svg" text="JavaScript" />
+              <DisplayTools className="about__list" image="/images/components/icons8-mongodb.svg" text="MongoDB" />
+              <DisplayTools className="about__list" image="/images/components/icons8-express-js.svg" text="Express.js" />
+              <DisplayTools className="about__list" image="/images/components/react.svg" text="React.js" />
+              <DisplayTools className="about__list" image="/images/components/icons8-nodejs.svg" text="Node.js" />
+              <DisplayTools className="about__list" image="/images/components/icons8-sass.svg" text="SASS" />
+            </div>
+          </div>
+
+          <div className="about__img-wrapper">
+            <img
+              className="about__img lazy loading"
+              src="https://fakeimg.pl/2160/?retina=1&text=ニャー&font=noto"
+              data-src="/images/home/Cyberpunk_Final_Render_woBack.png"
+              alt="Cyberpunk Image made with Blender 3D" />
+          </div>
+        </section>
+
+        <Work />
+        <Featured />
+      </main>
+
+      <section className="contact container section" id="contact">
+        <h2 className="contact__title">Get In Contact</h2>
+        <p className="contact__description">
+          Whether you are starting a project, have business
+          inquiries or just
+          want to say hi, my inbox is always open so feel free
+          to reach out and
+          I will get back to you as soon as possible.
+        </p>
+        <div className='contact__socials'>
+          <a href="https://www.facebook.com/Perseque"><img className='contact__socials-item' src="/images/components/icons8-facebook.svg" alt="" /></a>
+          <a href="https://www.frontendmentor.io/profile/KishonShrill"><img className='contact__socials-item' style={{padding: "3px"}} src="/images/components/frontendmentor.png" alt="" /></a>
+          <a href="https://www.linkedin.com/in/chriscent-louis-june-pingol"><img className='contact__socials-item' src="/images/components/icons8-linkedin.svg" alt="" /></a>
+          <a href="https://github.com/KishonShrill"><img className='contact__socials-item' src="/images/components/icons8-github.svg" alt="" /></a>
+        </div>
+        <Button className={"contact__btn front"} weight={700} link={"mailto:chriscentlouisjune.pingol@g.msuiit.edu.ph"} text={"Reach out!"} />
+      </section>
+
+      <footer className="footer container section">
+        <h3 className="footer__title"><strong>~ Chriscent Production ~</strong></h3>
+
+        <ul className='footer__list'>
+          <li>
+            <a target="_blank" href="https://icons8.com/">Icons</a> by <a target="_blank" href="https://icons8.com">Icons8</a>
+          </li>
+        </ul>
+      </footer>
+    </>
+  );
+}
+
+
+function Header({ handleClick, isClicked, exploreBtnRef, themeToggleRef }) {
   return (
     <>
       <header className="header container">
@@ -60,7 +186,7 @@ function Header() {
             <li><a className="header__link" href="#contact">Contact</a></li>
             <li className="header__line"></li>
             <li>
-              <button id="theme-toggle" className="header__sun">
+              <button id="theme-toggle" className="header__sun" onClick={() => themeToggleRef(prev => !prev)}>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
@@ -70,11 +196,11 @@ function Header() {
               </button>
             </li>
             <li className='relative'>
-              <a className="header__explore btn" onClick={() => handleHeaderBtnClick(false)}>Explore</a>
+              <a className="header__explore btn" ref={exploreBtnRef} onClick={() => handleClick(false)}>Explore</a>
               {!isClicked && <img className='absolute' style={{left: "-2rem", top: "1.5rem", transform: "rotateZ(65deg)"}} src="/images/components/icons8-double-tap-gesture.gif" alt="Click Here" />}
             </li>
           </ul>
-          <button className="header__bars relative" onClick={() => handleHeaderBtnClick(true)}>
+          <button className="header__bars relative" onClick={() => handleClick(true)}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
@@ -92,54 +218,52 @@ function Header() {
   )
 }
 
-function MobileNav() {
+function MobileNav({ handleClick, mobileNavRef, exploreBtnRef, body, themeToggleRef }) {
   const [projectDiv, setProjectDiv] = useState(false);
   const [isClicked, setIsClicked] = useState(false)
 
-  useEffect(() => {
-    const exploreBtnMobile = document.querySelector('.mobile-nav__btn');
-    const exploreBtnWeb = document.querySelector('.header__explore');
-    const closeBtn = document.querySelector('.explore-container__header');
+  const mobileNavBtnRef = useRef(null)
+  const closeBtnRef = useRef(null)
+  const exploreContainerRef = useRef(null)
 
+  useEffect(() => {
     const handleButtonClick = () => {
       if (isClicked == false) setIsClicked(true)
       setProjectDiv(prevProjectDiv => !prevProjectDiv);
     };
 
-    exploreBtnMobile.addEventListener('click', handleButtonClick);
-    exploreBtnWeb.addEventListener('click', handleButtonClick);
-    closeBtn.addEventListener('click', handleButtonClick);
+    mobileNavBtnRef.current.addEventListener('click', handleButtonClick);
+    exploreBtnRef.current.addEventListener('click', handleButtonClick);
+    closeBtnRef.current.addEventListener('click', handleButtonClick);
 
     return () => {
-      exploreBtnMobile.removeEventListener('click', handleButtonClick);
-      exploreBtnWeb.removeEventListener('click', handleButtonClick);
-      closeBtn.removeEventListener('click', handleButtonClick);
+      mobileNavBtnRef.current.removeEventListener('click', handleButtonClick);
+      exploreBtnRef.current.removeEventListener('click', handleButtonClick);
+      closeBtnRef.current.removeEventListener('click', handleButtonClick);
     };
   }, []);
 
   useEffect(() => {
-    const exploreContainer = document.querySelector('.explore-container');
-    const body = document.body;
     if (projectDiv) {
-      exploreContainer.style.right = '0%';
+      exploreContainerRef.current.style.right = '0%';
       body.style.overflowY = 'hidden';
     } else {
-      exploreContainer.style.right = '100%';
+      exploreContainerRef.current.style.right = '100%';
       body.style.overflowY = 'auto';
     }
   }, [projectDiv]);
 
   return (
     <>
-      <div className="mobile-nav">
+      <div className="mobile-nav" ref={mobileNavRef}>
         <nav>
           <ul className="mobile-nav__menu">
-            <li><a className="mobile-nav__link" href='#'>Home</a></li>
-            <li><a className="mobile-nav__link" href='#work'>Work</a></li>
-            <li><a className="mobile-nav__link" href="#contact">Contact</a></li>
+            <li><a className="mobile-nav__link" onClick={handleClick} href='#'>Home</a></li>
+            <li><a className="mobile-nav__link" onClick={handleClick} href='#work'>Work</a></li>
+            <li><a className="mobile-nav__link" onClick={handleClick} href="#contact">Contact</a></li>
             <li className="mobile-nav__link-line"></li>
             <li>
-              <button id="theme-toggle" className="mobile-nav__sun ">
+              <button id="theme-toggle" className="mobile-nav__sun" onClick={() => themeToggleRef(prev => !prev)}>
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
                   fill="currentColor">
                   <path
@@ -148,15 +272,15 @@ function MobileNav() {
               </button>
             </li>
             <li className='relative'>
-              <a className="mobile-nav__btn btn">Explore</a>
+              <a className="mobile-nav__btn btn" ref={mobileNavBtnRef}>Explore</a>
               {!isClicked && <img className='absolute' style={{left: "-1.5rem", top: "1.5rem", transform: "rotateZ(65deg)"}} src="/images/components/icons8-double-tap-gesture.gif" alt="Click Here" />} 
             </li>
           </ul>
         </nav>
       </div>
-      <div className="explore-container">
+      <div className="explore-container" ref={exploreContainerRef}>
         <div className="explore-container__header explore__container full-bleed" >
-          <a className="explore-container__closeBtn btn">Close</a>
+          <a className="explore-container__closeBtn btn" ref={closeBtnRef}>Close</a>
         </div>
         <div className="explore-container__album explore__container" id="explore__container">
           <LoadProjects />
@@ -310,102 +434,4 @@ function Work() {
       </div>
     </section>
   )
-}
-
-export default function Homepage() {
-  return (
-    <>
-      <title>Chriscent's Portfolio: Computer Science Student & Web Developer | Blender 3D Artist</title>
-      <Header />
-      <MobileNav />
-
-      <main className="container">
-        <section className="hero container">
-          <img className="hero__img" src="/images/home/author_picture.jpg" alt="Profile Picture" />
-          <h2 className="hero__subtitle">Hello, I am Chriscent <span className='hero__subtitle-wave'>👋</span></h2>
-          <h1 className="hero__title">FRONT-END <br /> WEB DEVELOPER</h1>
-          <p className="hero__description">
-            I’m a <strong>Front-End Web Developer</strong> based in Iligan City,
-            Philippines, currently pursuing a degree in <strong>Computer Science</strong>.
-            I also explore <strong>3D Art</strong> in my free time, occasionally creating
-            visual designs using <strong><a href="https://www.blender.org/" target="_blank">Blender</a></strong>.
-          </p>
-          <div className='hero__actions'>
-            <Button className={"hero__btn front"} weight={700} text={"My Socials"} link={"#contact"} />
-            <Button className={"hero__btn front"} weight={700} text={"Resume"} link={"https://www.facebook.com/ChriscentProduction/"} />
-          </div>
-        </section>
-
-        <section id="about" className="about container section">
-          <div className="about__content">
-            <h2 className="about__title">About</h2>
-            <p className="about__description">I'm <strong>Chriscent</strong>, a
-              computer science student at
-              Mindanao State University Iligan - Institute of Technology,
-              focused on front-end development and building real-world web applications.
-            </p>
-            <p className="about__description">
-              Outside of tech, I'm into fishing, bowling, and music — hobbies that keep me grounded and refreshed.
-            </p>
-            <p className="about__description">
-              I value <b>curiosity</b>, <b>good energy</b>, and <strong>teamwork</strong>, and I'm always up for learning something new or solving interesting problems.
-            </p>
-
-            <hr className="about__hr" />
-            <h3 className="about__subtitle">Technologies</h3>
-
-            <div className="about__ul">
-              <DisplayTools className="about__list" image="/images/components/icons8-html-logo.svg" text="HTML" />
-              <DisplayTools className="about__list" image="/images/components/icons8-css-logo.svg" text="CSS" />
-              <DisplayTools className="about__list" image="/images/components/icons8-javascript.svg" text="JavaScript" />
-              <DisplayTools className="about__list" image="/images/components/icons8-mongodb.svg" text="MongoDB" />
-              <DisplayTools className="about__list" image="/images/components/icons8-express-js.svg" text="Express.js" />
-              <DisplayTools className="about__list" image="/images/components/react.svg" text="React.js" />
-              <DisplayTools className="about__list" image="/images/components/icons8-nodejs.svg" text="Node.js" />
-              <DisplayTools className="about__list" image="/images/components/icons8-sass.svg" text="SASS" />
-            </div>
-          </div>
-
-          <div className="about__img-wrapper">
-            <img
-              className="about__img lazy loading"
-              src="https://fakeimg.pl/2160/?retina=1&text=ニャー&font=noto"
-              data-src="/images/home/Cyberpunk_Final_Render_woBack.png"
-              alt="Cyberpunk Image made with Blender 3D" />
-          </div>
-        </section>
-
-        <Work />
-        <Featured />
-      </main>
-
-      <section className="contact container section" id="contact">
-        <h2 className="contact__title">Get In Contact</h2>
-        <p className="contact__description">
-          Whether you are starting a project, have business
-          inquiries or just
-          want to say hi, my inbox is always open so feel free
-          to reach out and
-          I will get back to you as soon as possible.
-        </p>
-        <div className='contact__socials'>
-          <a href="https://www.facebook.com/Perseque"><img className='contact__socials-item' src="/images/components/icons8-facebook.svg" alt="" /></a>
-          <a href="https://www.frontendmentor.io/profile/KishonShrill"><img className='contact__socials-item' style={{padding: "3px"}} src="/images/components/frontendmentor.png" alt="" /></a>
-          <a href="https://www.linkedin.com/in/chriscent-louis-june-pingol"><img className='contact__socials-item' src="/images/components/icons8-linkedin.svg" alt="" /></a>
-          <a href="https://github.com/KishonShrill"><img className='contact__socials-item' src="/images/components/icons8-github.svg" alt="" /></a>
-        </div>
-        <Button className={"contact__btn front"} weight={700} link={"mailto:chriscentlouisjune.pingol@g.msuiit.edu.ph"} text={"Reach out!"} />
-      </section>
-
-      <footer className="footer container section">
-        <h3 className="footer__title"><strong>~ Chriscent Production ~</strong></h3>
-
-        <ul className='footer__list'>
-          <li>
-            <a target="_blank" href="https://icons8.com/">Icons</a> by <a target="_blank" href="https://icons8.com">Icons8</a>
-          </li>
-        </ul>
-      </footer>
-    </>
-  );
 }
