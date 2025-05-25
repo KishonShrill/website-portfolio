@@ -103,6 +103,7 @@ const NewsHomepage = (props) => {
           <p>Challenge by <a className="mentor" href="https://www.frontendmentor.io/challenges/age-calculator-app-dF9DFFpj-Q/hub" target="_blank"> Frontend Mentor</a>. 
           Coded by <a href="https://github.com/KishonShrill"> Chriscent Pingol</a>.</p>
         </div>
+        <p className="web">Go back <a href="/" target="_self"> Home</a>.</p>
       </footer>
     </main>
   )

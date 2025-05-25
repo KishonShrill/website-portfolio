@@ -45,7 +45,6 @@ export default function Homepage() {
 
   // Theme getter for local user setting
   useEffect(() => {
-    // const themeToggleBtns = document.querySelectorAll('#theme-toggle');
     const theme = localStorage.getItem('theme');
     theme && body.classList.add(theme);
     let currentTheme = localStorage.getItem('theme');
@@ -86,8 +85,8 @@ export default function Homepage() {
             visual designs using <strong><a href="https://www.blender.org/" target="_blank">Blender</a></strong>.
           </p>
           <div className='hero__actions'>
-            <Button className={"hero__btn front"} weight={700} text={"My Socials"} link={"#contact"} />
-            <Button className={"hero__btn front"} weight={700} text={"Resume"} link={"https://www.facebook.com/ChriscentProduction/"} />
+            <Button className={"hero__btn"} weight={700} text={"My Socials"} link={"#contact"} />
+            <Button className={"hero__btn"} weight={700} text={"Resume"} link={"https://www.facebook.com/ChriscentProduction/"} />
           </div>
         </section>
 
@@ -149,7 +148,7 @@ export default function Homepage() {
           <a href="https://www.linkedin.com/in/chriscent-louis-june-pingol"><img className='contact__socials-item' src="/images/components/icons8-linkedin.svg" alt="" /></a>
           <a href="https://github.com/KishonShrill"><img className='contact__socials-item' src="/images/components/icons8-github.svg" alt="" /></a>
         </div>
-        <Button className={"contact__btn front"} weight={700} link={"mailto:chriscentlouisjune.pingol@g.msuiit.edu.ph"} text={"Reach out!"} />
+        <Button className={"contact__btn"} weight={700} link={"mailto:chriscentlouisjune.pingol@g.msuiit.edu.ph"} text={"Reach out!"} />
       </section>
 
       <footer className="footer container section">
@@ -385,7 +384,7 @@ function Work() {
             </p>
             <div style={{display: "flex", alignItems: "center", justifyContent: "center"}}>
               <Button 
-                className={"work__project-btn front"} 
+                className={"work__project-btn"} 
                 weight={700} 
                 link={"https://productprice-iligan.vercel.app/"} 
                 text={"Visit"} 
@@ -421,7 +420,7 @@ function Work() {
             </p>
             <div style={{display: "flex", alignItems: "center", justifyContent: "center"}}>
               <Button 
-                className={"work__project-btn front"} 
+                className={"work__project-btn"} 
                 weight={700} 
                 link={"https://chriscent-qr-code.vercel.app/"} 
                 text={"Visit"} 
