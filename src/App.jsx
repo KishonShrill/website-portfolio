@@ -11,7 +11,7 @@ scan({enabled: import.meta.env.VITE_SCAN === "true",});
 // Use React.lazy to load page components only when needed
 const Homepage = lazy(() => import('./pages/Homepage.jsx'));
 const Database_List = lazy(() => import('./pages/Database_List.jsx'));
-const NoPage = lazy(() => import('./components/NoPage.jsx'));
+const NoPage = lazy(() => import('./pages/NoPage.jsx'));
 const SpecificStudent = lazy(() => import('./components/SpecificStudent.jsx'));
 
 // Project Pages (Lazy Loaded)
