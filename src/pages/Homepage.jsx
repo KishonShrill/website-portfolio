@@ -1,5 +1,4 @@
-import React, { useEffect, useState, useRef } from 'react';
-import { Link } from 'react-router-dom';
+import { useEffect, useState, useRef } from 'react';
 
 import('../styles/App.css')
 import('../styles/utils.css')
@@ -64,7 +63,6 @@ export default function Homepage() {
 
   return (
     <>
-      <title>Chriscent's Portfolio: Computer Science Student & Web Developer | Blender 3D Artist</title>
       <Header 
         handleClick={handleHeaderBtnClick}
         exploreBtnRef={exploreBtnRef}

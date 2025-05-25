@@ -1,6 +1,6 @@
 import { scan } from 'react-scan'
-import { useEffect, Suspense, lazy } from 'react';
-import { BrowserRouter, Route, Routes, useLocation } from "react-router-dom";
+import { useEffect, lazy } from 'react';
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { QueryClientProvider, QueryClient } from 'react-query';
 
 // --- React Query Setup ---
@@ -58,6 +58,9 @@ export default function App() {
       <BrowserRouter>
           <Routes>
             <Route path="/" element={<Homepage />} exact />
+            <Route path="*" element={<NoPage />} />
+
+
             <Route path="/projects/age_calculator_app" element={<AgeCalculatorApp title="Frontend Mentor | Age Calculator App" />} />
             <Route path="/projects/qr_code_component" element={<QrCodeComponent title="Frontend Mentor | QR Code Component" />} />
             <Route path="/projects/news_homepage" element={<NewsHomepage title="Frontend Mentor | News Homepage" />} />
@@ -77,10 +80,8 @@ export default function App() {
 
             <Route path="/database" element={<Database_List />} />
             <Route path="/database/:studentId" element={<SpecificStudent />} />
-            <Route path="*" element={<NoPage />} />
           </Routes>
       </BrowserRouter>
-      {/* <ReactQueryDevtools initialIsOpem={false} position='bottom-right'/> */}
     </QueryClientProvider>
   );
 }
