@@ -1,5 +1,6 @@
 import { useQuery } from 'react-query'
 import axios from 'axios';
+import LazyImage from './LazyImage';
 
 const fetchProjects = () => {
   return axios.get("/projects.json");
@@ -31,7 +32,11 @@ export default function LoadProjects() {
           <p>{item.name}</p>
           <a href={item.link} target="_self" rel="noopener noreferrer">
             <picture>
-              <img src={item.image} alt={item.name} style={{ width: 'auto' }} />
+              <LazyImage
+                src={"https://fakeimg.pl/1920x1080/?retina=1&text=こんにちは&font=noto"} 
+                image={item.image} 
+                alt={item.name}
+                style={{ width: 'auto' }}/>
             </picture>
           </a>
           <hr />
@@ -40,4 +45,4 @@ export default function LoadProjects() {
       {error && <p id="error-message">Error: {error.message}</p>}
     </>
   );
-};
+}

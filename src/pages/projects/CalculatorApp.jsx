@@ -1,13 +1,13 @@
 import { useEffect } from "react"
 import calculator from "./components/calculatorApp.cjs"
 import themeSwitch from "./components/theme-switch"
+import('./styles/calculator-app.css')
 
 const CalculatorApp = (props) => {
+  document.title = props.title
   useEffect(() => {
-    document.title = props.title
     calculator();
     themeSwitch();
-    import('./styles/calculator-app.css')
   }, [])
 
   return(

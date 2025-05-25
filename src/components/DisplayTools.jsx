@@ -1,8 +1,8 @@
+import LazyImage from "./LazyImage"
 function DisplayTools({ image, text, className, link }) {
     return (
         <a className={className} href={link}>
-            <img 
-                className='lazy loading'
+            <LazyImage
                 src="https://fakeimg.pl/300x300"
                 data-src={image}
                 alt={text} />

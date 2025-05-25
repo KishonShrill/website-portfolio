@@ -39,6 +39,12 @@ font-family: 'Figtree', sans-serif;
   --size-10xl: 10rem;
 }
 
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
 * {
   margin: 0;
   line-height: calc(1em + 0.5rem);

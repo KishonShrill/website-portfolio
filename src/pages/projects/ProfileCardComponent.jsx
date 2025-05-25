@@ -1,10 +1,7 @@
-import { useEffect } from "react"
+import('./styles/profile-card-component.css')
 
 const ProfileCardComponent = (props) => {
-  useEffect(() => {
-    document.title = props.title
-    import('./styles/profile-card-component.css')
-  }, [])
+  document.title = props.title
 
   return(
     <main className="profile-card-component">

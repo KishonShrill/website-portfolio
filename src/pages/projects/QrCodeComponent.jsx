@@ -1,10 +1,7 @@
-import { useEffect } from "react"
+import('./styles/qr-code.css')
 
 const QrCodeComponent = (props) => {
-  useEffect(() => {document.title = props.title}, [])
-  useEffect(() => {
-    import('./styles/qr-code.css')
-  })
+  document.title = props.title
 
   return(
     <main className="qr-code-component">

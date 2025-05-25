@@ -1,10 +1,7 @@
-import { useEffect } from "react"
+import('./styles/project-nft.css')
 
 const NFTPreviewCard = (props) => {
-  useEffect(() => {
-    document.title = props.title
-    import('./styles/project-nft.css')
-  }, [])
+  document.title = props.title
 
   return(
     <main className="body">

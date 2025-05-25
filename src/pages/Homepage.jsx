@@ -1,4 +1,4 @@
-import { useEffect, useState, useRef } from 'react';
+import { useEffect, useState, useRef, Suspense } from 'react';
 
 import('../styles/App.css')
 import('../styles/utils.css')
@@ -18,6 +18,7 @@ import DisplayTools from '../components/DisplayTools.jsx';
 import DisplayProject from '../components/DisplayProject.jsx';
 import TechIcon from '../components/TechIcon.jsx';
 import Button from '../components/Button.jsx';
+import LazyImage from '../components/LazyImage.jsx';
 
 
 export default function Homepage() {
@@ -73,65 +74,67 @@ export default function Homepage() {
         themeToggleRef={setIsThemeToggle}
         mobileNavRef={mobileNavRef} body={body} />
 
-      <main className="container">
-        <section className="hero container">
-          <img className="hero__img" src="/images/home/author_picture.jpg" alt="Profile Picture" />
-          <h2 className="hero__subtitle">Hello, I am Chriscent <span className='hero__subtitle-wave'>👋</span></h2>
-          <h1 className="hero__title">FRONT-END <br /> WEB DEVELOPER</h1>
-          <p className="hero__description">
-            I’m a <strong>Front-End Web Developer</strong> based in Iligan City,
-            Philippines, currently pursuing a degree in <strong>Computer Science</strong>.
-            I also explore <strong>3D Art</strong> in my free time, occasionally creating
-            visual designs using <strong><a href="https://www.blender.org/" target="_blank">Blender</a></strong>.
-          </p>
-          <div className='hero__actions'>
-            <Button className={"hero__btn"} weight={700} text={"My Socials"} link={"#contact"} />
-            <Button className={"hero__btn"} weight={700} text={"Resume"} link={"https://www.facebook.com/ChriscentProduction/"} />
-          </div>
-        </section>
-
-        <section id="about" className="about container section">
-          <div className="about__content">
-            <h2 className="about__title">About</h2>
-            <p className="about__description">I'm <strong>Chriscent</strong>, a
-              computer science student at
-              Mindanao State University Iligan - Institute of Technology,
-              focused on front-end development and building real-world web applications.
+      <Suspense fallback={<h1>🌀 Loading...</h1>}>
+        <main className="container">
+          <section className="hero container">
+            <img className="hero__img" src="/images/home/author_picture.jpg" alt="Profile Picture" />
+            <h2 className="hero__subtitle">Hello, I am Chriscent <span className='hero__subtitle-wave'>👋</span></h2>
+            <h1 className="hero__title">FRONT-END <br /> WEB DEVELOPER</h1>
+            <p className="hero__description">
+              I’m a <strong>Front-End Web Developer</strong> based in Iligan City,
+              Philippines, currently pursuing a degree in <strong>Computer Science</strong>.
+              I also explore <strong>3D Art</strong> in my free time, occasionally creating
+              visual designs using <strong><a href="https://www.blender.org/" target="_blank">Blender</a></strong>.
             </p>
-            <p className="about__description">
-              Outside of tech, I'm into fishing, bowling, and music — hobbies that keep me grounded and refreshed.
-            </p>
-            <p className="about__description">
-              I value <b>curiosity</b>, <b>good energy</b>, and <strong>teamwork</strong>, and I'm always up for learning something new or solving interesting problems.
-            </p>
-
-            <hr className="about__hr" />
-            <h3 className="about__subtitle">Technologies</h3>
-
-            <div className="about__ul">
-              <DisplayTools className="about__list" image="/images/components/icons8-html-logo.svg" text="HTML" />
-              <DisplayTools className="about__list" image="/images/components/icons8-css-logo.svg" text="CSS" />
-              <DisplayTools className="about__list" image="/images/components/icons8-javascript.svg" text="JavaScript" />
-              <DisplayTools className="about__list" image="/images/components/icons8-mongodb.svg" text="MongoDB" />
-              <DisplayTools className="about__list" image="/images/components/icons8-express-js.svg" text="Express.js" />
-              <DisplayTools className="about__list" image="/images/components/react.svg" text="React.js" />
-              <DisplayTools className="about__list" image="/images/components/icons8-nodejs.svg" text="Node.js" />
-              <DisplayTools className="about__list" image="/images/components/icons8-sass.svg" text="SASS" />
+            <div className='hero__actions'>
+              <Button className={"hero__btn"} weight={700} text={"My Socials"} link={"#contact"} />
+              <Button className={"hero__btn"} weight={700} text={"Resume"} link={"https://www.facebook.com/ChriscentProduction/"} />
             </div>
-          </div>
+          </section>
 
-          <div className="about__img-wrapper">
-            <img
-              className="about__img lazy loading"
-              src="https://fakeimg.pl/2160/?retina=1&text=ニャー&font=noto"
-              data-src="/images/home/Cyberpunk_Final_Render_woBack.png"
-              alt="Cyberpunk Image made with Blender 3D" />
-          </div>
-        </section>
+          <section id="about" className="about container section">
+            <div className="about__content">
+              <h2 className="about__title">About</h2>
+              <p className="about__description">I'm <strong>Chriscent</strong>, a
+                computer science student at
+                Mindanao State University Iligan - Institute of Technology,
+                focused on front-end development and building real-world web applications.
+              </p>
+              <p className="about__description">
+                Outside of tech, I'm into fishing, bowling, and music — hobbies that keep me grounded and refreshed.
+              </p>
+              <p className="about__description">
+                I value <b>curiosity</b>, <b>good energy</b>, and <strong>teamwork</strong>, and I'm always up for learning something new or solving interesting problems.
+              </p>
 
-        <Work />
-        <Featured />
-      </main>
+              <hr className="about__hr" />
+              <h3 className="about__subtitle">Technologies</h3>
+
+              <div className="about__ul">
+                <DisplayTools className="about__list" image="/images/components/icons8-html-logo.svg" text="HTML" />
+                <DisplayTools className="about__list" image="/images/components/icons8-css-logo.svg" text="CSS" />
+                <DisplayTools className="about__list" image="/images/components/icons8-javascript.svg" text="JavaScript" />
+                <DisplayTools className="about__list" image="/images/components/icons8-mongodb.svg" text="MongoDB" />
+                <DisplayTools className="about__list" image="/images/components/icons8-express-js.svg" text="Express.js" />
+                <DisplayTools className="about__list" image="/images/components/react.svg" text="React.js" />
+                <DisplayTools className="about__list" image="/images/components/icons8-nodejs.svg" text="Node.js" />
+                <DisplayTools className="about__list" image="/images/components/icons8-sass.svg" text="SASS" />
+              </div>
+            </div>
+
+            <div className="about__img-wrapper">
+              <LazyImage 
+                className='about__img'
+                src="https://fakeimg.pl/2160/?retina=1&text=ニャー&font=noto"
+                data-src="/images/home/Cyberpunk_Final_Render_woBack.png"
+                alt="Cyberpunk Image made with Blender 3D" />
+            </div>
+          </section>
+
+          <Work />
+          <Featured />
+        </main>
+      </Suspense>
 
       <section className="contact container section" id="contact">
         <h2 className="contact__title">Get In Contact</h2>
@@ -360,12 +363,10 @@ function Work() {
       <div className="work__container">
         <div className='work__row'>
           <div>
-            <img
-              className="lazy loading"
+            <LazyImage 
               src="https://fakeimg.pl/1080x1080/?retina=1&text=ニャー&font=noto"
               data-src="/images/featured/budgetbuddy-preview.png"
-              alt="Budget Buddy: A budgeting web app for students"
-              style={{}} />
+              alt="Budget Buddy: A budgeting web app for students"/>
           </div>
           <div className="work__project work__project-content1">
             <h3 className="work__project-subtitle">Budget Buddy</h3>
@@ -395,11 +396,10 @@ function Work() {
 
         <div className="work__row">
           <div>
-            <img
-              className="lazy loading"
+            <LazyImage 
               src="https://fakeimg.pl/1080x1080/?retina=1&text=ニャー&font=noto"
               data-src="/images/featured/qrcode-preview.png"
-              alt="QR Maker, QR Reader" />
+              alt="QR Maker, QR Reader"/>
           </div>
           <div className="work__project work__project-content2">
             <h3 className="work__project-subtitle">QR Code Maker/Reader</h3>

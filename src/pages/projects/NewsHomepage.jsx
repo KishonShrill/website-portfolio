@@ -1,10 +1,7 @@
-import { useEffect } from "react"
+import('./styles/news-homepage.css')
 
 const NewsHomepage = (props) => {
-  useEffect(() => {document.title = props.title}, [])
-  useEffect(() => {
-    import('./styles/news-homepage.css')
-  })
+  document.title = props.title
 
   return(
     <main className="body">

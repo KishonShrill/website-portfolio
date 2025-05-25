@@ -1,10 +1,7 @@
-import { useEffect } from "react"
+import('./styles/blog-preview-card.css')
 
 const BlogPreviewCard = (props) => {
-  useEffect(() => {
-    document.title = props.title
-    import('./styles/blog-preview-card.css')
-  }, [])
+  document.title = props.title
 
   return(
     <main className="blog-preview-card">

@@ -1,6 +1,8 @@
 import { useEffect, useState, useRef } from "react"
+import('./styles/rock_paper_scissor.css')
 
 const RockPaperScissor = (props) => {
+  document.title = props.title
   const [rules, setRules] = useState(false);
   const [playerPick, setPlayerPick] = useState("");
   const [computer, setComputer] = useState("");
@@ -18,15 +20,10 @@ const RockPaperScissor = (props) => {
   const playerPlay = document.querySelector("#player");
   const opponentPlay = document.querySelector("#opponent");
 
-  // Initial Load for CSS
+  
+  const mediaQuery = window.matchMedia("(max-width: 768px)");
   useEffect(() => {
-    document.title = props.title
-    import('./styles/rock_paper_scissor.css')
-
-    const mediaQuery = window.matchMedia("(max-width: 768px)");
-    console.log(mediaQuery.matches)
     setIsMobile(mediaQuery.matches);
-    console.log("Mobile Ver: " + isMobile)
   }, [])
 
 

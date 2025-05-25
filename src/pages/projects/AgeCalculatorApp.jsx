@@ -1,11 +1,11 @@
 import { useEffect } from "react"
 import ageCalculator from "./components/ageCalculator.cjs"
+import('./styles/age-calculator.css')
 
 const AgeCalculatorApp = (props) => {
-  useEffect(() => {document.title = props.title}, [])
+  document.title = props.title
   useEffect(() => {
     ageCalculator();
-    import('./styles/age-calculator.css')
   }, [])
 
   return(

@@ -1,11 +1,11 @@
 import { useEffect } from "react"
 import cardDetails from "./components/cardDetailProject.cjs"
+import('./styles/interactive-card-details-form.scss')
 
 const InteractiveCardDetailsForm = (props) => {
+  document.title = props.title
   useEffect(() => {
-    document.title = props.title
     cardDetails();
-    import('./styles/interactive-card-details-form.scss')
   }, [])
 
   return(

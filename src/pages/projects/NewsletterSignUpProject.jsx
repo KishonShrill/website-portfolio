@@ -1,11 +1,11 @@
 import { useEffect } from "react"
 import emailChecker from "./components/emailChekcer.cjs"
+import('./styles/newsletter-sign-up-project.css')
 
 const NewsletterSignUpProject = (props) => {
+  document.title = props.title
   useEffect(() => {
-    document.title = props.title
     emailChecker();
-    import('./styles/newsletter-sign-up-project.css')
   }, [])
 
   return(

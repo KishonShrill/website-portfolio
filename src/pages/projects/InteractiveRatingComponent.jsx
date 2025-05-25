@@ -1,11 +1,11 @@
 import { useEffect } from "react"
 import styledBtn from "./components/interactiveRatingComponent.cjs"
+import('./styles/interactive-rating-component.css')
 
 const InteractiveRatingComponent = (props) => {
+  document.title = props.title
   useEffect(() => {
-    document.title = props.title
     styledBtn();
-    import('./styles/interactive-rating-component.css')
   }, [])
 
   return(

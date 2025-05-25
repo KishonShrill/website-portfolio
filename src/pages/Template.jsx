@@ -1,10 +1,7 @@
-import { useEffect } from "react"
+import('')
 
-const Template = (props) => {
-  useEffect(() => {
+const Template = (props = '') => {
     document.title = props.title
-    import('')
-  }, [])
 
   return(
     <>

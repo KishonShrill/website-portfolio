@@ -1,11 +1,8 @@
-import { useEffect } from "react"
 import 'https://kit.fontawesome.com/31dfec9376.js'
+import('./styles/project-product-preview-card.css')
 
 const ProductPreviewCard = (props) => {
-  useEffect(() => {
-    document.title = props.title
-    import('./styles/project-product-preview-card.css')
-  }, [])
+  document.title = props.title
 
   return(
     <>

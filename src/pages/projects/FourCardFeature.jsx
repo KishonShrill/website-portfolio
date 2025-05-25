@@ -1,10 +1,7 @@
-import { useEffect } from "react"
+import('./styles/four-card-feature.css')
 
 const FourCardFeature = (props) => {
-  useEffect(() => {
-    document.title = props.title
-    import('./styles/four-card-feature.css')
-  }, [])
+  document.title = props.title
 
   return(
     <main className="body">
