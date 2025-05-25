@@ -1,3 +1,4 @@
+import React from 'react';
 import { useQuery } from 'react-query'
 import axios from 'axios';
 import LazyImage from './LazyImage';
@@ -6,7 +7,7 @@ const fetchProjects = () => {
   return axios.get("/projects.json");
 }
 
-export default function LoadProjects() {
+function LoadProjects() {
   const { isLoading, data, isError, error, isFetching } = useQuery(
     'fetchedProjects', 
     fetchProjects,
@@ -46,3 +47,4 @@ export default function LoadProjects() {
     </>
   );
 }
+export default React.memo(LoadProjects)

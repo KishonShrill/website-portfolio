@@ -1,3 +1,4 @@
+import React from 'react';
 import('../styles/components/button.css')
 
 function Button({ text, link, className, weight }) {
@@ -12,4 +13,4 @@ function Button({ text, link, className, weight }) {
     )
 }
 
-export default Button
+export default React.memo(Button)

@@ -1,7 +1,4 @@
-import { useEffect, useState, useRef, Suspense } from 'react';
-
-import('../styles/App.css')
-import('../styles/utils.css')
+import { useEffect, useState, useRef, Suspense, lazy, useCallback, useMemo } from 'react';
 
 import('../styles/components/header.css')
 import('../styles/components/hero.css')
@@ -13,7 +10,7 @@ import('../styles/components/footer.css')
 import('../styles/components/mobile-nav.css')
 import('../styles/components/explore-container.css')
 
-import LoadProjects from '../components/FetchProjects.jsx'
+const LoadProjects = lazy(() => import('../components/FetchProjects.jsx'))
 import DisplayTools from '../components/DisplayTools.jsx';
 import DisplayProject from '../components/DisplayProject.jsx';
 import TechIcon from '../components/TechIcon.jsx';
@@ -29,10 +26,25 @@ export default function Homepage() {
   const exploreBtnRef = useRef(null)
   const body = document.body;
   
-  const handleHeaderBtnClick = (outside) => {
+  const handleHeaderBtnClick = useCallback((outside) => {
     if (isClicked == false) setIsClicked(true)
     if (outside) {setIsNavOpen(prevState => !prevState);}
-  };
+  }, [isClicked]);
+
+  const renderHeaderAndNav = useMemo(() => [
+    <>
+      <Header 
+        handleClick={handleHeaderBtnClick}
+        exploreBtnRef={exploreBtnRef}
+        themeToggleRef={setIsThemeToggle}
+        isClicked={isClicked} />
+      <MobileNav 
+        handleClick={handleHeaderBtnClick}
+        exploreBtnRef={exploreBtnRef}
+        themeToggleRef={setIsThemeToggle}
+        mobileNavRef={mobileNavRef} body={body} />
+    </>
+  ], []) // I swear, I feel like I am over engineering my web portfolio just to make it run faster -_-
 
   useEffect(() => {
     if (isNavOpen) {
@@ -63,16 +75,7 @@ export default function Homepage() {
 
   return (
     <>
-      <Header 
-        handleClick={handleHeaderBtnClick}
-        exploreBtnRef={exploreBtnRef}
-        themeToggleRef={setIsThemeToggle}
-        isClicked={isClicked} />
-      <MobileNav 
-        handleClick={handleHeaderBtnClick}
-        exploreBtnRef={exploreBtnRef}
-        themeToggleRef={setIsThemeToggle}
-        mobileNavRef={mobileNavRef} body={body} />
+      {renderHeaderAndNav}
 
       <Suspense fallback={<h1>🌀 Loading...</h1>}>
         <main className="container">
@@ -89,6 +92,7 @@ export default function Homepage() {
             <div className='hero__actions'>
               <Button className={"hero__btn"} weight={700} text={"My Socials"} link={"#contact"} />
               <Button className={"hero__btn"} weight={700} text={"Resume"} link={"https://www.facebook.com/ChriscentProduction/"} />
+              <Button className={"hero__btn"} weight={700} text={"Download CV"} link={"https://www.facebook.com/ChriscentProduction/"} />
             </div>
           </section>
 

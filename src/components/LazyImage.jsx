@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef } from 'react';
 
 export default function LazyImage({ src, image, alt = '', className = '', ...props }) {
   const imgRef = useRef(null);
