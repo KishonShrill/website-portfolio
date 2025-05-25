@@ -50,11 +50,11 @@
   display: flex;
   align-items: center;
   font-size: var(--size-s);
-  color: var(--clr-secondary);
+  color: var(--clr-dark);
 
   /* border: 1px solid red; */
   border-radius: 5px;
-  background-color: #232530;
+  background-color: var(--clr-light);
 }
 
 .about__list img {
