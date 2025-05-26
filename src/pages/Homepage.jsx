@@ -74,7 +74,7 @@ export default function Homepage({setIsThemeToggle}) {
             <div className='hero__actions'>
               <Button className={"hero__btn"} weight={700} text={"My Socials"} link={"#contact"} />
               <Button className={"hero__btn"} weight={700} text={"Resume"} link="/documents/chriscent_resume.pdf" target="_blank" />
-              <Button className={"hero__btn"} weight={700} text={"Download CV"} link="/documents/chriscent_resume.pdf" download />
+              <Button className={"hero__btn"} weight={700} text={"Download"} link="/documents/chriscent_resume.pdf" download />
             </div>
           </section>
 
