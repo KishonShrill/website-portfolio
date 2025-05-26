@@ -91,8 +91,8 @@ export default function Homepage() {
             </p>
             <div className='hero__actions'>
               <Button className={"hero__btn"} weight={700} text={"My Socials"} link={"#contact"} />
-              <Button className={"hero__btn"} weight={700} text={"Resume"} link={"https://www.facebook.com/ChriscentProduction/"} />
-              <Button className={"hero__btn"} weight={700} text={"Download CV"} link={"https://www.facebook.com/ChriscentProduction/"} />
+              <Button className={"hero__btn"} weight={700} text={"Resume"} link="/documents/chriscent_resume.pdf" target="_blank" />
+              <Button className={"hero__btn"} weight={700} text={"Download CV"} link="/documents/chriscent_resume.pdf" download />
             </div>
           </section>
 
