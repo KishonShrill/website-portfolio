@@ -18,10 +18,9 @@ import Button from '../components/Button.jsx';
 import LazyImage from '../components/LazyImage.jsx';
 
 
-export default function Homepage() {
+export default function Homepage({setIsThemeToggle}) {
   const [isNavOpen, setIsNavOpen] = useState(false);
   const [isClicked, setIsClicked] = useState(false);
-  const [isThemeToggle, setIsThemeToggle] = useState(false)
   const mobileNavRef = useRef(null)
   const exploreBtnRef = useRef(null)
   const body = document.body;
@@ -55,23 +54,6 @@ export default function Homepage() {
       body.style.overflowY = 'auto';
     }
   }, [isNavOpen]);
-
-  // Theme getter for local user setting
-  useEffect(() => {
-    const theme = localStorage.getItem('theme');
-    theme && body.classList.add(theme);
-    let currentTheme = localStorage.getItem('theme');
-
-    if (currentTheme === 'dark-mode') {
-      localStorage.setItem('theme', 'light-mode');
-      body.classList.remove('dark-mode');
-      body.classList.add('light-mode');
-    } else {
-      localStorage.setItem('theme', 'dark-mode');
-      body.classList.remove('light-mode');
-      body.classList.add('dark-mode');
-    }
-  }, [isThemeToggle]);
 
   return (
     <>
