@@ -390,10 +390,10 @@ function Work() {
           <div className="work__project work__project-content2">
             <h3 className="work__project-subtitle">QR Code Maker/Reader</h3>
             <p className="work__project-description1">
-              In this low-poly 3D-rendered student bedroom, simplicity meets
-              functionality. The minimalist design features clean lines, muted
-              colors, and basic geometric shapes, creating a tranquil space
-              conducive to focused study.
+              A simple yet powerful tool that allows users to generate 
+              QR codes from any text or URL and scan existing QR codes 
+              using their device's camera. Ideal for quick sharing and 
+              retrieving of information in various formats.
             </p>
             <p className="work__project-description2">
               <b>~~~ Technologies Used ~~~</b>
