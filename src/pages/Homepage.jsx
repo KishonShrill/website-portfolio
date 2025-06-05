@@ -18,7 +18,7 @@ import Button from '../components/Button.jsx';
 import LazyImage from '../components/LazyImage.jsx';
 
 
-export default function Homepage({setIsThemeToggle}) {
+export default function Homepage({themeToggle}) {
   const [isNavOpen, setIsNavOpen] = useState(false);
   const [isClicked, setIsClicked] = useState(false);
   const mobileNavRef = useRef(null)
@@ -35,12 +35,12 @@ export default function Homepage({setIsThemeToggle}) {
       <Header 
         handleClick={handleHeaderBtnClick}
         exploreBtnRef={exploreBtnRef}
-        themeToggleRef={setIsThemeToggle}
+        themeToggle={themeToggle}
         isClicked={isClicked} />
       <MobileNav 
         handleClick={handleHeaderBtnClick}
         exploreBtnRef={exploreBtnRef}
-        themeToggleRef={setIsThemeToggle}
+        themeToggle={themeToggle}
         mobileNavRef={mobileNavRef} body={body} />
     </>
   ], []) // I swear, I feel like I am over engineering my web portfolio just to make it run faster -_-
@@ -154,7 +154,7 @@ export default function Homepage({setIsThemeToggle}) {
 }
 
 
-function Header({ handleClick, isClicked, exploreBtnRef, themeToggleRef }) {
+function Header({ handleClick, isClicked, exploreBtnRef, themeToggle }) {
   return (
     <>
       <header className="header container">
@@ -172,7 +172,7 @@ function Header({ handleClick, isClicked, exploreBtnRef, themeToggleRef }) {
             <li><a className="header__link" href="#contact">Contact</a></li>
             <li className="header__line"></li>
             <li>
-              <button id="theme-toggle" className="header__sun" onClick={() => themeToggleRef(prev => !prev)}>
+              <button id="theme-toggle" className="header__sun" onClick={() => themeToggle()}>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
@@ -204,7 +204,7 @@ function Header({ handleClick, isClicked, exploreBtnRef, themeToggleRef }) {
   )
 }
 
-function MobileNav({ handleClick, mobileNavRef, exploreBtnRef, body, themeToggleRef }) {
+function MobileNav({ handleClick, mobileNavRef, exploreBtnRef, body, themeToggle }) {
   const [projectDiv, setProjectDiv] = useState(false);
   const [isClicked, setIsClicked] = useState(false)
 
@@ -249,7 +249,7 @@ function MobileNav({ handleClick, mobileNavRef, exploreBtnRef, body, themeToggle
             <li><a className="mobile-nav__link" onClick={handleClick} href="#contact">Contact</a></li>
             <li className="mobile-nav__link-line"></li>
             <li>
-              <button id="theme-toggle" className="mobile-nav__sun" onClick={() => themeToggleRef(prev => !prev)}>
+              <button id="theme-toggle" className="mobile-nav__sun" onClick={() => themeToggle()}>
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
                   fill="currentColor">
                   <path
@@ -359,7 +359,7 @@ function Work() {
             <p className="work__project-description1">
               <strong>Budget Buddy</strong> is a simple and intuitive web app designed to help users manage their expenses, track their income, and stay on top of their budgets!
             </p>
-            <p className="work__project-description2">
+            <div className="work__project-description2">
               <b>~~~ Technologies Used ~~~</b>
               <div className="work__project-techs">
                 <TechIcon icon={"react"} width={"3rem"} height={"3rem"} />
@@ -368,7 +368,7 @@ function Work() {
                 <TechIcon icon={"javascript"} width={"3rem"} height={"3rem"} />
                 <TechIcon icon={"sass"} width={"3rem"} height={"3rem"} />
               </div>
-            </p>
+            </div>
             <div style={{display: "flex", alignItems: "center", justifyContent: "center"}}>
               <Button 
                 className={"work__project-btn"} 
@@ -395,7 +395,7 @@ function Work() {
               using their device's camera. Ideal for quick sharing and 
               retrieving of information in various formats.
             </p>
-            <p className="work__project-description2">
+            <div className="work__project-description2">
               <b>~~~ Technologies Used ~~~</b>
               <div className="work__project-techs">
                 <TechIcon icon={"react"} width={"3rem"} height={"3rem"} />
@@ -403,7 +403,7 @@ function Work() {
                 <TechIcon icon={"css"} width={"3rem"} height={"3rem"} />
                 <TechIcon icon={"javascript"} width={"3rem"} height={"3rem"} />
               </div>
-            </p>
+            </div>
             <div style={{display: "flex", alignItems: "center", justifyContent: "center"}}>
               <Button 
                 className={"work__project-btn"} 

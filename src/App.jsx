@@ -33,14 +33,15 @@ const RockPaperScissor = lazy(() => import('./pages/projects/RockPaperScissor.js
 
 
 export default function App() {
-  const [isThemeToggle, setIsThemeToggle] = useState(false)
   const body = document.body
-  
+  const theme = localStorage.getItem('theme');
+  theme && body.classList.add(theme);
+
+
   // Theme getter for local user setting
-  useEffect(() => {
-    const theme = localStorage.getItem('theme');
-    theme && body.classList.add(theme);
+  function themeToggle() {
     let currentTheme = localStorage.getItem('theme');
+    console.log("Am I running")
 
     if (currentTheme === 'dark-mode') {
       localStorage.setItem('theme', 'light-mode');
@@ -51,8 +52,8 @@ export default function App() {
       body.classList.remove('light-mode');
       body.classList.add('dark-mode');
     }
-  }, [isThemeToggle]);
-
+  }
+  
   // Intersection Observers for Lazy Classes
   useEffect(() => {
     const lazyImgs = document.querySelectorAll('.lazy');
@@ -77,7 +78,7 @@ export default function App() {
     <QueryClientProvider client={queryClient}>
       <BrowserRouter>
           <Routes>
-            <Route path="/" element={<Homepage setIsThemeToggle={setIsThemeToggle} />} exact />
+            <Route path="/" element={<Homepage themeToggle={themeToggle} />} exact />
             <Route path="*" element={<NoPage />} />
 
 
