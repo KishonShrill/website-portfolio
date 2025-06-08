@@ -16,6 +16,7 @@ import DisplayProject from '../components/DisplayProject.jsx';
 import TechIcon from '../components/TechIcon.jsx';
 import Button from '../components/Button.jsx';
 import LazyImage from '../components/LazyImage.jsx';
+import CredlyBadge from '../components/CredlyBadge.jsx';
 
 
 export default function Homepage({themeToggle}) {
@@ -322,7 +323,13 @@ function Featured() {
 
       <br />
       <br />
+      <h2 className="featured__title" style={{ textAlign: "center" }}>Badges</h2>
       <br />
+      <div style={{display: "grid", placeContent: "center"}}>
+        <CredlyBadge badgeId={"7eb10efd-f455-4ef3-bba0-601cbb9495bd"}/>
+      </div>
+      <br />
+
       <h2 className="featured__title" style={{ textAlign: "center" }}>3D Art Projects</h2>
       <div className="featured__img-container">
         <DisplayProject image={"/images/featured/love.png"} text={"Chriscent Production"} link={"#"} />
