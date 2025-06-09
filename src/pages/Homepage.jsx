@@ -325,8 +325,9 @@ function Featured() {
       <br />
       <h2 className="featured__title" style={{ textAlign: "center" }}>Badges</h2>
       <br />
-      <div style={{display: "grid", placeContent: "center"}}>
+      <div style={{display: "flex", alignItems: "center", justifyContent: "center", gap: "0.5rem"}}>
         <CredlyBadge badgeId={"7eb10efd-f455-4ef3-bba0-601cbb9495bd"}/>
+        <CredlyBadge badgeId={"96ac92ca-895e-43ff-bdb6-cb7d0e41cc81"}/>
       </div>
       <br />
 
