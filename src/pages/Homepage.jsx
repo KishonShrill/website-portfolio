@@ -328,6 +328,7 @@ function Featured() {
       <div style={{display: "flex", alignItems: "center", justifyContent: "center", gap: "0.5rem"}}>
         <CredlyBadge badgeId={"7eb10efd-f455-4ef3-bba0-601cbb9495bd"}/>
         <CredlyBadge badgeId={"96ac92ca-895e-43ff-bdb6-cb7d0e41cc81"}/>
+        <CredlyBadge badgeId={"acd5706a-930f-4624-bd43-d18818ba62e1"}/>
       </div>
       <br />
 
