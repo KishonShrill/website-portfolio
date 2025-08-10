@@ -348,14 +348,47 @@ function Featured() {
 function Work() {
   return (
     <section className="work container section" id='work'>
-      <h2 className="work__title">Personal Web Projects</h2>
+      <h2 className="work__title">Website Projects</h2>
       <p className="work__description">
-        Here are some of the rendered artworks I've created during
-        moments when I needed a break or found myself looking for
-        creative inspiration outside of web development. Explore my
-        artistic side below:</p>
+        Here are some of the rendered artworks and personal/collaborated 
+        projectscreated during moments when I needed a break or found 
+        myself looking for creative inspiration outside of web development. 
+        Explore my artistic side below:</p>
 
       <div className="work__container">
+        <div className='work__row'>
+          <div>
+            <LazyImage 
+              src="https://fakeimg.pl/1080x1080/?retina=1&text=ニャー&font=noto"
+              data-src="/images/featured/popupiligan.png"
+              alt="Popup Dining Iligan"/>
+          </div>
+          <div className="work__project work__project-content1">
+            <h3 className="work__project-subtitle">Lasa Lokal Pinas</h3>
+            <p className="work__project-description1">
+              <strong>Popup-Iligan</strong> is a landing page for a popup restaurant based in Iligan City.
+            </p>
+            <div className="work__project-description2">
+              <b>~~~ Technologies Used ~~~</b>
+              <div className="work__project-techs">
+                <TechIcon icon={"react"} width={"3rem"} height={"3rem"} />
+                <TechIcon icon={"html"} width={"3rem"} height={"3rem"} />
+                <TechIcon icon={"css"} width={"3rem"} height={"3rem"} />
+                <TechIcon icon={"javascript"} width={"3rem"} height={"3rem"} />
+                <TechIcon icon={"sass"} width={"3rem"} height={"3rem"} />
+              </div>
+            </div>
+            <div style={{display: "flex", alignItems: "center", justifyContent: "center"}}>
+              <Button 
+                className={"work__project-btn"} 
+                weight={700} 
+                link={"http://popup-iligan.zaide.online/"} 
+                text={"Visit"} 
+              />
+            </div>
+          </div>
+        </div>
+
         <div className='work__row'>
           <div>
             <LazyImage 
@@ -385,6 +418,31 @@ function Work() {
                 link={"https://productprice-iligan.vercel.app/"} 
                 text={"Visit"} 
               />
+            </div>
+          </div>
+        </div>
+
+        <div className='work__row'>
+          <div>
+            <LazyImage 
+              src="https://fakeimg.pl/1080x1080/?retina=1&text=ニャー&font=noto"
+              data-src="/images/featured/onlineinventorysystem.png"
+              alt="Online inventory system for CDIIS"/>
+          </div>
+          <div className="work__project work__project-content1">
+            <h3 className="work__project-subtitle">Online Inventory System</h3>
+            <p className="work__project-description1">
+              An <strong>online inventory</strong> for your gadgets with QR code scanning to ease the trouble of typing the item codes.
+            </p>
+            <div className="work__project-description2">
+              <b>~~~ Technologies Used ~~~</b>
+              <div className="work__project-techs">
+                <TechIcon icon={"react"} width={"3rem"} height={"3rem"} />
+                <TechIcon icon={"html"} width={"3rem"} height={"3rem"} />
+                <TechIcon icon={"css"} width={"3rem"} height={"3rem"} />
+                <TechIcon icon={"javascript"} width={"3rem"} height={"3rem"} />
+                <TechIcon icon={"sass"} width={"3rem"} height={"3rem"} />
+              </div>
             </div>
           </div>
         </div>
