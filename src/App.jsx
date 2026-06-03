@@ -79,7 +79,6 @@ export default function App() {
                     <Route path="/" element={<Homepage themeToggle={themeToggle} />} exact />
                     <Route path="*" element={<NoPage />} />
 
-
                     <Route path="/projects/age_calculator_app" element={<AgeCalculatorApp title="Frontend Mentor | Age Calculator App" />} />
                     <Route path="/projects/qr_code_component" element={<QrCodeComponent title="Frontend Mentor | QR Code Component" />} />
                     <Route path="/projects/news_homepage" element={<NewsHomepage title="Frontend Mentor | News Homepage" />} />
@@ -95,10 +94,6 @@ export default function App() {
                     <Route path="/projects/calculator_app" element={<CalculatorApp title="Frontend Mentor | CalculatorApp" />} />
                     <Route path="/projects/blog_preview_card" element={<BlogPreviewCard title="Frontend Mentor | Blog Preview Card" />} />
                     <Route path="/projects/rock_paper_scissor" element={<RockPaperScissor title="Frontend Mentor | Rock Paper Scissor" />} />
-
-
-                    <Route path="/database" element={<Database_List />} />
-                    <Route path="/database/:studentId" element={<SpecificStudent />} />
                 </Routes>
             </BrowserRouter>
         </QueryClientProvider>
